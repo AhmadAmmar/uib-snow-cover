@@ -2,6 +2,7 @@
 
 Saves outputs/comparison.csv and figures/original_vs_new.png and .pdf.
 """
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -9,7 +10,8 @@ import pandas as pd
 from scipy import stats
 
 R = Path(__file__).resolve().parent.parent
-new = pd.read_csv(R / "data" / "uib_sca_8day.csv", parse_dates=["date"])
+name = sys.argv[1] if len(sys.argv) > 1 else "uib_sca_8day"
+new = pd.read_csv(R / "data" / f"{name}.csv", parse_dates=["date"])
 old = pd.read_csv(R / "outputs" / "original_8day.csv", parse_dates=["date"])
 new["valid"] = new[["snow", "land", "water", "ice"]].sum(axis=1)
 new["total"] = new[["snow", "cloud", "land", "water", "ice", "night", "nodecision", "fill"]].sum(axis=1)
