@@ -59,13 +59,7 @@ def read():
     pd.DataFrame([dict(pixels=total, below_002=sum(h), threshold=thr)]).to_csv(R / "outputs/tibet_fdr_500m.csv", index=False)
     print("Tibet at 500 m: pixels", round(total), "threshold", thr, "share below 0.002", round(sum(h) / total, 5))
 
-    rows, token = [], None
-    while True:
-        page = ee.data.listFeatures({"asset": SUB, "pageSize": 1000, **({"pageToken": token} if token else {})})
-        rows += [x["properties"] for x in page["features"]]
-        token = page.get("nextPageToken")
-        if not token:
-            break
+    rows = [x["properties"] for x in ee.FeatureCollection(SUB).getInfo()["features"]]
     d = pd.DataFrame(rows)
     d = d.rename(columns={"mean": "duration"}) if "mean" in d and "duration" not in d else d
     d.to_csv(R / "outputs/subbasin_year.csv", index=False)
