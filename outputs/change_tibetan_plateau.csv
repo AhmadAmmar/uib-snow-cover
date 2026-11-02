@@ -1,0 +1,73 @@
+unit,level,cls,on_glacier,km2,cls_name
+Tibetan Plateau,range,0,0,157359.3251865059,too little data
+Tibetan Plateau,range,0,1,9637.236596016151,too little data
+Tibetan Plateau,range,1,0,818903.1553489289,rarely snow
+Tibetan Plateau,range,1,1,4.245273,rarely snow
+Tibetan Plateau,range,2,0,745856.7430097585,stable seasonal
+Tibetan Plateau,range,2,1,21805.041299976943,stable seasonal
+Tibetan Plateau,range,5,0,416.9659879999999,persistent
+Tibetan Plateau,range,5,1,5228.492958813488,persistent
+Hengduan Shan,division,0,0,42253.70037697871,too little data
+Hengduan Shan,division,0,1,367.86315537720594,too little data
+Hengduan Shan,division,1,0,223406.49282969988,rarely snow
+Hengduan Shan,division,1,1,1.7425233125,rarely snow
+Hengduan Shan,division,2,0,119731.21528387512,stable seasonal
+Hengduan Shan,division,2,1,708.1430773637255,stable seasonal
+Hengduan Shan,division,5,0,2.5994816875,persistent
+Hengduan Shan,division,5,1,46.768253375,persistent
+Kunlun Mountains,division,0,0,3291.2115201877477,too little data
+Kunlun Mountains,division,0,1,2586.8134233884784,too little data
+Kunlun Mountains,division,1,0,114348.70177007979,rarely snow
+Kunlun Mountains,division,1,1,0.7809675,rarely snow
+Kunlun Mountains,division,2,0,145904.43328569236,stable seasonal
+Kunlun Mountains,division,2,1,8586.201414837753,stable seasonal
+Kunlun Mountains,division,5,0,359.68332874999993,persistent
+Kunlun Mountains,division,5,1,3865.2057526684016,persistent
+Min Mountains,division,0,0,35748.00874537028,too little data
+Min Mountains,division,1,0,43356.0933062819,rarely snow
+Min Mountains,division,2,0,15089.354821243378,stable seasonal
+Min Mountains,division,2,1,0.8393725625,stable seasonal
+Qionglai Shan,division,0,0,19556.927027471454,too little data
+Qionglai Shan,division,0,1,2.5485819375,too little data
+Qionglai Shan,division,1,0,15081.632591972415,rarely snow
+Qionglai Shan,division,2,0,18537.571772680916,stable seasonal
+Qionglai Shan,division,2,1,38.38408756250001,stable seasonal
+Tanggula Mountains,division,0,0,617.8609385522051,too little data
+Tanggula Mountains,division,0,1,199.7829289977941,too little data
+Tanggula Mountains,division,1,0,2487.253977392899,rarely snow
+Tanggula Mountains,division,2,0,35390.02903893899,stable seasonal
+Tanggula Mountains,division,2,1,1745.2030852450957,stable seasonal
+Tanggula Mountains,division,5,0,12.4574481875,persistent
+Tanggula Mountains,division,5,1,304.6192139999998,persistent
+Transhimalaya,division,0,0,52866.22695930978,too little data
+Transhimalaya,division,0,1,5621.446068432567,too little data
+Transhimalaya,division,1,0,198925.78313516112,rarely snow
+Transhimalaya,division,1,1,1.7217821875000001,rarely snow
+Transhimalaya,division,2,0,148659.75664288894,stable seasonal
+Transhimalaya,division,2,1,6784.65042231348,stable seasonal
+Transhimalaya,division,5,0,2.578635125,persistent
+Transhimalaya,division,5,1,249.4276575625,persistent
+Nan Shan,division,0,0,1127.492110664461,too little data
+Nan Shan,division,0,1,351.7265899375001,too little data
+Nan Shan,division,1,0,100279.39151864877,rarely snow
+Nan Shan,division,2,0,90097.01450995258,stable seasonal
+Nan Shan,division,2,1,1398.4377133124995,stable seasonal
+Nan Shan,division,5,0,10.8639321875,persistent
+Nan Shan,division,5,1,234.03506243749985,persistent
+Qiangtang,division,0,0,956.5231249553924,too little data
+Qiangtang,division,0,1,498.7199303779411,too little data
+Qiangtang,division,1,0,88209.56049509768,rarely snow
+Qiangtang,division,2,0,91493.2099656789,stable seasonal
+Qiangtang,division,2,1,2524.709108958088,stable seasonal
+Qiangtang,division,5,0,28.783162062499997,persistent
+Qiangtang,division,5,1,528.4370187700983,persistent
+Tibetan Plateau (nn),division,0,0,36.09160717205883,too little data
+Tibetan Plateau (nn),division,0,1,5.825308937500001,too little data
+Tibetan Plateau (nn),division,1,0,1605.4428798786744,rarely snow
+Tibetan Plateau (nn),division,2,0,5581.220981897053,stable seasonal
+Tibetan Plateau (nn),division,2,1,7.484037437499999,stable seasonal
+Bayan Har Mountains,division,0,0,902.6840523267152,too little data
+Bayan Har Mountains,division,0,1,2.5010820000000002,too little data
+Bayan Har Mountains,division,1,0,31017.49186485738,rarely snow
+Bayan Har Mountains,division,2,0,75362.23715653164,stable seasonal
+Bayan Har Mountains,division,2,1,10.985806250000001,stable seasonal

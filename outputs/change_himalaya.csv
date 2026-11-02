@@ -1,0 +1,39 @@
+unit,level,cls,on_glacier,km2,cls_name
+Himalaya,range,0,0,83916.75561105211,too little data
+Himalaya,range,0,1,1246.786673017156,too little data
+Himalaya,range,1,0,233222.25144849176,rarely snow
+Himalaya,range,1,1,68.57318829687499,rarely snow
+Himalaya,range,2,0,204995.1964895112,stable seasonal
+Himalaya,range,2,1,29373.33679152186,stable seasonal
+Himalaya,range,5,0,190.26761356250003,persistent
+Himalaya,range,5,1,2834.9586321718725,persistent
+Eastern Himalaya,division,0,0,77348.15461468053,too little data
+Eastern Himalaya,division,0,1,811.6129954390294,too little data
+Eastern Himalaya,division,1,0,41733.304539037665,rarely snow
+Eastern Himalaya,division,1,1,30.530907328124997,rarely snow
+Eastern Himalaya,division,2,0,19101.79797024051,stable seasonal
+Eastern Himalaya,division,2,1,3535.8068148389766,stable seasonal
+Eastern Himalaya,division,5,0,10.750858203124999,persistent
+Eastern Himalaya,division,5,1,377.4619541249988,persistent
+Central Himalayas,division,0,0,5630.853603038775,too little data
+Central Himalayas,division,0,1,196.66852014062547,too little data
+Central Himalayas,division,1,0,93594.36556561163,rarely snow
+Central Himalayas,division,1,1,38.04228096874998,rarely snow
+Central Himalayas,division,2,0,49697.54643929968,stable seasonal
+Central Himalayas,division,2,1,10801.253312921877,stable seasonal
+Central Himalayas,division,5,0,86.87217618750003,persistent
+Central Himalayas,division,5,1,1091.5915810312508,persistent
+Kashmir Himalayas,division,0,0,830.1299303299021,too little data
+Kashmir Himalayas,division,0,1,229.1115659843749,too little data
+Kashmir Himalayas,division,1,0,57499.60598387393,rarely snow
+Kashmir Himalayas,division,2,0,113233.43761485167,stable seasonal
+Kashmir Himalayas,division,2,1,10728.68697647973,stable seasonal
+Kashmir Himalayas,division,5,0,75.355253328125,persistent
+Kashmir Himalayas,division,5,1,1100.8577640781211,persistent
+Kumaun Himalayas,division,0,0,107.87818139669128,too little data
+Kumaun Himalayas,division,0,1,9.393591453125003,too little data
+Kumaun Himalayas,division,1,0,40393.51177430693,rarely snow
+Kumaun Himalayas,division,2,0,22962.07752837643,stable seasonal
+Kumaun Himalayas,division,2,1,4307.411957609402,stable seasonal
+Kumaun Himalayas,division,5,0,17.289325843749996,persistent
+Kumaun Himalayas,division,5,1,265.0473329375002,persistent

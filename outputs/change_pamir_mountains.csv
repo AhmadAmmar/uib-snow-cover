@@ -1,0 +1,29 @@
+unit,level,cls,on_glacier,km2,cls_name
+Pamir Mountains,range,0,0,751.658096024816,too little data
+Pamir Mountains,range,0,1,794.027829989585,too little data
+Pamir Mountains,range,1,0,6150.218058463664,rarely snow
+Pamir Mountains,range,2,0,76371.08912888709,stable seasonal
+Pamir Mountains,range,2,1,5705.190404330452,stable seasonal
+Pamir Mountains,range,5,0,644.2514327449144,persistent
+Pamir Mountains,range,5,1,3928.907903148293,persistent
+Western Pamirs,division,0,0,347.5757910506131,too little data
+Western Pamirs,division,0,1,410.54374959938923,too little data
+Western Pamirs,division,1,0,971.1630765879295,rarely snow
+Western Pamirs,division,2,0,48447.219416570704,stable seasonal
+Western Pamirs,division,2,1,4308.211038037131,stable seasonal
+Western Pamirs,division,5,0,490.7246310186891,persistent
+Western Pamirs,division,5,1,2977.4992349090767,persistent
+Eastern Pamirs,division,0,0,297.2994782620707,too little data
+Eastern Pamirs,division,0,1,104.0474461852329,too little data
+Eastern Pamirs,division,1,0,2242.7793104000025,rarely snow
+Eastern Pamirs,division,2,0,20754.218363930613,stable seasonal
+Eastern Pamirs,division,2,1,763.6844539674009,stable seasonal
+Eastern Pamirs,division,5,0,75.73989626642157,persistent
+Eastern Pamirs,division,5,1,387.66052277659116,persistent
+Trans-Alay Range,division,0,0,106.77274239056368,too little data
+Trans-Alay Range,division,0,1,279.4288060463243,too little data
+Trans-Alay Range,division,1,0,2936.2852883449536,rarely snow
+Trans-Alay Range,division,2,0,7170.029022039373,stable seasonal
+Trans-Alay Range,division,2,1,633.2740609144602,stable seasonal
+Trans-Alay Range,division,5,0,77.78231238253674,persistent
+Trans-Alay Range,division,5,1,563.718045663723,persistent

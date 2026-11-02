@@ -8,6 +8,7 @@ Glacier outlines (GLIMS) give each class an on-glacier or off-glacier area. Pers
 end of the melt season; it is not a measure of glacier health.
 
     python src/12_change_classes.py <range> [--map]      saves outputs/change_<range>.csv, and with --map a quick-look PNG
+    python src/12_change_classes.py <range> --export-mk  batch export of the trend test, for ranges too large to compute interactively
 """
 import sys
 from pathlib import Path
@@ -51,9 +52,9 @@ def mann_kendall(dur):
     return s.rename("s"), z.rename("z"), p.rename("p"), n.rename("n")
 
 
-def bh_threshold(p, geom):
+def bh_threshold(p, geom, scale=SCALE):
     """Largest p threshold meeting Benjamini-Hochberg, from a fine histogram over the region."""
-    h = p.reduceRegion(ee.Reducer.fixedHistogram(0, 1, BINS), geom, SCALE, maxPixels=1e10, tileScale=8).getInfo()["p"]
+    h = p.reduceRegion(ee.Reducer.fixedHistogram(0, 1, BINS), geom, scale, maxPixels=1e10, tileScale=8).getInfo()["p"]
     total = sum(c for _, c in h)
     cum, best = 0, 0.0
     for lo, c in h:
@@ -70,9 +71,28 @@ def main(name, *flags):
     divs = ee.FeatureCollection("projects/ee-ahmadammargeo/assets/tp_regions_v2_division").filter(ee.Filter.eq("parent", name))
     dur, late = stack(key)
     s, z, p, n = mann_kendall(dur)
+    stored = f"{ROOT}_mk/{key}"
+    if "--export-mk" in flags:
+        try:
+            ee.data.createAsset({"type": "FOLDER"}, f"{ROOT}_mk")
+        except ee.EEException:
+            pass
+        proj = ee.Image(f"{ROOT}/{key}_2001").select(0).projection()
+        task = ee.batch.Export.image.toAsset(image=s.addBands(p).addBands(n).clip(rng).toFloat(), description=f"tp_mk_{key}", assetId=stored, crs=proj.crs().getInfo(), crsTransform=proj.getInfo()["transform"], region=rng.bounds(), maxPixels=1e11)
+        task.start()
+        print("started", task.id)
+        return
+    scale = SCALE
+    try:
+        ee.data.getAsset(stored)
+        m = ee.Image(stored)
+        s, p, n = m.select("s"), m.select("p"), m.select("n")
+        scale = 1000  # the largest range: tabulated at 1 km to stay within interactive limits
+    except ee.EEException:
+        pass
     enough = n.gte(MIN_YEARS)
     p = p.updateMask(enough)
-    thr, tested = bh_threshold(p, rng)
+    thr, tested = bh_threshold(p, rng, scale)
     print(name, "tested pixels", int(tested), "BH p threshold", round(thr, 5))
     mean = dur.reduce(ee.Reducer.mean())
     sig = p.lte(thr).unmask(0)
@@ -89,7 +109,7 @@ def main(name, *flags):
         info = u if isinstance(u, dict) else None
         unit = info["properties"]["unit"] if info else name
         geom = ee.Feature(ee.Dictionary(info)).geometry() if False else (divs.filter(ee.Filter.eq("unit", unit)).geometry() if info else rng)
-        got = area.reduceRegion(reducer, geom, SCALE, maxPixels=1e10, tileScale=8).getInfo()["groups"]
+        got = area.reduceRegion(reducer, geom, scale, maxPixels=1e10, tileScale=8).getInfo()["groups"]
         for g in got:
             rows.append(dict(unit=unit, level="division" if info else "range", cls=int(g["code"]) // 10, on_glacier=int(g["code"]) % 10, km2=g["sum"]))
     t = pd.DataFrame(rows)
@@ -99,8 +119,15 @@ def main(name, *flags):
     print(t[t.level == "range"].pivot_table(index="cls_name", columns="on_glacier", values="km2", aggfunc="sum").round(0).to_string())
     # georeferenced 1 km copy for the figures, by nearest pixel
     (R / "data").mkdir(exist_ok=True)
-    tif = cls.unmask(255).clip(rng).getDownloadURL(dict(scale=1000, crs="EPSG:4326", region=rng.bounds(), format="GEO_TIFF", bands=["cls"]))
-    (R / "data" / f"change_{key}.tif").write_bytes(requests.get(tif, timeout=600).content)
+    for res in (1000, 2000, 4000):  # the service refuses large downloads and returns an error message instead of a file
+        url = cls.unmask(255).clip(rng).getDownloadURL(dict(scale=res, crs="EPSG:4326", region=rng.bounds(), format="GEO_TIFF", bands=["cls"]))
+        body = requests.get(url, timeout=600).content
+        if body[:2] in (b"II", b"MM"):
+            (R / "data" / f"change_{key}.tif").write_bytes(body)
+            print("map saved at", res, "m")
+            break
+    else:
+        raise SystemExit("no valid map download")
     if "--map" in flags:
         (R / "figures").mkdir(exist_ok=True)
         url = cls.getThumbURL(dict(region=rng.bounds(), dimensions=1100, min=0, max=5, palette=["#bdbdbd", "#f2efe6", "#a6cee3", "#2166ac", "#b2182b", "#111111"], format="png"))
