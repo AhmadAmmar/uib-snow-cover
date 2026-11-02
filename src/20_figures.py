@@ -68,8 +68,8 @@ def change_maps(values):
         shape = g[g.unit.str.lower() == name].to_crs(PROJ.proj4_init)
         with rasterio.open(p) as s:
             transform, w, h = calculate_default_transform(s.crs, PROJ.proj4_init, s.width, s.height, *s.bounds, resolution=1000)
-            out = np.zeros((h, w), dtype="uint8")
-            reproject(rasterio.band(s, 1), out, dst_transform=transform, dst_crs=PROJ.proj4_init, resampling=Resampling.nearest, src_nodata=None, dst_nodata=255)
+            out = np.full((h, w), 255, dtype="uint8")
+            reproject(s.read(1), out, src_transform=s.transform, src_crs=s.crs, dst_transform=transform, dst_crs=PROJ.proj4_init, resampling=Resampling.nearest)
         inside = geometry_mask(shape.geometry, (h, w), transform, invert=True)
         arr = np.ma.masked_where(~inside | (out == 255), out.astype(float))
         box = (transform.c, transform.c + w * transform.a, transform.f + h * transform.e, transform.f)
