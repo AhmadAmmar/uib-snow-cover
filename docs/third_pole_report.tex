@@ -70,6 +70,20 @@ Across \nUnits{} units, \nUnitsRaw{} have $p<0.05$ and \nUnitsSig{} remain after
 \input{generated/table_trends.tex}
 \end{table}
 
+\section{Harmonisation}
+Studies of this region are hard to combine because they use different boundaries, periods and units. Every dataset in this project therefore follows one standard, so that others can add to it.
+
+\begin{itemize}
+\item \textbf{Space.} Vector files are GeoJSON in WGS~84. Each region has a stable identifier (GMBA or HydroBASINS) and a boundary version. Areas are computed in an equal-area projection, never in degrees.
+\item \textbf{Time.} Years are hydrological, October to September, named by the year in which they end. Dates are ISO~8601.
+\item \textbf{Tables.} Long form, one row per unit and period, with explicit units in column names (for example \texttt{km2}, \texttt{days}, \texttt{mm}), and missing values left empty.
+\item \textbf{Rasters.} Native grid retained, with resampling recorded whenever it happens.
+\item \textbf{Provenance.} Each file records its source, product version, licence, script and date, in a catalogue. Originals stay read-only and are hashed.
+\item \textbf{Names.} A file name says what the file holds. Numbers mean a year or a version, never the order of saving.
+\end{itemize}
+
+The same standard will be applied in turn to glacier outlines and mass balance \citep{Hugonnet_2021}, climate series, and the monsoon indices.
+
 \section{Still to do}
 Complete the remaining ranges and the sub-basins; test the NDSI threshold, Aqua and gap filling; investigate the 2012 low in the Karakoram, where daily images are complete and a smaller dip also appears in MOD10A2; compare with MOYDGL06 \citep{Muhammad_2020}; validate against Landsat, Sentinel-2 and stations; and review the climate indices.
 
