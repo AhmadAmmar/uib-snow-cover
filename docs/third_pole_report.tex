@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=25mm]{geometry}
+\usepackage{graphicx,booktabs,longtable,amsmath,microtype,xcolor}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{../figures/}}
+\input{generated/values.tex}
+\title{Snow cover change across the Third Pole by mountain division and sub-basin:\\ methods and preliminary results}
+\author{Ahmad Ammar}
+\date{Working document, regenerated from the analysis}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document records how snow cover change is being measured across the mountains of the Third Pole, and what the results show so far. Every number, table and figure is produced by the analysis scripts. Results currently cover \nRangesDone{} of \nRanges{} ranges (\rangesDone{}) and are preliminary.
+\end{abstract}
+
+\section{Why this region}
+The mountains of High Mountain Asia store and release water for some of the most populous river basins on Earth \citep{Immerzeel_2010,Immerzeel_2019,Wester_2019}. Seasonal snow matters as much as glacier ice in much of this supply, particularly in the west, where winter precipitation from western disturbances dominates \citep{Bookhagen_2010,Dimri_2015,Kraaijenbrink_2021}. The Karakoram is a particular puzzle, as its glaciers have changed less than those of neighbouring ranges \citep{Hewitt_2005,Gardelle_2012,Farinotti_2020}.
+
+Earlier studies differ in period, boundary and cloud treatment, so their trends are hard to compare \citep{Maskey_2011,Gurung_2017,Hasson_2014,Notarnicola_2020}. ICIMOD has also released an improved MODIS product for this region, which reduces cloud and sensor errors \citep{Muhammad_2020}, and this work will be compared with it. The contribution here is a single, openly reproducible comparison across fixed mountain and river units.
+
+\section{Regions}
+Ranges and divisions follow the GMBA Mountain Inventory v2 \citep{Snethlage_2022}, and sub-basins follow HydroBASINS level 5 \citep{Lehner_2013}, clipped to those mountains. This gives \nRanges{} ranges, \nDivisions{} divisions and \nSubbasins{} sub-basins over \domainKm{}~km$^2$ (Figure~\ref{fig:regions}). The mountain definition excludes flat plateau interiors, so results describe mountain terrain and not the whole plateau.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_regions.pdf}
+\caption{Analysis units, in an Albers equal-area conic projection with standard parallels at 25$^\circ$N and 45$^\circ$N. The scale bar is true along those parallels. Boundaries imply no position on any territorial claim.}\label{fig:regions}
+\end{figure}
+
+\section{Data and methods}
+\paragraph{Snow.} Daily MOD10A1 collection 6.1 \citep{Hall_2002,Riggs_2017} gives NDSI snow cover at 500~m. A clear pixel with NDSI snow cover of at least 40 counts as snow; this threshold is still to be tested against alternatives. For each hydrological year (October to September), duration is $365 \times$ snow days $/$ clear days, for pixels with at least 120 clear days. Scaling by clear days assumes that cloudy days resemble clear ones, which is a known weakness to be tested against gap filling and the Aqua sensor.
+
+\paragraph{Pixel classes.} Each pixel with at least 20 usable years is tested with Mann-Kendall \citep{Yue_2002}, with false discovery control at 5\% \citep{Benjamini_1995,Wilks_2016}. Significant pixels are gain or loss. Others are `no detectable trend' or `rarely snow' (under 15 days a year). Pixels snow-covered on at least 80\% of clear days from 1 August to 15 September are `persistent snow or ice', split by GLIMS glacier outlines. MODIS cannot separate snow from ice, and persistence does not measure glacier health; that needs mass-balance estimates such as \citet{Hugonnet_2021}.
+
+\paragraph{Unit trends.} Annual means per unit use the Sen slope \citep{Sen_1968}. The quoted $p$ is the larger of the plain Mann-Kendall test and trend-free pre-whitening, and $q$ applies false discovery control across units. The Hamed-Rao correction \citep{Hamed_1998} was tried and rejected, because it gave near-zero $p$ for very weak trends in these 25-value series.
+
+\paragraph{Climate.} Temperature, precipitation and snowfall come from ERA5-Land \citep{MunozSabater_2021}, whose accuracy at altitude is limited \citep{Palazzi_2013}. Nino 3.4, the dipole mode index \citep{Saji_1999} and South Asian monsoon rainfall come from a companion analysis and have not yet been independently reviewed. Series are detrended and compared by Spearman correlation. These are associations and do not establish causes.
+
+\section{Preliminary results}
+Of \kmClassified{}~km$^2$ classified so far, \kmStable{}~km$^2$ show no detectable trend, \kmGain{}~km$^2$ show gain, \kmLoss{}~km$^2$ show loss, \kmPersistent{}~km$^2$ are persistent, \kmRare{}~km$^2$ rarely have snow, and \kmNodata{}~km$^2$ lack enough clear days (Figure~\ref{fig:classes}). `No detectable trend' does not establish stability, as 25 years gives limited power at pixel level.
+
+Across \nUnits{} units, \nUnitsRaw{} have $p<0.05$ and \nUnitsSig{} remain after false discovery control (Table~\ref{tab:trends}, Figures~\ref{fig:series} and \ref{fig:heat}). Of the climate associations tested, \nDriverSig{} remain after false discovery control (Figure~\ref{fig:attr}).
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_change_classes.pdf}
+\caption{Snow cover change classes, 2001--2025, resampled to 1~km by nearest pixel for display. Preliminary.}\label{fig:classes}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.6\textwidth]{fig_series.pdf}
+\caption{Mean snow-cover duration by range, with Sen slope (dashed). Preliminary.}\label{fig:series}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=\textwidth]{fig_anomaly_heatmap.pdf}
+\caption{Duration anomaly by division and year, on a perceptually uniform diverging colour map \citep{Crameri_2020}. Preliminary.}\label{fig:heat}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.7\textwidth]{fig_attribution.pdf}
+\caption{Spearman correlation of detrended duration with climate series. An asterisk marks $q<0.05$. Preliminary.}\label{fig:attr}
+\end{figure}
+
+\begin{table}[htbp]\centering\scriptsize
+\caption{Trends in snow-cover duration, 2001--2025. Preliminary.}\label{tab:trends}
+\input{generated/table_trends.tex}
+\end{table}
+
+\section{Still to do}
+Complete the remaining ranges and the sub-basins; test the NDSI threshold, Aqua and gap filling; investigate the 2012 low in the Karakoram, where daily images are complete and a smaller dip also appears in MOD10A2; compare with MOYDGL06 \citep{Muhammad_2020}; validate against Landsat, Sentinel-2 and stations; and review the climate indices.
+
+\bibliographystyle{agsm}
+\bibliography{../references/refs}
+\end{document}

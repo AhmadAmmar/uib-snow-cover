@@ -97,6 +97,10 @@ def main(name, *flags):
     (R / "outputs").mkdir(exist_ok=True)
     t.to_csv(R / "outputs" / f"change_{key}.csv", index=False)
     print(t[t.level == "range"].pivot_table(index="cls_name", columns="on_glacier", values="km2", aggfunc="sum").round(0).to_string())
+    # georeferenced 1 km copy for the figures, by nearest pixel
+    (R / "data").mkdir(exist_ok=True)
+    tif = cls.unmask(255).clip(rng).getDownloadURL(dict(scale=1000, crs="EPSG:4326", region=rng.bounds(), format="GEO_TIFF", bands=["cls"]))
+    (R / "data" / f"change_{key}.tif").write_bytes(requests.get(tif, timeout=600).content)
     if "--map" in flags:
         (R / "figures").mkdir(exist_ok=True)
         url = cls.getThumbURL(dict(region=rng.bounds(), dimensions=1100, min=0, max=5, palette=["#bdbdbd", "#f2efe6", "#a6cee3", "#2166ac", "#b2182b", "#111111"], format="png"))

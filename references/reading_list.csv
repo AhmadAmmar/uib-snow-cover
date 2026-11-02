@@ -1,0 +1,53 @@
+topic,doi,year,title_found,match,status,title_wanted
+snow,10.1016/j.rse.2008.08.010,2009,Large-scale monitoring of snow cover and runoff simulation in Himalayan river basins using remote sensing,1.0,ok,Large-scale monitoring of snow cover and runoff simulation in Himalayan river basins using remote sensing
+snow,10.1002/joc.4961,2017,Climate and topographic controls on snow cover dynamics in the Hindu Kush Himalaya,1.0,ok,Climate and topographic controls on snow cover dynamics in the Hindu Kush Himalaya
+snow,10.1007/s10584-011-0181-y,2011,An analysis of snow cover changes in the Himalayan region using MODIS snow products and in-situ temperature data,1.0,ok,An analysis of snow cover changes in the Himalayan region using MODIS snow products and in-situ temperature data
+snow,10.1016/j.jhydrol.2011.08.035,2011,"Modeling snowmelt-runoff under climate scenarios in the Hunza River basin, Karakoram Range, Northern Pakistan",0.9,ok,"Modeling snowmelt-runoff under climate scenarios in the Hunza River basin, Karakoram Range"
+snow,10.5194/hess-18-4077-2014,2014,Early 21st century snow cover state over the western river basins of the Indus River system,1.0,ok,Early 21st century snow cover state over the western river basins of the Indus River system
+snow,10.1016/j.rse.2020.111781,2020,Hotspots of snow cover changes in global mountain regions over 2000–2018,0.99,ok,Hotspots of snow cover changes in global mountain regions over 2000-2018
+snow,10.1029/2020rg000730,2022,Climate Changes and Their Elevational Patterns in the Mountains of the World,1.0,ok,Climate changes and their elevational patterns in the mountains of the world
+snow,10.1016/j.accre.2021.12.002,2020,Importance and vulnerability of water towers across Northwest China,0.72,CHECK,Importance and vulnerability of the world's water towers
+snow,10.1126/science.1183188,2010,Climate Change Will Affect the Asian Water Towers,1.0,ok,Climate change will affect the Asian water towers
+snow,10.1038/s41558-021-01074-x,2021,Climate change decisive for Asia’s snow meltwater supply,0.98,ok,Climate change decisive for Asia's snow meltwater supply
+snow,10.5194/tc-11-1647-2017,2017,Assimilation of snow cover and snow depth into a snow model to estimate snow water equivalent and snowmelt runoff in a Himalayan catchment,0.99,ok,Assimilation of snow cover and snow depth into a snow model to estimate snow water equivalent and snowmelt runoff in a Himalayan catchment
+snow,10.5194/tc-15-5261-2021,2021,Spatiotemporal distribution of seasonal snow water  equivalent in High Mountain Asia from an 18-year  Landsat–MODIS era snow reanalysis dataset,0.41,CHECK,High Mountain Asia UCLA daily snow reanalysis
+snow,10.1126/sciadv.1701550,2018,Changes in seasonal snow water equivalent distribution in High Mountain Asia (1987 to 2009),1.0,ok,Changes in seasonal snow water equivalent distribution in High Mountain Asia (1987 to 2009)
+modis,10.1016/s0034-4257(02)00095-0,2002,MODIS snow-cover products,1.0,ok,MODIS snow-cover products
+modis,10.5194/essd-2017-25,2017,"Overview of NASA's MODIS and VIIRS Snow-Cover Earth System
+Data Records",0.99,ok,Overview of NASA's MODIS and VIIRS snow-cover Earth System Data Records
+modis,10.1002/hyp.6715,2007,Accuracy assessment of the MODIS snow products,1.0,ok,Accuracy assessment of the MODIS snow products
+modis,10.5194/hessd-11-12531-2014,2015,A snow cover climatology for the Pyrenees from MODIS snow products,1.0,ok,A snow cover climatology for the Pyrenees from MODIS snow products
+modis,10.5194/hess-23-5227-2019,2019,Evaluation of MODIS and VIIRS cloud-gap-filled snow-cover products for production of an Earth science data record,1.0,ok,Evaluation of MODIS and VIIRS cloud-gap-filled snow-cover products for production of an Earth science data record
+glacier,10.1038/s41586-021-03436-z,2021,Accelerated global glacier mass loss in the early twenty-first century,1.0,ok,Accelerated global glacier mass loss in the early twenty-first century
+glacier,10.5194/egusphere-egu2020-11382,2020,Manifestations and mechanisms of the Karakoram glacier Anomaly,1.0,ok,Manifestations and mechanisms of the Karakoram glacier anomaly
+glacier,10.1659/0276-4741(2005)025[0332:tkagea]2.0.co;2,2005,"The Karakoram Anomaly? Glacier Expansion and the ‘Elevation Effect,’ Karakoram Himalaya",0.99,ok,"The Karakoram anomaly? Glacier expansion and the elevation effect, Karakoram Himalaya"
+glacier,10.1038/ngeo1450,2012,Slight mass gain of Karakoram glaciers in the early twenty-first century,1.0,ok,Slight mass gain of Karakoram glaciers in the early twenty-first century
+glacier,10.1126/science.1215828,2012,The State and Fate of Himalayan Glaciers,1.0,ok,The state and fate of Himalayan glaciers
+glacier,10.1017/jog.2017.86,2018,Review of the status and mass changes of Himalayan-Karakoram glaciers,1.0,ok,Review of the status and mass changes of Himalayan-Karakoram glaciers
+glacier,10.1038/ngeo2999,2017,A spatially resolved estimate of High Mountain Asia glacier mass balances from 2000 to 2016,1.0,ok,A spatially resolved estimate of High Mountain Asia glacier mass balances from 2000 to 2016
+glacier,10.1038/nclimate3361,2017,Karakoram temperature and glacial melt driven by regional atmospheric circulation variability,1.0,ok,Karakoram temperature and glacial melt driven by regional atmospheric circulation variability
+glacier,10.1029/2009jf001426,2010,Toward a complete Himalayan hydrological budget: Spatiotemporal distribution of snowmelt and rainfall and their impact on river discharge,1.0,ok,Toward a complete Himalayan hydrological budget: spatiotemporal distribution of snowmelt and rainfall and their impact on river discharge
+geomorph,10.1038/ngeo1068,2011,Spatially variable response of Himalayan glaciers to climate change affected by debris cover,1.0,ok,Spatially variable response of Himalayan glaciers to climate change affected by debris cover
+geomorph,10.1029/2006gl026037,2006,"Topography, relief, and TRMM‐derived rainfall variations along the Himalaya",0.99,ok,"Topography, relief, and TRMM-derived rainfall variations along the Himalaya"
+geomorph,10.1007/s00035-016-0182-6,2017,A global inventory of mountains for bio-geographical applications,1.0,ok,A global inventory of mountains for bio-geographical applications
+geomorph,10.1038/s41597-022-01256-y,2022,A hierarchical inventory of the world’s mountains for global comparative mountain science,0.99,ok,A hierarchical inventory of the world's mountains for global comparative mountain science
+geomorph,10.1002/hyp.9740,2013,Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems,1.0,ok,Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems
+climate,10.1038/nclimate1580,2012,Different glacier status with atmospheric circulations in Tibetan Plateau and surroundings,1.0,ok,Different glacier status with atmospheric circulations in Tibetan Plateau and surroundings
+climate,10.1029/2012jd018697,2013,Precipitation in the Hindu‐Kush Karakoram Himalaya: Observations and future scenarios,0.99,ok,Precipitation in the Hindu-Kush Karakoram Himalaya: observations and future scenarios
+climate,10.1002/2014rg000460,2015,Western Disturbances: A review,1.0,ok,Western disturbances: a review
+climate,10.1007/s00382-014-2248-8,2015,Multi-annual variations in winter westerly disturbance activity affecting the Himalaya,1.0,ok,Multi-annual variations in winter westerly disturbance activity affecting the Himalaya
+climate,10.1007/978-3-319-92288-1,2019,The Hindu Kush Himalaya Assessment,1.0,ok,The Hindu Kush Himalaya Assessment
+climate,10.5194/essd-13-4349-2021,2021,ERA5-Land: a state-of-the-art global reanalysis dataset for land applications,1.0,ok,ERA5-Land: a state-of-the-art global reanalysis dataset for land applications
+climate,10.1038/nclimate2563,2015,Elevation-dependent warming in mountain regions of the world,1.0,ok,Elevation-dependent warming in mountain regions of the world
+climate,10.1146/annurev.earth.31.100901.141251,2003,The Indian Monsoon and Its Variability,1.0,ok,The Indian monsoon and its variability
+climate,10.1038/43854,1999,A dipole mode in the tropical Indian Ocean,1.0,ok,A dipole mode in the tropical Indian Ocean
+climate,10.1126/science.1131152,2006,Unraveling the Mystery of Indian Monsoon Failure During El Niño,0.99,ok,Unraveling the mystery of Indian monsoon failure during El Nino
+stats,10.1016/s0022-1694(01)00594-7,2002,Power of the Mann–Kendall and Spearman's rho tests for detecting monotonic trends in hydrological series,0.99,ok,Power of the Mann-Kendall and Spearman's rho tests for detecting monotonic trends in hydrological series
+stats,10.1175/bams-d-15-00267.1,2016,"“The Stippling Shows Statistically Significant Grid Points”: How Research Results are Routinely Overstated and Overinterpreted, and What to Do about It",0.9,ok,The stippling shows statistically significant grid points: how research results are routinely overstated and overinterpreted
+stats,10.1111/j.2517-6161.1995.tb02031.x,1995,Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing,1.0,ok,Controlling the false discovery rate: a practical and powerful approach to multiple testing
+stats,10.1016/s0022-1694(97)00125-x,1998,A modified Mann-Kendall trend test for autocorrelated data,1.0,ok,A modified Mann-Kendall trend test for autocorrelated data
+stats,10.1080/01621459.1968.10480934,1968,Estimates of the Regression Coefficient Based on Kendall's Tau,1.0,ok,Estimates of the regression coefficient based on Kendall's tau
+carto,10.1038/s41467-020-19160-7,2020,The misuse of colour in science communication,1.0,ok,The misuse of colour in science communication
+carto,10.1559/152304003100010929,2003,ColorBrewer in Print: A Catalog of Color Schemes for Maps,1.0,ok,ColorBrewer in print: a catalog of color schemes for maps
+carto,10.1371/journal.pcbi.1003833,2014,Ten Simple Rules for Better Figures,1.0,ok,Ten simple rules for better figures
+carto,10.1080/13658816.2018.1504949,2018,The Equal Earth map projection,1.0,ok,The Equal Earth map projection
