@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{What has been done, and where the gaps may be: Third Pole snow}
+\author{Private working record}
+\date{2 November 2026, provisional}
+\begin{document}
+\maketitle
+\noindent Basis: 1,339 OpenAlex records from 32 searches (\texttt{references/gap\_search.py}), keyword coverage tables, and abstracts of the closest studies. Full papers have not yet been read, and Scopus has not yet been run (\texttt{references/scopus\_queries.md}). A gap below is a candidate until confirmed by reading.
+
+\section{Already done: not new on its own}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\toprule
+Study & What it covers \\
+\midrule
+Ackroyd et al.\ 2021 & Snow-cover duration trends, 2002--2017, across five major basins, from gap-filled fractional MODIS \\
+Almagioni et al.\ 2025 & Days, onset and end of snow, 2001--2024, in 14 regions of the Karakoram, Western Himalaya and Kunlun, gap-filled \\
+Notarnicola 2020 & High Mountain Asia against global mountains, 2000--2018; significant trends reported in about 86\% of areas \\
+Thapa et al.\ 2020 & Karakoram sub-basins, 2003--2018, on the improved product \\
+Dharpure et al.\ 2021 & Karakoram and Himalaya, 2000--2019, gap-filled, with timing indices and climate links \\
+Muhammad et al.\ 2020, 2021; Yan et al.\ 2024; Deng et al.\ 2024 & Improved and cloud-free MODIS products \\
+Naegeli et al.\ 2022; Sun et al.\ 2025 & Four decades of AVHRR snow in the Hindu Kush Himalaya; long fractional retrievals \\
+\bottomrule
+\end{tabularx}
+
+\medskip\noindent So a paper that only reports snow trends by region repeats existing work, and our own AVHRR analysis should build on these long records and not repeat them.
+
+\section{Candidate gaps, strongest first}
+\begin{enumerate}
+\item \textbf{Why do published trends disagree?} About 86\% of areas are reported significant by Notarnicola (2020), while our first pass finds no significant trend in any of 47 units and change in under 0.1\% of area. Period, cloud treatment, threshold, sensor, boundary and multiple testing all differ. A single framework that varies each choice in turn could show which conclusions survive. Keyword searches found no abstract mentioning false discovery control among snow papers, though this needs checking in full texts.
+\item \textbf{What can be detected at all?} Minimum detectable trend per range, division and sub-basin, given observed variability, record length and clear days. This would say where ``no trend'' means stability and where it means too little data, and how much 40-year records would help. It needs no new sensor.
+\item \textbf{Fixed nested units.} Comparing mountain divisions and sub-basins on one set of boundaries appears uncommon: only two abstracts paired duration with sub-basins. On its own this is a modest contribution, and it is better as a shared open dataset.
+\item \textbf{Drivers across ranges in one design.} Our early result is that cold-season temperature and snowfall dominate in most ranges, with little link to monsoon or ENSO, and the Karakoram stands apart. Abstracts mentioning the Indian Ocean Dipole with snow are very few (at most one per region). Few links is partly because few are expected, so this is weak on its own.
+\item \textbf{Blind spots.} The cloudy eastern Himalaya and Hengduan (Hengduan: 6 snow abstracts) are hardly studied, because the data are poor. Worth stating, and worth targeting with gap-filled products.
+\end{enumerate}
+
+\section{What this changes in our plan}
+\begin{itemize}
+\item The main paper should ask gap 1 and gap 2, with region-by-region trends as supporting evidence.
+\item Use published gap-filled products in the comparison, and do not build a new one.
+\item Read Naegeli et al.\ (2022) and Ackroyd et al.\ (2021) in full next, since they are the closest.
+\end{itemize}
+\end{document}
