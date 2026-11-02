@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs}
+\usepackage[margin=25mm]{geometry}
+\title{Audit of the original Upper Indus snow project}
+\author{Private working record}
+\date{2 November 2026}
+\begin{document}
+\maketitle
+From \texttt{src/04\_audit\_original.py} and \texttt{src/03\_compare\_original.py}, reading the originals without changing them.
+
+\section{The series}
+\texttt{UIBNDSI.xlsx} holds one summary table with no formulas: \texttt{FREQUENCY}, \texttt{SUM\_AREA\_G} and a file name carrying year and day, such as \texttt{2000057.dbf}. It has 909 records from 26 February 2000 to 19 December 2019. So all processing happened before the sheet, and the ArcPy steps are not in this folder.
+
+Most steps are 8 days. Shorter steps at year ends follow the MODIS calendar, and two 16-day steps show missing composites.
+
+\section{The area}
+The project's documents disagree about what ``Upper Indus'' means:
+
+\begin{tabular}{lr}
+\toprule
+Source & Area (km$^2$) \\
+\midrule
+Proposal & 478,310 \\
+Report & about 175,000 \\
+HydroBASINS, above Tarbela (this audit) & about 164,000 \\
+Largest snow area in the data & 340,549 \\
+\bottomrule
+\end{tabular}
+
+Snow area in the sheet exceeds the whole basin above Tarbela, so the data cannot be that basin. Against new MOD10A2 series, the data match the Indus above Sukkur ($r=0.991$, median ratio 0.99), and not the basin above Tarbela ($r=0.927$, ratio 1.78). The sheet is therefore about a larger area than the report describes.
+
+\section{Trend}
+Annual means from the original data show no significant trend ($\tau=0.20$, $p=0.24$), and a straight line through the 8-day values explains 0.04\% of their variance, since the seasonal cycle dominates. The new series agree on the absence of a significant trend.
+
+\section{Report}
+The report contains statements about 2003 and 2013, and about 2005 and 2015, which do not arise from a 2000--2019 analysis, and it uses images taken from other websites. Its text must not be reused, as already recorded. Nothing from it enters the manuscript.
+\end{document}

@@ -1,0 +1,41 @@
+SHEET UIBNDSI A1:C910
+   ['FREQUENCY', 'SUM_AREA_G', 'Day']
+   ['1', '268607.074052', '2000057.dbf']
+   ['1', '267689.229103', '2000065.dbf']
+   ['1', '264902.304225', '2000073.dbf']
+   charts 0
+series 909 2000-02-26 2019-12-19 ['date', 'year', 'doy', 'area', 'FREQUENCY']
+area min, median, max 24237.8254026 182142.036683 340549.161074
+steps of other than 8 days {5.0: 15, 6.0: 5, 7.0: 4, 16.0: 2, 9.0: 2, 1.0: 2} duplicates 0
+annual mean trend 399.3337983242236 tau, p SignificanceResult(statistic=np.float64(0.20467836257309938), pvalue=np.float64(0.2377832201095029))
+linear r2 on raw 8-day 0.0004144098174635373
+
+DOC Snow Cover Area Change Assessment in Upper Indus Basin from 2000-2019 using MODIS Data (Project Proposal - Ahmad Ammar).docx 1122 words
+  > Snow Cover Area or SCA is a measure of water stored in solid form in a basin. Studying the availability and extent of snow is important because ~a billion people globally depend on snowmelt for freshwater and knowing the trends are important for water resource management and clim
+  > Upper Indus Basin spans over areas of Afghanistan, Pakistan, India and China, and has an approximate Area of 478310.338518 sq. km. UIB makes up a significant portion of Hindukush Himalayan (HKH) and Karakoram regions which are known as the Third Pole of Earth (TPE). This shows th
+  > Snow, especially fresh snow appears white to our eyes which tells us that it is highly reflective in the visible region of the electromagnetic spectrum, whereas it absorbs highly in Near Infrared and Shortwave Infrared regions of the spectrum like water. Based on these properties
+  > 4.  V. V. Salomonson and I. Appel, “Development of the aqua MODIS NDSI fractional snow cover algorithm and validation results,” IEEE Trans. Geosci. Remote Sens., vol. 44, no. 7, pp. 1747–1756, 2006.
+
+DOC Snow Cover Area Change Assessment in Upper Indus Basin.docx 3156 words
+  > Snow cover area (SCA) is an important component of the solid water reservoir in the catchment. The study of snow trends is essential for managing water resources and for understanding regional climate change. Changes in the snow budget have socioeconomic and environmental implica
+  > The dynamic hydrological zone of the UIB lies in the high-altitude Himalaya and Karakoram Ranges. Many authors stated that over 65% of the annual flow of the Upper Indus River is contributed by the seasonal and stable snowfields and glacierized areas above 3500 m in elevation. Al
+  > |   Orbit              |   705 km, 10:30 a.m. descending node (Terra) or 1:30 p.m. ascending node (Aqua), sun-synchronous, near-polar, circular |
+  > |   Swath Dimensions   |   2330 km (cross track) by 10 km (along track at nadir)                                                                |
+  > Fresh dry snow appears white to the receptors of human eye. So it is asserted as highly reflective, with little variation over the range of wavelength (nearly 0.4 to 0.65 m) to which the eye is sensitive. The reason is dielectric properties of ice, and the fact that ice constitut
+  > The density of snow does not affect reflectance directly, though the processes of metamorphism that cause the increase in density over time also leads to an increase in grain size and hence a eventual decrease in reflectance. With the passage of time snow pack ages, compressional
+  > Reflectance of the snow gets little effect with the presence of liquid water in a snow pack. The amount of water rarely exceeds 10% by volume and there is in any case competent dielectric contrast between water and ice to ensure that the multiple-scattering phenomenon continues t
+  > MODIS holds special potential to address Normalized Difference Snow Index (NDSI). Normalized Difference Snow Index is prototype of normalized differences indices. It is originated from well known NDVI (Normalized Difference Vegetation Index). This index artfully exploits the inte
+  > [http://slideplayer.com/slide/5939365/20/images/8/NDSI+Algorithm+NDSI+=+NDSI+=.jpg]
+  > Resultant pixel values exceeding 0.4 in Equation are considered as snow but it is found that this threshold limit varies with season (Vogel 2002).
+  > An effort was made by Klein, Hall, and Riggs in 1998 and they successfully designed algorithm to map snow by using MODIS instrument. In this endeavor they defined that at pre-launch version of NDSI for MODIS, the pixels with NDSI value greater than or equal to 0.4 were considered
+  > [https://ars.els-cdn.com/content/image/1-s2.0-S0022169413008834-gr2.jpg]
+  > The study area consists of numerous sub-basins of UIB as shown in Figure, that lie between the source of Indus river and Tarbela reservoir covering a basin area of about 175,000 km2 (Tariq and van de Giesen, 2012). Major tributaries of UIB region include Shyok, Gilgit, Hunza, Kab
+  > The water flow in streams of the study area is characterized by seasonal snowmelt and melting of glacier ice, which is obviously increased during summer because of higher temperature. Snow and glacier melt is estimated to contribute more than 50% of the total flow to the Indus ri
+  > % in winter season. The UIB lacks major lakes and large forests; and about one quarter of the area is occupied by glaciers. Also in 2011, Bajracharya and Shrestha mapped a total 21,192.67 km2 glacier area in Indus basin with an overall area of 1,116,086 km2, and an estimated 2,69
+  > The UIB region is dominated by large glaciers as listed in Table 1 and there is a 5 to 10 times increase in precipitation from glacier termini (~ 2500 m) to accumulation zones above 4800 m. Maximum precipitation occurs between 5000 and 6000 m (Shroder, 1993). Whereas the elevatio
+  > NDSI was calculated and threshold values applied to generate SCA maps. Resultant rasters were converted into polygons to find area. The 8-day moving average over 10 years was plotted on a graph.
+  > The climate of UIB is altered by the factors like high maximum temperature and less solid precipitation. Global level it was predicted that 0.6°C temperature would increase for the time period of 2001 to 2010. But in actual it ended up with 0.93°C and particularly for Northern ar
+  > Maps depicted that from the start of March up to the end of September, the snow melted. High temperature during this period caused the depletion of snow cover especially at the low elevation (3000–5000 m) of HKH covering the SW and SE extent; but at the high altitude in UIB, part
+  > As we studied the maps, the anomaly was observed in the start of November: the snow cover was much high in 2003 as compared to 2013. From this study, the snow cover estimations demonstrated the retreat in area for the whole year of 2013 instead of few months: November, January an
+  > Overall the correlation between the year 2005 and 2015 snow cover area is found to be ~0.86.
+  > Major change in snow cover trend occured in first fifteen days of October (from September 30 to October 15 both in 2003 and 2013); and after that in first sixteen days of November (from Novermber 1 to 16 both in 2003 and 2013).
