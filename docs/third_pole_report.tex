@@ -84,6 +84,21 @@ Studies of this region are hard to combine because they use different boundaries
 
 The same standard will be applied in turn to glacier outlines and mass balance \citep{Hugonnet_2021}, climate series, and the monsoon indices.
 
+\section{Further checks}
+\paragraph{Himalayan loss.} Loss pixels lie mostly in the Eastern and Central Himalaya, next to the cloudiest ground. Following those pixels through 2003--2025 gives $\lossTerra{}$~days per decade in Terra, $\lossAqua{}$ in Aqua, and $\lossMerged{}$ with the two combined. It holds at thresholds of 30, 40 and 50. Clear days show no significant trend ($p=\clearTerraP{}$ and $\clearAquaP{}$). So changing cloud does not explain it. The pixels were chosen because Terra showed loss, so these rates overstate the typical pixel, and Aqua sees the same snow. Landsat or Sentinel-2 remain the proper independent test.
+
+\paragraph{Sub-basins.} Of \nSub{} sub-basins, \nSubRaw{} have $p<0.05$ and \nSubSig{} remain after correction. About nine would be expected by chance.
+
+\section{Method log}
+Decisions that changed results, newest last. Reasons are kept so that the same mistakes are not repeated.
+\begin{enumerate}
+\item Rectangular ranges replaced by GMBA divisions and HydroBASINS sub-basins.
+\item Hamed-Rao correction dropped: it gave near-zero $p$ for very weak trends in 25 values.
+\item False discovery threshold refined: bins of 0.0005 returned zero wrongly; bins of one millionth do not.
+\item The Tibetan Plateau tested at 500~m by batch, after timing out interactively, since a test at 1~km had found nothing.
+\item Literature search showed regional trend papers exist (see \texttt{gap\_analysis}), so the main question moves to why published trends disagree, and what can be detected.
+\end{enumerate}
+
 \section{Still to do}
 Complete the remaining ranges and the sub-basins; test the NDSI threshold, Aqua and gap filling; investigate the 2012 low in the Karakoram, where daily images are complete and a smaller dip also appears in MOD10A2; compare with MOYDGL06 \citep{Muhammad_2020}; validate against Landsat, Sentinel-2 and stations; and review the climate indices.
 

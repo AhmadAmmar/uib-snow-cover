@@ -195,6 +195,15 @@ def main():
         lab = "stable seasonal" if name == "no detectable trend" else name
         values[f"km {tag}"] = int(c[c.cls_name == lab].km2.sum())
     values["km classified"] = int(total)
+    # the largest range was tested at 500 m by batch, while its class table is at 1 km
+    tib = pd.read_csv(O / "tibet_change_500m.csv").iloc[0]
+    values["km gain"] += int(tib.gain)
+    values["km loss"] += int(tib.loss)
+    values["km stable"] -= int(tib.gain + tib.loss)
+    sb = pd.read_csv(O / "subbasin_trends.csv")
+    values.update(nSub=len(sb), nSubRaw=int((sb.p < 0.05).sum()), nSubSig=int((sb.q < 0.05).sum()))
+    lt = pd.read_csv(O / "loss_tests_summary.csv").set_index("series")
+    values.update(lossTerra=(lt.loc["terra40", "slope_days_decade"], 1), lossAqua=(lt.loc["aqua40", "slope_days_decade"], 1), lossMerged=(lt.loc["merged", "slope_days_decade"], 1), clearTerraP=(lt.loc["terra40", "clear_p"], 2), clearAquaP=(lt.loc["aqua40", "clear_p"], 2))
     write_values(G / "values.tex", values)
     show = x.sort_values(["level", "parent", "km2"], ascending=[False, True, False])
     head = ["Unit", "Parent", "Area (km$^2$)", "Mean (days)", "Sen slope (days per decade)", "$p$", "$q$"]
