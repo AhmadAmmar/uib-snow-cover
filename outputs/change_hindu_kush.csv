@@ -1,19 +1,19 @@
 unit,level,cls,on_glacier,km2,cls_name
 Hindu Kush,range,0,0,432.1568599360299,too little data
-Hindu Kush,range,0,1,268.8877708235296,too little data
-Hindu Kush,range,1,0,103229.14155346347,rarely snow
-Hindu Kush,range,2,0,199428.26196671938,stable seasonal
-Hindu Kush,range,2,1,3240.645509224078,stable seasonal
-Hindu Kush,range,5,0,271.10211493750035,persistent
+Hindu Kush,range,0,1,268.88777082352965,too little data
+Hindu Kush,range,1,0,103229.14155346349,rarely snow
+Hindu Kush,range,2,0,199428.2619667194,stable seasonal
+Hindu Kush,range,2,1,3240.6455092240776,stable seasonal
+Hindu Kush,range,5,0,271.1021149375004,persistent
 Hindu Kush,range,5,1,1251.2412477499959,persistent
-Western Hindu Kush,division,0,0,140.73974911200978,too little data
-Western Hindu Kush,division,1,0,84490.95393409747,rarely snow
-Western Hindu Kush,division,2,0,117260.21364946436,stable seasonal
+Western Hindu Kush,division,0,0,140.7397491120098,too little data
+Western Hindu Kush,division,1,0,84490.9539340975,rarely snow
+Western Hindu Kush,division,2,0,117260.21364946442,stable seasonal
 Western Hindu Kush,division,2,1,4.4049341562499995,stable seasonal
 Eastern Hindu Kush,division,0,0,291.6282110078435,too little data
 Eastern Hindu Kush,division,0,1,268.88777082352954,too little data
-Eastern Hindu Kush,division,1,0,18736.611847502827,rarely snow
-Eastern Hindu Kush,division,2,0,82167.96298482227,stable seasonal
-Eastern Hindu Kush,division,2,1,3236.2405750678295,stable seasonal
-Eastern Hindu Kush,division,5,0,271.1021149375004,persistent
-Eastern Hindu Kush,division,5,1,1251.241247749996,persistent
+Eastern Hindu Kush,division,1,0,18736.61184750283,rarely snow
+Eastern Hindu Kush,division,2,0,82167.96298482228,stable seasonal
+Eastern Hindu Kush,division,2,1,3236.24057506783,stable seasonal
+Eastern Hindu Kush,division,5,0,271.10211493750035,persistent
+Eastern Hindu Kush,division,5,1,1251.2412477499963,persistent

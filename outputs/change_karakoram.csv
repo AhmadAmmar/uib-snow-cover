@@ -1,16 +1,20 @@
 unit,level,cls,on_glacier,km2,cls_name
-Karakoram,range,0,0,6135.377544505406,too little data
-Karakoram,range,0,1,9842.3391287164,too little data
-Karakoram,range,1,0,12380.894198332846,rarely snow
+Karakoram,range,0,0,6135.377544505408,too little data
+Karakoram,range,0,1,9842.339128716398,too little data
+Karakoram,range,1,0,12380.549091926598,rarely snow
 Karakoram,range,1,1,74.30138023743876,rarely snow
-Karakoram,range,2,0,35492.00813946869,stable seasonal
-Karakoram,range,2,1,6506.852507329479,stable seasonal
+Karakoram,range,2,0,35476.11300362752,stable seasonal
+Karakoram,range,2,1,6448.143001378498,stable seasonal
+Karakoram,range,3,0,1.3969468125,gain
+Karakoram,range,3,1,1.7310409843749999,gain
+Karakoram,range,4,0,14.843295434926471,loss
+Karakoram,range,4,1,56.978464966605394,loss
 Karakoram,range,5,0,404.5997972183823,persistent
-Karakoram,range,5,1,3776.040031772616,persistent
-Ladakh Range,division,0,0,124.26979047959553,too little data
+Karakoram,range,5,1,3776.0400317726157,persistent
+Ladakh Range,division,0,0,124.26979047959554,too little data
 Ladakh Range,division,0,1,72.26144921875006,too little data
-Ladakh Range,division,1,0,3639.7154059729155,rarely snow
-Ladakh Range,division,2,0,9000.809940619547,stable seasonal
+Ladakh Range,division,1,0,3639.715405972915,rarely snow
+Ladakh Range,division,2,0,9000.809940619549,stable seasonal
 Ladakh Range,division,2,1,839.5426114843751,stable seasonal
 Ladakh Range,division,5,0,0.176164734375,persistent
 Ladakh Range,division,5,1,3.348187375,persistent
@@ -18,40 +22,51 @@ Saltoro Mountains,division,0,0,798.4493484151337,too little data
 Saltoro Mountains,division,0,1,1394.3887523150145,too little data
 Saltoro Mountains,division,1,0,684.9563508227328,rarely snow
 Saltoro Mountains,division,1,1,0.0513648893382353,rarely snow
-Saltoro Mountains,division,2,0,2038.5909797705788,stable seasonal
-Saltoro Mountains,division,2,1,409.1011081085173,stable seasonal
-Saltoro Mountains,division,5,0,20.27770640625,persistent
-Saltoro Mountains,division,5,1,160.00990627015952,persistent
+Saltoro Mountains,division,2,0,2034.0321259424538,stable seasonal
+Saltoro Mountains,division,2,1,402.9638764366422,stable seasonal
+Saltoro Mountains,division,4,0,4.558853828125,loss
+Saltoro Mountains,division,4,1,6.137231671875001,loss
+Saltoro Mountains,division,5,0,20.277706406249997,persistent
+Saltoro Mountains,division,5,1,160.0099062701595,persistent
 Masherbrum Mountains,division,0,0,1092.749514143552,too little data
 Masherbrum Mountains,division,0,1,924.5476414225459,too little data
 Masherbrum Mountains,division,1,0,716.7551534848692,rarely snow
 Masherbrum Mountains,division,1,1,4.214689645404411,rarely snow
 Masherbrum Mountains,division,2,0,1737.1058349601653,stable seasonal
-Masherbrum Mountains,division,2,1,310.84218995030614,stable seasonal
+Masherbrum Mountains,division,2,1,308.1187084164213,stable seasonal
+Masherbrum Mountains,division,4,1,2.723481533884804,loss
 Masherbrum Mountains,division,5,0,5.222620015625001,persistent
 Masherbrum Mountains,division,5,1,43.50584291041665,persistent
 Baltoro Muztagh,division,0,0,304.76407429166824,too little data
 Baltoro Muztagh,division,0,1,1097.023711896134,too little data
 Baltoro Muztagh,division,1,0,226.48685887064937,rarely snow
 Baltoro Muztagh,division,1,1,29.768878586948524,rarely snow
-Baltoro Muztagh,division,2,0,670.7283791963883,stable seasonal
-Baltoro Muztagh,division,2,1,358.75497178020976,stable seasonal
+Baltoro Muztagh,division,2,0,670.2083473057633,stable seasonal
+Baltoro Muztagh,division,2,1,350.36049018523386,stable seasonal
+Baltoro Muztagh,division,3,1,1.38552725,gain
+Baltoro Muztagh,division,4,0,0.520031890625,loss
+Baltoro Muztagh,division,4,1,7.008954344975491,loss
 Baltoro Muztagh,division,5,0,21.7272063254902,persistent
 Baltoro Muztagh,division,5,1,210.4943810321683,persistent
 Batura Muztagh,division,0,0,731.2264994133028,too little data
-Batura Muztagh,division,0,1,775.0374008788567,too little data
-Batura Muztagh,division,1,0,971.9547915177687,rarely snow
+Batura Muztagh,division,0,1,775.0374008788568,too little data
+Batura Muztagh,division,1,0,971.8214857098643,rarely snow
 Batura Muztagh,division,1,1,14.132824671875001,rarely snow
 Batura Muztagh,division,2,0,3320.06974349112,stable seasonal
-Batura Muztagh,division,2,1,775.8102700947306,stable seasonal
-Batura Muztagh,division,5,0,56.866393168566134,persistent
+Batura Muztagh,division,2,1,773.2271203916056,stable seasonal
+Batura Muztagh,division,3,0,0.13330580790441177,gain
+Batura Muztagh,division,4,1,2.5831497031249997,loss
+Batura Muztagh,division,5,0,56.86639316856613,persistent
 Batura Muztagh,division,5,1,490.9712494675238,persistent
 Hispar Muztagh,division,0,0,241.23798753805212,too little data
 Hispar Muztagh,division,0,1,1015.249684771142,too little data
-Hispar Muztagh,division,1,0,193.77053410729107,rarely snow
+Hispar Muztagh,division,1,0,193.55941018817342,rarely snow
 Hispar Muztagh,division,1,1,6.196262148897059,rarely snow
-Hispar Muztagh,division,2,0,804.3948166696694,stable seasonal
-Hispar Muztagh,division,2,1,318.19179604264707,stable seasonal
+Hispar Muztagh,division,2,0,804.2220643259194,stable seasonal
+Hispar Muztagh,division,2,1,317.15642643327203,stable seasonal
+Hispar Muztagh,division,3,0,0.3838762628676471,gain
+Hispar Muztagh,division,3,1,0.345513734375,gain
+Hispar Muztagh,division,4,1,0.6898558749999999,loss
 Hispar Muztagh,division,5,0,19.235261073529422,persistent
 Hispar Muztagh,division,5,1,269.865698270713,persistent
 Panmah Muztagh,division,0,0,144.32132764583434,too little data
@@ -59,7 +74,8 @@ Panmah Muztagh,division,0,1,357.8829643501809,too little data
 Panmah Muztagh,division,1,0,20.89799933125,rarely snow
 Panmah Muztagh,division,1,1,4.784722741605391,rarely snow
 Panmah Muztagh,division,2,0,141.16892637113992,stable seasonal
-Panmah Muztagh,division,2,1,109.85578502732781,stable seasonal
+Panmah Muztagh,division,2,1,109.16878428890871,stable seasonal
+Panmah Muztagh,division,4,1,0.6870007384191177,loss
 Panmah Muztagh,division,5,0,3.404591348345588,persistent
 Panmah Muztagh,division,5,1,107.87907952211987,persistent
 Rakaposhi Range,division,0,0,406.0952162039913,too little data
@@ -67,30 +83,37 @@ Rakaposhi Range,division,0,1,247.88755640753752,too little data
 Rakaposhi Range,division,1,0,574.7834619675231,rarely snow
 Rakaposhi Range,division,1,1,3.1284919661764707,rarely snow
 Rakaposhi Range,division,2,0,588.2201104111489,stable seasonal
-Rakaposhi Range,division,2,1,122.4858951789213,stable seasonal
+Rakaposhi Range,division,2,1,121.44843260079631,stable seasonal
+Rakaposhi Range,division,4,1,1.037462578125,loss
 Rakaposhi Range,division,5,0,9.787804109865194,persistent
 Rakaposhi Range,division,5,1,98.47499182230368,persistent
 Rimo Muztagh,division,0,0,205.4726321769602,too little data
-Rimo Muztagh,division,0,1,848.9124665933756,too little data
+Rimo Muztagh,division,0,1,848.9124665933757,too little data
 Rimo Muztagh,division,1,0,83.12009006740206,rarely snow
 Rimo Muztagh,division,1,1,0.17515109375,rarely snow
-Rimo Muztagh,division,2,0,569.5835976427702,stable seasonal
-Rimo Muztagh,division,2,1,215.20728901881137,stable seasonal
+Rimo Muztagh,division,2,0,566.4567429586403,stable seasonal
+Rimo Muztagh,division,2,1,200.7455792054536,stable seasonal
+Rimo Muztagh,division,4,0,3.126854684129902,loss
+Rimo Muztagh,division,4,1,14.461709813357846,loss
 Rimo Muztagh,division,5,0,25.166095859374998,persistent
-Rimo Muztagh,division,5,1,336.32785082567386,persistent
-Saser Muztagh,division,0,0,406.4079166068616,too little data
+Rimo Muztagh,division,5,1,336.3278508256739,persistent
+Saser Muztagh,division,0,0,406.40791660686153,too little data
 Saser Muztagh,division,0,1,871.1129481500546,too little data
-Saser Muztagh,division,1,0,792.8715642789233,rarely snow
+Saser Muztagh,division,1,0,792.8715642789232,rarely snow
 Saser Muztagh,division,1,1,0.35102159375,rarely snow
-Saser Muztagh,division,2,0,1548.4213721550223,stable seasonal
-Saser Muztagh,division,2,1,386.99702476795323,stable seasonal
+Saser Muztagh,division,2,0,1547.544606873772,stable seasonal
+Saser Muztagh,division,2,1,385.0680933907473,stable seasonal
+Saser Muztagh,division,4,0,0.87676528125,loss
+Saser Muztagh,division,4,1,1.9289313772058825,loss
 Saser Muztagh,division,5,0,28.323985843750002,persistent
 Saser Muztagh,division,5,1,320.6943879531251,persistent
 Siachen Muztagh,division,0,0,23.685049906678913,too little data
 Siachen Muztagh,division,0,1,316.94135847549063,too little data
 Siachen Muztagh,division,1,0,21.643596974387233,rarely snow
-Siachen Muztagh,division,2,0,439.680836310234,stable seasonal
-Siachen Muztagh,division,2,1,184.2460810736523,stable seasonal
+Siachen Muztagh,division,2,0,438.4609625144618,stable seasonal
+Siachen Muztagh,division,2,1,180.5920884642773,stable seasonal
+Siachen Muztagh,division,4,0,1.219873795772059,loss
+Siachen Muztagh,division,4,1,3.653992609374999,loss
 Siachen Muztagh,division,5,0,35.490286616789206,persistent
 Siachen Muztagh,division,5,1,369.8915679669116,persistent
 Spantik-Sosbun Mountains,division,0,0,389.4577258083939,too little data
@@ -98,7 +121,8 @@ Spantik-Sosbun Mountains,division,0,1,508.57001287585445,too little data
 Spantik-Sosbun Mountains,division,1,0,111.51011778161744,rarely snow
 Spantik-Sosbun Mountains,division,1,1,0.7482254329656863,rarely snow
 Spantik-Sosbun Mountains,division,2,0,720.0783798651966,stable seasonal
-Spantik-Sosbun Mountains,division,2,1,358.0630933746928,stable seasonal
+Spantik-Sosbun Mountains,division,2,1,357.70872023811194,stable seasonal
+Spantik-Sosbun Mountains,division,4,1,0.3543731365808824,loss
 Spantik-Sosbun Mountains,division,5,0,6.088434373468138,persistent
 Spantik-Sosbun Mountains,division,5,1,69.72198307077215,persistent
 Haramoshi Range,division,0,0,680.8666544226107,too little data
@@ -112,41 +136,53 @@ South Ghujerab Mountains,division,0,0,175.86430343541724,too little data
 South Ghujerab Mountains,division,0,1,328.67716090888337,too little data
 South Ghujerab Mountains,division,1,0,366.3751035996943,rarely snow
 South Ghujerab Mountains,division,1,1,4.734419397671568,rarely snow
-South Ghujerab Mountains,division,2,0,2109.9966680635516,stable seasonal
-South Ghujerab Mountains,division,2,1,421.88096953437446,stable seasonal
-South Ghujerab Mountains,division,5,0,43.66048866121319,persistent
+South Ghujerab Mountains,division,2,0,2107.932427938552,stable seasonal
+South Ghujerab Mountains,division,2,1,417.7424281941172,stable seasonal
+South Ghujerab Mountains,division,4,0,2.064240125,loss
+South Ghujerab Mountains,division,4,1,4.138541340257354,loss
+South Ghujerab Mountains,division,5,0,43.6604886612132,persistent
 South Ghujerab Mountains,division,5,1,295.8654682665447,persistent
 North Ghunjerab Mountains,division,0,0,117.97565029473034,too little data
 North Ghunjerab Mountains,division,0,1,149.483841502635,too little data
 North Ghunjerab Mountains,division,1,0,40.61768019068634,rarely snow
-North Ghunjerab Mountains,division,2,0,2911.578001559092,stable seasonal
-North Ghunjerab Mountains,division,2,1,392.5134201772662,stable seasonal
+North Ghunjerab Mountains,division,2,0,2910.2061373559673,stable seasonal
+North Ghunjerab Mountains,division,2,1,390.9697665522664,stable seasonal
+North Ghunjerab Mountains,division,4,0,1.3718642031250001,loss
+North Ghunjerab Mountains,division,4,1,1.5436536250000001,loss
 North Ghunjerab Mountains,division,5,0,73.04180371672798,persistent
-North Ghunjerab Mountains,division,5,1,338.8658149012251,persistent
+North Ghunjerab Mountains,division,5,1,338.86581490122506,persistent
 Yengisogat,division,0,0,75.61208887224277,too little data
 Yengisogat,division,0,1,295.88668116372446,too little data
 Yengisogat,division,1,0,228.0714700630519,rarely snow
 Yengisogat,division,1,1,5.983398357904409,rarely snow
-Yengisogat,division,2,0,588.3991649099245,stable seasonal
-Yengisogat,division,2,1,187.81617243609125,stable seasonal
+Yengisogat,division,2,0,587.8798431911746,stable seasonal
+Yengisogat,division,2,1,179.01168700576025,stable seasonal
+Yengisogat,division,3,0,0.3463165625,gain
+Yengisogat,division,4,0,0.17300515625,loss
+Yengisogat,division,4,1,8.804485430330882,loss
 Yengisogat,division,5,0,24.730853984375,persistent
 Yengisogat,division,5,1,252.86916472322454,persistent
-Chang Chenmo Range,division,0,0,153.2268931811887,too little data
+Chang Chenmo Range,division,0,0,153.22689318118867,too little data
 Chang Chenmo Range,division,0,1,142.98631339062493,too little data
-Chang Chenmo Range,division,1,0,1717.0422129789217,rarely snow
-Chang Chenmo Range,division,2,0,5930.566541849908,stable seasonal
-Chang Chenmo Range,division,2,1,652.7809039075385,stable seasonal
-Chang Chenmo Range,division,5,0,26.501325515625016,persistent
+Chang Chenmo Range,division,1,0,1717.0422129789222,rarely snow
+Chang Chenmo Range,division,2,0,5929.857000037409,stable seasonal
+Chang Chenmo Range,division,2,1,652.2510248919134,stable seasonal
+Chang Chenmo Range,division,3,0,0.5327715,gain
+Chang Chenmo Range,division,4,0,0.1767703125,loss
+Chang Chenmo Range,division,4,1,0.529879015625,loss
+Chang Chenmo Range,division,5,0,26.501325515625012,persistent
 Chang Chenmo Range,division,5,1,316.9476639386652,persistent
 Pangong Range,division,0,0,46.058388578125005,too little data
 Pangong Range,division,0,1,24.369036296874985,too little data
-Pangong Range,division,1,0,858.7521812395179,rarely snow
-Pangong Range,division,2,0,549.2666789169732,stable seasonal
+Pangong Range,division,1,0,858.752181239518,rarely snow
+Pangong Range,division,2,0,549.2666789169731,stable seasonal
 Pangong Range,division,2,1,54.43900534375005,stable seasonal
 Northern Karakorum,division,0,0,17.157766041115202,too little data
 Northern Karakorum,division,0,1,65.34350181066175,too little data
 Northern Karakorum,division,1,0,645.4718197569829,rarely snow
-Northern Karakorum,division,2,0,925.4178731785596,stable seasonal
-Northern Karakorum,division,2,1,192.51596844987768,stable seasonal
+Northern Karakorum,division,2,0,924.8997974910596,stable seasonal
+Northern Karakorum,division,2,1,191.82496868425272,stable seasonal
+Northern Karakorum,division,4,0,0.5180756875000001,loss
+Northern Karakorum,division,4,1,0.690999765625,loss
 Northern Karakorum,division,5,0,1.8990902187499998,persistent
 Northern Karakorum,division,5,1,32.79901670312502,persistent

@@ -1,31 +1,41 @@
 unit,level,cls,on_glacier,km2,cls_name
-Tian Shan,range,0,0,9119.328344768031,too little data
+Tian Shan,range,0,0,9119.328344768035,too little data
 Tian Shan,range,0,1,1276.1044372343756,too little data
-Tian Shan,range,1,0,96148.35044090384,rarely snow
+Tian Shan,range,1,0,96148.35044090381,rarely snow
 Tian Shan,range,1,1,15.245579046875005,rarely snow
-Tian Shan,range,2,0,437821.35788306943,stable seasonal
-Tian Shan,range,2,1,9869.496715906242,stable seasonal
+Tian Shan,range,2,0,437787.962504225,stable seasonal
+Tian Shan,range,2,1,9758.853470703118,stable seasonal
+Tian Shan,range,3,1,0.31768046875,gain
+Tian Shan,range,4,0,33.395378844362746,loss
+Tian Shan,range,4,1,110.32556473437504,loss
 Tian Shan,range,5,0,797.6964963887873,persistent
-Tian Shan,range,5,1,5119.2210981718645,persistent
-Eastern Tian Shan,division,0,0,4011.3682952662407,too little data
-Eastern Tian Shan,division,0,1,302.5171220799018,too little data
-Eastern Tian Shan,division,1,0,36738.57741298209,rarely snow
-Eastern Tian Shan,division,2,0,174427.57151765865,stable seasonal
-Eastern Tian Shan,division,2,1,2624.015109923286,stable seasonal
+Tian Shan,range,5,1,5119.221098171863,persistent
+Eastern Tian Shan,division,0,0,4011.3682952662402,too little data
+Eastern Tian Shan,division,0,1,302.51712207990187,too little data
+Eastern Tian Shan,division,1,0,36738.57741298211,rarely snow
+Eastern Tian Shan,division,2,0,174403.69084061112,stable seasonal
+Eastern Tian Shan,division,2,1,2565.8646067670356,stable seasonal
+Eastern Tian Shan,division,4,0,23.880677047487744,loss
+Eastern Tian Shan,division,4,1,58.150503156250004,loss
 Eastern Tian Shan,division,5,0,165.94798354687495,persistent
 Eastern Tian Shan,division,5,1,964.6853899501837,persistent
 Western Tian Shan,division,0,0,499.80935871292917,too little data
 Western Tian Shan,division,0,1,32.176953031249994,too little data
-Western Tian Shan,division,1,0,33169.8111709269,rarely snow
-Western Tian Shan,division,2,0,136140.2647187681,stable seasonal
-Western Tian Shan,division,2,1,1890.759537701469,stable seasonal
-Western Tian Shan,division,5,0,151.09293460937505,persistent
+Western Tian Shan,division,1,0,33169.811170926885,rarely snow
+Western Tian Shan,division,2,0,136140.10213951807,stable seasonal
+Western Tian Shan,division,2,1,1890.1072179358441,stable seasonal
+Western Tian Shan,division,4,0,0.16257925,loss
+Western Tian Shan,division,4,1,0.6523197656249999,loss
+Western Tian Shan,division,5,0,151.09293460937502,persistent
 Western Tian Shan,division,5,1,468.91332084375017,persistent
-Central Tian Shan,division,0,0,4609.594730054905,too little data
+Central Tian Shan,division,0,0,4609.594730054904,too little data
 Central Tian Shan,division,0,1,941.4097414917273,too little data
-Central Tian Shan,division,1,0,26236.03715360315,rarely snow
+Central Tian Shan,division,1,0,26236.037153603156,rarely snow
 Central Tian Shan,division,1,1,15.245579046875006,rarely snow
-Central Tian Shan,division,2,0,127251.89366781901,stable seasonal
-Central Tian Shan,division,2,1,5354.719585756495,stable seasonal
-Central Tian Shan,division,5,0,480.65557823253755,persistent
-Central Tian Shan,division,5,1,3685.6217664213295,persistent
+Central Tian Shan,division,2,0,127242.54154527212,stable seasonal
+Central Tian Shan,division,2,1,5302.879163475241,stable seasonal
+Central Tian Shan,division,3,1,0.31768046875,gain
+Central Tian Shan,division,4,0,9.352122546875002,loss
+Central Tian Shan,division,4,1,51.522741812499994,loss
+Central Tian Shan,division,5,0,480.65557823253744,persistent
+Central Tian Shan,division,5,1,3685.621766421329,persistent

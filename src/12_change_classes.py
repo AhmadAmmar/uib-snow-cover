@@ -23,7 +23,7 @@ ROOT = "projects/ee-ahmadammargeo/assets/tp_snow_v1"
 YEARS = list(range(2001, 2026))
 MIN_VALID, MIN_YEARS, Q = 120, 20, 0.05
 RARE_DAYS, PERSISTENT = 15, 0.8
-BINS = 2000
+BINS, TOP = 2000, 0.002
 SCALE = 463.3127
 
 
@@ -53,13 +53,14 @@ def mann_kendall(dur):
 
 
 def bh_threshold(p, geom, scale=SCALE):
-    """Largest p threshold meeting Benjamini-Hochberg, from a fine histogram over the region."""
-    h = p.reduceRegion(ee.Reducer.fixedHistogram(0, 1, BINS), geom, scale, maxPixels=1e10, tileScale=8).getInfo()["p"]
-    total = sum(c for _, c in h)
+    """Largest p threshold meeting Benjamini-Hochberg. Bins of one millionth up to TOP: a coarser histogram returned zero wrongly."""
+    p = p.rename("p")
+    total = p.reduceRegion(ee.Reducer.count(), geom, scale, maxPixels=1e10, tileScale=8).getInfo()["p"]
+    h = p.updateMask(p.lt(TOP)).reduceRegion(ee.Reducer.fixedHistogram(0, TOP, BINS), geom, scale, maxPixels=1e10, tileScale=8).getInfo()["p"]
     cum, best = 0, 0.0
     for lo, c in h:
         cum += c
-        edge = lo + 1 / BINS
+        edge = lo + TOP / BINS
         if cum and edge <= Q * cum / total:
             best = edge
     return best, total
@@ -95,7 +96,7 @@ def main(name, *flags):
     thr, tested = bh_threshold(p, rng, scale)
     print(name, "tested pixels", int(tested), "BH p threshold", round(thr, 5))
     mean = dur.reduce(ee.Reducer.mean())
-    sig = p.lte(thr).unmask(0)
+    sig = (p.lte(thr) if thr else p.lt(0)).unmask(0)
     cls = (ee.Image(0).where(enough, 2).where(enough.And(mean.lt(RARE_DAYS)), 1)
            .where(enough.And(sig).And(s.gt(0)), 3).where(enough.And(sig).And(s.lt(0)), 4)
            .where(enough.And(late.gte(PERSISTENT)), 5).rename("cls").clip(rng).toByte())
