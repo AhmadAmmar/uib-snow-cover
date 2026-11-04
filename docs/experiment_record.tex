@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\title{Snow cover project: experiment record}
+\author{Ahmad Ammar}
+\date{Internal. Newest last.}
+\begin{document}
+\maketitle
+Each entry gives the question, what changed, what it produced, how it was judged, and what it led to. The public
+manuscript reports only the final method and its benchmarks; the reasoning lives here. Numbers come from the
+generated values of the report (\texttt{docs/generated}), so this record and the report cannot drift apart.
+
+\section{The original series (MS-era work)}
+\textbf{What existed.} One summary table, \texttt{UIBNDSI.xlsx}: 909 records of snow area from 26 February 2000 to
+19 December 2019, from 8-day MODIS composites. The processing before the table was not kept, and the project's documents
+disagree about the boundary of the Upper Indus. See \texttt{original\_audit.tex}.
+\textbf{Judgement.} The table can be compared with, but not rebuilt into, a reproducible result. Statements in the old
+report about years outside the series cannot be supported by it.
+\textbf{Led to.} A rebuild from source data with a documented boundary.
+
+\section{Rebuild: 2001--2025, daily data, per-pixel change}
+\textbf{Change.} Daily MOD10A1 collection 6.1 at 500~m, hydrological years October to September, 2001--2025. Regions
+from GMBA mountain divisions and HydroBASINS sub-basins, replacing rectangles. Each pixel with at least 20 usable years
+tested with Mann-Kendall, with false discovery control at 5\%.
+\textbf{Why.} The 8-day product hides cloud gaps, and a regional mean hides opposite changes within a region. Per-pixel
+classes (gain, loss, no detectable trend, persistent, rarely snow, too little data) show where change happens.
+\textbf{Corrections on the way.} The Hamed-Rao correction gave near-zero $p$ for very weak trends in 25 values, and was
+dropped. A coarse histogram made the false discovery threshold return zero significant pixels wrongly; a finer one
+fixed it, and all ranges were rerun.
+\textbf{Result.} After correction, loss is concentrated in the Himalaya beside the cloudiest ground, little area gains,
+and almost no range or sub-basin mean shows a detectable trend. Loss is robust to using Aqua instead of Terra and to the
+snow threshold tested so far.
+
+\section{The literature, and what the question becomes}
+\textbf{Change.} Scopus queries and a citation corpus (\texttt{references/}), read against the provisional findings.
+\textbf{Result.} Regional trend studies exist and disagree. See \texttt{gap\_analysis.tex}.
+\textbf{Led to.} The main question moves from ``is snow changing'' to why published trends disagree, and how large a
+change can be detected with each sensor and period.
+
+\section{Further back in time}
+\textbf{Question.} Can the record start before 2000?
+\textbf{Change.} Landsat availability checked back to the 1970s; MSS has no shortwave infrared band, so it cannot
+compute NDSI in the same way. Harmonisation between Landsat sensors fitted from near-same-day pairs over the region,
+compared with the published coefficients of Roy et al.\ (2016).
+\textbf{Status.} Landsat can extend selected patches, not the whole region, before 2000. Still to do: a Landsat check on
+the Himalayan loss patches, and the AVHRR overlap.
+
+\section{Open steps}
+Detectability analysis; comparison with MOYDGL06; reasons published trends disagree, as a set of tested explanations.
+\end{document}
