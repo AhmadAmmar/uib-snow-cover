@@ -72,7 +72,32 @@ changes several times larger than any seen in 25 years, which is one tested reas
 \textbf{Led to.} Report the detectable size beside every trend. Next, test the other reasons for disagreement: period,
 product and cloud treatment, and boundary.
 
+\section{Published studies rerun on their own periods (2026-11-14)}
+\textbf{Question.} When our data are cut to each published study's region and years, do they agree, and could the
+study's period have detected a trend at all?
+\textbf{Change.} \texttt{references/published\_trends.csv}: 16 MODIS studies, each with the result as stated in its
+abstract, quoted, with its DOI. Eleven map onto one of our ranges or divisions; \texttt{src/25\_published\_rerun.py}
+reruns our duration trend over their years and sets it against the detectable size for that many years.
+\textbf{Result} (\texttt{outputs/published\_rerun.csv}, \texttt{figures/published\_rerun.png}). None of the eleven reruns is
+significant, and every observed trend is under 35\% of what its period could detect. Our direction agrees with the
+study in 7 of the 9 that report a direction. The three studies reporting significant trends (Choudhury 2021, Tripathi
+2026, Almagioni 2025) differ from ours in metric (area or persistence, not regional duration), in reporting a share of
+pixels rather than a regional mean, or in gap-filling.
+\textbf{Judgement.} Taken from abstracts only; full texts may refine the regions and metrics. The disagreement is
+mostly not between data but between what is measured and how much area is summarised.
+\textbf{Led to.} Test the metric and product directly (8-day snow-covered area, MOYDGL06), which is running.
+
+\section{Climate indices (2026-11-14)}
+\textbf{Change.} \texttt{src/28\_indices.py}: ENSO (ONI), Indian Ocean Dipole (DMI) and NAO, autumn and winter, with no
+lag and a one-year lag, against yearly duration in every range and division; Spearman correlation and false discovery
+control over all 564 tests. NAO stands in for western disturbances and is not a measure of them.
+\textbf{Result} (\texttt{outputs/indices\_attribution.csv}). 26 tests have $p<0.05$, close to the 28 expected by chance,
+and none survives false discovery control.
+\textbf{Judgement.} No evidence over 25 years that these indices drive year-to-year snow duration in any unit. Local
+temperature and snowfall (earlier attribution) remain the only associations that survive.
+
 \section{Open steps}
-Comparison with MOYDGL06; the remaining reasons published trends disagree (period, product, cloud treatment,
-boundary); Landsat check of the Himalayan loss patches; AVHRR overlap.
+Running: elevation bands (\texttt{src/24}), 8-day snow-covered area (\texttt{src/26}), MOYDGL06 (\texttt{src/31}), Landsat
+validation (\texttt{src/29}). Waiting for Earth Engine capacity: degree-day model (\texttt{src/27}), snow onset and
+melt-out dates. Needs an account or data request: river flow (GRDC or GloFAS). Planned separately: AVHRR before 2000.
 \end{document}
