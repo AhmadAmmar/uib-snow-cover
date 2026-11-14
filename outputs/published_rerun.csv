@@ -1,0 +1,12 @@
+study,doi,our_unit,years,n,reported_direction,reported_significance,reported_metric,our_sen_days_per_decade,our_mk_p,our_result,our_direction,detectable_days_per_decade,our_over_detectable
+Chu et al. 2014,10.1117/1.jrs.8.084690,Tibetan Plateau,2001-2013,13,none,not significant,snow-covered area,0.3011433717694256,0.9513521309544037,none,increase,14.911029889461977,0.020196014225835043
+Li et al. 2017,10.1002/joc.5204,Tibetan Plateau,2001-2014,14,decrease,not stated,snow cover fraction,0.41106356462093807,0.8266659696701553,none,increase,13.200721001863956,0.03113947825750544
+Wang et al. 2017,10.1038/s41598-017-15208-9,Tibetan Plateau,2001-2015,15,none,no widespread decline,snow cover duration,0.41106356462093807,0.8430852292699837,none,increase,11.785272574513657,0.034879427864051876
+Huang et al. 2018,10.1093/jpe/rty051,Tibetan Plateau,2003-2015,13,decrease,not stated,snow cover duration (non-growing season),-2.225360085544056,0.4277105102974643,none,decrease,14.911029889461977,0.14924254743240623
+Ga et al. 2018,10.3724/sp.j.1226.2017.00020,Tibetan Plateau,2003-2013,11,decrease,stated as remarkable,snow cover percentage,-5.2361853059779,0.35020138917929566,none,decrease,19.623535753068285,0.2668318987906745
+Thapa et al. 2020,10.3390/w12102681,Karakoram,2003-2018,16,decrease,not significant,snow-covered area,-2.5154575229348417,0.8218916912511594,none,decrease,25.35792367400134,0.09919808716491481
+Atif et al. 2018,10.3390/atmos9050162,Karakoram,2001-2015,15,increase,not stated,snow cover percentage,0.7422096689110447,1.0,none,increase,28.256038612447,0.02626729383729309
+Choudhury et al. 2021,10.3390/rs13040655,Kashmir Himalayas,2001-2019,19,increase,significant,snow-covered area,4.730752731140437,0.6242768461207494,none,increase,13.693265389076617,0.3454802486274932
+Tripathi et al. 2026,10.5194/isprs-archives-xlix-b3-2026-853-2026,Kashmir Himalayas,2001-2024,24,decrease,significant in about 29% of area,snow persistence,3.244906788000544,0.6024416860423838,none,increase,9.487468873691583,0.34202028288056435
+Tauqir et al. 2025,10.3390/rs17183175,Central Himalayas,2004-2024,21,decrease,not stated,snow-covered area by elevation,-2.722705197650639,0.41489093965848534,none,decrease,10.65371678716868,0.255563879915586
+Almagioni et al. 2025,10.3390/rs17050914,Kunlun Mountains,2001-2024,24,decrease,significant,snow cover extent,0.4092276795664713,0.8233490121001951,none,increase,6.200682911842581,0.0659971950484509
