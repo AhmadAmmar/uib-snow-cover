@@ -96,6 +96,19 @@ and none survives false discovery control.
 \textbf{Judgement.} No evidence over 25 years that these indices drive year-to-year snow duration in any unit. Local
 temperature and snowfall (earlier attribution) remain the only associations that survive.
 
+\section{The long record, 1967--2025 (2026-11-14)}
+\textbf{Question.} Does a longer record show change that 25 years of MODIS cannot detect?
+\textbf{Change.} \texttt{src/36\_nhsce.py}: NOAA Climate Data Record of Northern Hemisphere snow cover extent (weekly,
+cells of about 190~km, doi:10.7289/V5N014G9). Duration per range from cells whose centre lies inside it; Karakoram
+(3 cells) left out. Missing weeks (fill $-127$, 1968--1971) dropped.
+\textbf{Result} (\texttt{outputs/nhsce\_trends.csv}, \texttt{figures/nhsce\_long.png}). Over 2001--2025 the record follows
+MODIS from year to year ($r$ = 0.69--0.80; Tian Shan 0.49). Over 1967--2025 the Himalaya ($-7.8$ days per decade) and
+Pamir ($-16.5$) show significant loss larger than 57 years can detect. A Pettitt test puts the break in both at
+1998--2000, when the record moved from hand-drawn charts to the automated IMS analysis. Within 1967--1998 alone the
+Himalaya shows no trend ($p$ = 0.62), the Pamir a weak decline ($p$ = 0.03 before correction), and the Hindu Kush a gain.
+\textbf{Judgement.} The long-record loss is mostly a step at the change of method and cannot be read as climate change.
+Studies that take trends across 1999 in this record need to show they are not measuring that step.
+
 \section{Open steps}
 Running: elevation bands (\texttt{src/24}), 8-day snow-covered area (\texttt{src/26}), MOYDGL06 (\texttt{src/31}), Landsat
 validation (\texttt{src/29}). Waiting for Earth Engine capacity: degree-day model (\texttt{src/27}), snow onset and
