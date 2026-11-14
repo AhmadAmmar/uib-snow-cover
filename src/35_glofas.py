@@ -38,8 +38,8 @@ def download(first=2000, last=2025):
             continue
         c.retrieve("cems-glofas-historical", {
             "system_version": ["version_4_0"], "hydrological_model": ["lisflood"], "product_type": ["consolidated"],
-            "variable": ["river_discharge_in_the_last_24_hours"], "hyear": [str(y)],
-            "hmonth": [f"{m:02d}" for m in range(1, 13)], "hday": [f"{d:02d}" for d in range(1, 32)],
+            "variable": ["average_river_discharge_in_the_last_24_hours"], "timespan": ["time_mean"], "year": [str(y)],
+            "month": [f"{m:02d}" for m in range(1, 13)], "day": [f"{d:02d}" for d in range(1, 32)],
             "data_format": "netcdf", "download_format": "unarchived", "area": AREA}, str(out))
         print("downloaded", y, flush=True)
 
@@ -47,7 +47,7 @@ def download(first=2000, last=2025):
 def extract():
     import xarray as xr
     ds = xr.open_mfdataset(sorted(D.glob("glofas_*.nc")), combine="by_coords")
-    q = ds["dis24"]
+    q = ds[[v for v in ds.data_vars if ds[v].ndim == 3][0]]
     tname = [c for c in q.dims if "time" in c][0]
     mean = q.mean(tname).compute()
     rows = []
