@@ -59,6 +59,54 @@ def reduce(first=2001, last=2025):
         print(y, len(files), flush=True)
 
 
+def reduce_raw(first=2001, last=2025):
+    """The same counts from the unfilled MOD10A1 layer inside the same files: same pixels and days, cloud left out."""
+    from pyhdf.SD import SD, SDC
+    for y in range(first, last + 1):
+        out = D / f"counts_raw_{y}.npz"
+        files = sorted((D / str(y)).glob("*.hdf"))
+        if out.exists() or not files:
+            continue
+        snow = valid = None
+        for f in files:
+            a = SD(str(f), SDC.READ).select("MOD10A1_NDSI_Snow_Cover")[:].astype(np.int16)
+            if snow is None:
+                snow = np.zeros(a.shape, np.int16)
+                valid = np.zeros(a.shape, np.int16)
+            ok = a <= 100
+            snow += ok & (a >= 40)
+            valid += ok
+        np.savez_compressed(out, snow=snow, valid=valid, days=len(files))
+        print("raw", y, len(files), flush=True)
+
+
+def compare_same_pixels(unit="Karakoram", min_valid=120):
+    """Duration on identical pixels: gap-filled versus clear days only (scaled to 365, at least min_valid clear days)."""
+    import importlib.util
+    from scipy import stats
+    spec = importlib.util.spec_from_file_location("det", R / "src" / "22_detectability.py")
+    det = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(det)
+    m = tile_mask(unit)
+    rows = []
+    for y in range(2001, 2026):
+        f, g = D / f"counts_{y}.npz", D / f"counts_raw_{y}.npz"
+        if not (f.exists() and g.exists()):
+            continue
+        a, b = np.load(f), np.load(g)
+        ok = m & (b["valid"] >= min_valid) & (a["valid"] >= 300)
+        rows.append(dict(year=y, filled=float((a["snow"][ok].astype("float64") * 365 / a["valid"][ok]).mean()),
+                         clear_only=float((b["snow"][ok].astype("float64") * 365 / b["valid"][ok]).mean()),
+                         clear_days=float(b["valid"][ok].mean()), cells=int(ok.sum())))
+    t = pd.DataFrame(rows)
+    t.to_csv(R / "outputs/cloud_treatment_same_pixels.csv", index=False)
+    print(t.round(1).to_string(index=False))
+    print("r =", round(t.filled.corr(t.clear_only), 3), "| mean difference", round((t.filled - t.clear_only).mean(), 1), "days")
+    for col in ("filled", "clear_only"):
+        x, v = t.year.to_numpy(float), t[col].to_numpy()
+        print(col, "Sen", round(10 * det.sen(x, v), 2), "days/decade, p", round(2 * stats.norm.sf(abs(det.mk_z(v[None])[0])), 3))
+
+
 def timing(first=2001, last=2025, run=5):
     """Snow onset and melt-out per pixel, in days from 1 October, read in one pass with per-pixel counters.
     Onset: first day of the first spell of at least `run` consecutive snow days. Melt-out: last day of the last such
@@ -130,7 +178,7 @@ def compare():
         z = np.load(f)
         y = int(f.stem.split("_")[1])
         ok = m & (z["valid"] >= 300)
-        rows.append(dict(year=y, duration_cgf=float((z["snow"][ok] * 365 / z["valid"][ok]).mean()), cells=int(ok.sum()),
+        rows.append(dict(year=y, duration_cgf=float((z["snow"][ok].astype("float64") * 365 / z["valid"][ok]).mean()), cells=int(ok.sum()),
                          share_of_unit_in_tile=float(m.sum())))
     t = pd.DataFrame(rows)
     u = pd.read_csv(R / "outputs/unit_year.csv").query("unit == 'Karakoram' and level == 'range'")[["year", "duration"]]
@@ -142,4 +190,5 @@ def compare():
 
 if __name__ == "__main__":
     cmd, *rest = sys.argv[1:] or ["compare"]
-    {"download": download, "reduce": reduce, "compare": compare, "timing": timing, "timing_series": timing_series}[cmd](*map(int, rest))
+    {"download": download, "reduce": reduce, "reduce_raw": reduce_raw, "compare": compare, "compare_same_pixels": compare_same_pixels,
+     "timing": timing, "timing_series": timing_series}[cmd](*map(int, rest))
