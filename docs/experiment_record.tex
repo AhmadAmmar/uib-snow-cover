@@ -45,6 +45,34 @@ compared with the published coefficients of Roy et al.\ (2016).
 \textbf{Status.} Landsat can extend selected patches, not the whole region, before 2000. Still to do: a Landsat check on
 the Himalayan loss patches, and the AVHRR overlap.
 
+\section{Detectability (2026-11-14)}
+\textbf{Question.} How large a trend in snow-cover duration can each region's record detect, and are the observed
+trends below that size?
+\textbf{Change.} \texttt{src/22\_detectability.py}. For each range, division and sub-basin, yearly duration minus its
+Sen slope gives the year-to-year noise (standard deviation and lag-1 autocorrelation). AR(1) noise plus a linear trend
+was simulated 4,000 times per case, and the smallest trend a two-sided Mann-Kendall test ($\alpha=0.05$) detects in 80\%
+of runs was found for records of 10, 15, 20, 25 and 40 years. The detectable trend scales with the noise, so it is
+simulated once for unit noise on a grid of autocorrelation and scaled; a direct run agreed within 1\%.
+\textbf{Checks} (\texttt{outputs/detectability\_checks.csv}). False positive rate with no trend 0.046; Mann-Kendall
+$p$ agrees with scipy's Kendall $\tau$; Sen slope exact on a known line; detectable trend for white noise, 25 years,
+0.086 per year against 0.078 for a regression-slope test, as expected for a rank test with continuity correction.
+\textbf{Result} (\texttt{outputs/detectability.csv}, \texttt{figures/detectability.png}).
+\begin{itemize}
+\item Over 25 years a whole range can detect a change of 5--12 days per decade (median 6.6), 6--14\% of its mean
+duration per decade. Divisions need a median 11.5 days per decade, sub-basins a median 20\% of their mean per decade.
+\item No range, division or any of 165 sub-basins has an observed Sen slope as large as its detectable trend. The
+largest observed-to-detectable ratio is 0.67 for a range (Tian Shan) and 0.81 for a division (Masherbrum).
+\item A 10-year record needs a trend about 4.5 times larger than a 25-year one; 40 years would halve it.
+\item Karakoram and Pamir need about twice the trend of the other ranges, because their duration varies more
+from year to year.
+\end{itemize}
+\textbf{Judgement.} ``No detectable trend'' means trends smaller than roughly a tenth of the mean per decade cannot be
+ruled out; it is not evidence of no change. Studies built on ten to fifteen years of MODIS could only have detected
+changes several times larger than any seen in 25 years, which is one tested reason published trends disagree.
+\textbf{Led to.} Report the detectable size beside every trend. Next, test the other reasons for disagreement: period,
+product and cloud treatment, and boundary.
+
 \section{Open steps}
-Detectability analysis; comparison with MOYDGL06; reasons published trends disagree, as a set of tested explanations.
+Comparison with MOYDGL06; the remaining reasons published trends disagree (period, product, cloud treatment,
+boundary); Landsat check of the Himalayan loss patches; AVHRR overlap.
 \end{document}
