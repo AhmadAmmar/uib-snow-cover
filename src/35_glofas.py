@@ -1,7 +1,8 @@
 """Daily river discharge for the Upper Indus from the GloFAS v4 historical reanalysis (Copernicus Emergency Management
-Service, via the Climate Data Store: dataset cems-glofas-historical; licence accepted on the dataset page first).
+Service, via the Early Warning Data Store, ewds.climate.copernicus.eu: dataset cems-glofas-historical; licence
+accepted on the dataset page first). The same token as in ~/.cdsapirc is used.
 
-Needs ~/.cdsapirc with the user's own CDS token (url: https://cds.climate.copernicus.eu/api).
+Needs ~/.cdsapirc with the user's own token (the CDS and EWDS share one ECMWF account).
 Downloads one year per request over a small box around the gauges, to data/glofas/glofas_<year>.nc, then picks for each
 gauge the cell within 0.15 degrees with the largest mean discharge (the main channel; GloFAS cells are 0.05 degrees).
 Gauges (approximate published positions; check against the GloFAS upstream-area map before relying on one):
@@ -29,7 +30,8 @@ AREA = [36.5, 72.4, 34.6, 76.5]  # N, W, S, E
 def download(first=2000, last=2025):
     import cdsapi
     D.mkdir(parents=True, exist_ok=True)
-    c = cdsapi.Client()
+    key = [ln.split(":", 1)[1].strip() for ln in (Path.home() / ".cdsapirc").read_text().splitlines() if ln.startswith("key")][0]
+    c = cdsapi.Client(url="https://ewds.climate.copernicus.eu/api", key=key)  # GloFAS moved to the Early Warning Data Store
     for y in range(first, last + 1):
         out = D / f"glofas_{y}.nc"
         if out.exists():
