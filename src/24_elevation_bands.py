@@ -5,6 +5,7 @@ Elevation is the Copernicus GLO-30 DEM (2024_1 release), averaged to the 500 m M
 Output: outputs/band_year.csv (range, band_low_m, year, duration, pixels).
 Runs at 1 km scale with tileScale 8, like src/13. Resumes: years already in the file are skipped.
 """
+import time
 from pathlib import Path
 
 import ee
@@ -26,13 +27,13 @@ def key(n):
     return n.lower().replace(" ", "_")
 
 
-def rows(r, y, geom):
+def rows(r, y, geom, tile_scale=8):
     i = ee.Image(f"{ROOT}/{key(r)}_{y}")
     v = i.select("valid_days")
     dur = i.select("snow_days").multiply(365).divide(v).updateMask(v.gte(MIN_VALID)).rename("duration")
     band = DEM.reduceResolution(ee.Reducer.mean(), maxPixels=1024).reproject(i.projection()).divide(STEP).floor().int().rename("band")
     red = ee.Reducer.mean().combine(ee.Reducer.count(), sharedInputs=True).group(groupField=1, groupName="band")
-    g = dur.addBands(band).reduceRegion(red, geom, 1000, maxPixels=1e12, tileScale=8).get("groups").getInfo()
+    g = dur.addBands(band).reduceRegion(red, geom, 1000, maxPixels=1e12, tileScale=tile_scale).get("groups").getInfo()
     return [dict(range=r, band_low_m=int(x["band"]) * STEP, year=y, duration=x.get("mean"), pixels=x.get("count", 0)) for x in g if x.get("mean") is not None]
 
 
@@ -44,7 +45,15 @@ def main():
         for y in YEARS:
             if (r, y) in have:
                 continue
-            new = pd.DataFrame(rows(r, y, geom))
+            for attempt, ts in enumerate((8, 16, 16, 16)):       # on a timeout, split into smaller tiles and wait
+                try:
+                    new = pd.DataFrame(rows(r, y, geom, ts))
+                    break
+                except ee.EEException as e:
+                    if attempt == 3 or not any(s in str(e) for s in ("timed out", "Too Many Requests")):
+                        raise
+                    print("retry", r, y, str(e)[:40], flush=True)
+                    time.sleep(60)
             new.to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
             print(r, y, len(new), flush=True)
 
