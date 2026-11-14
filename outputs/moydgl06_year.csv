@@ -1,0 +1,753 @@
+unit,level,year,sca,composites
+Baltoro Muztagh,division,2003,0.8336527587643592,45
+Baltoro Muztagh,division,2004,0.8446624553921479,46
+Baltoro Muztagh,division,2005,0.8664766331196642,46
+Baltoro Muztagh,division,2006,0.8407819927902842,46
+Baltoro Muztagh,division,2007,0.8241628992063101,46
+Baltoro Muztagh,division,2008,0.826185294353597,46
+Baltoro Muztagh,division,2009,0.8630141063031962,46
+Baltoro Muztagh,division,2010,0.8611961503326665,46
+Baltoro Muztagh,division,2011,0.8469721005219668,46
+Baltoro Muztagh,division,2012,0.8210044433172975,46
+Baltoro Muztagh,division,2013,0.8444140229748228,46
+Baltoro Muztagh,division,2014,0.8382407361880633,46
+Baltoro Muztagh,division,2015,0.8603654544372358,46
+Baltoro Muztagh,division,2016,0.8642161569057742,46
+Baltoro Muztagh,division,2017,0.8380815841707144,46
+Baltoro Muztagh,division,2018,0.8274675679242695,46
+Batura Muztagh,division,2003,0.7069016200065026,45
+Batura Muztagh,division,2004,0.7321299206264925,46
+Batura Muztagh,division,2005,0.7520589902142107,46
+Batura Muztagh,division,2006,0.7032183649414925,46
+Batura Muztagh,division,2007,0.695040759226684,46
+Batura Muztagh,division,2008,0.6687588649872303,46
+Batura Muztagh,division,2009,0.7556859462943434,46
+Batura Muztagh,division,2010,0.7433751142131046,46
+Batura Muztagh,division,2011,0.6644258642606824,46
+Batura Muztagh,division,2012,0.7135940143395932,46
+Batura Muztagh,division,2013,0.718947441468741,46
+Batura Muztagh,division,2014,0.7035858446197085,46
+Batura Muztagh,division,2015,0.7075739717140535,46
+Batura Muztagh,division,2016,0.7155838721107632,46
+Batura Muztagh,division,2017,0.6706788017323592,46
+Batura Muztagh,division,2018,0.6794068383814913,46
+Bayan Har Mountains,division,2003,0.18582634300015674,45
+Bayan Har Mountains,division,2004,0.12229989218666527,46
+Bayan Har Mountains,division,2005,0.22765052270078553,46
+Bayan Har Mountains,division,2006,0.18845609398523236,46
+Bayan Har Mountains,division,2007,0.19367731794122583,46
+Bayan Har Mountains,division,2008,0.2265764999232815,46
+Bayan Har Mountains,division,2009,0.2504068554701099,46
+Bayan Har Mountains,division,2010,0.193379101557484,46
+Bayan Har Mountains,division,2011,0.17252334348947218,46
+Bayan Har Mountains,division,2012,0.27746317165892337,46
+Bayan Har Mountains,division,2013,0.18062447631158643,46
+Bayan Har Mountains,division,2014,0.23315588524831443,46
+Bayan Har Mountains,division,2015,0.16249853674627518,46
+Bayan Har Mountains,division,2016,0.15975838725394512,46
+Bayan Har Mountains,division,2017,0.1904719829017756,46
+Bayan Har Mountains,division,2018,0.23156844138760324,46
+Central Himalayas,division,2003,0.2501301737407168,45
+Central Himalayas,division,2004,0.20699770671779155,46
+Central Himalayas,division,2005,0.248987295438099,46
+Central Himalayas,division,2006,0.22834836528824148,46
+Central Himalayas,division,2007,0.2387052015038696,46
+Central Himalayas,division,2008,0.22596898464617737,46
+Central Himalayas,division,2009,0.1972327623009485,46
+Central Himalayas,division,2010,0.21910923358319578,46
+Central Himalayas,division,2011,0.23168425405221554,46
+Central Himalayas,division,2012,0.23013788655249676,46
+Central Himalayas,division,2013,0.2359745423013367,46
+Central Himalayas,division,2014,0.24575061422302427,46
+Central Himalayas,division,2015,0.2909229233814892,46
+Central Himalayas,division,2016,0.19694690229065023,46
+Central Himalayas,division,2017,0.19991426232112028,46
+Central Himalayas,division,2018,0.19557026734770383,46
+Central Tian Shan,division,2003,0.4854572533304211,45
+Central Tian Shan,division,2004,0.4779332895266254,46
+Central Tian Shan,division,2005,0.46764348193551336,46
+Central Tian Shan,division,2006,0.4445550966379693,46
+Central Tian Shan,division,2007,0.37854274364178253,46
+Central Tian Shan,division,2008,0.44970996119534923,46
+Central Tian Shan,division,2009,0.4844880901286889,46
+Central Tian Shan,division,2010,0.47639753617201624,46
+Central Tian Shan,division,2011,0.4408010351760433,46
+Central Tian Shan,division,2012,0.49915373780426003,46
+Central Tian Shan,division,2013,0.41699638336608513,46
+Central Tian Shan,division,2014,0.4247156331524707,46
+Central Tian Shan,division,2015,0.4560454185966288,46
+Central Tian Shan,division,2016,0.4132045432634594,46
+Central Tian Shan,division,2017,0.48770959662114444,46
+Central Tian Shan,division,2018,0.4225664620220409,46
+Chang Chenmo Range,division,2003,0.517729444609969,45
+Chang Chenmo Range,division,2004,0.507954677939608,46
+Chang Chenmo Range,division,2005,0.5685124812705376,46
+Chang Chenmo Range,division,2006,0.48948386567467084,46
+Chang Chenmo Range,division,2007,0.5737135504151787,46
+Chang Chenmo Range,division,2008,0.5351064610707855,46
+Chang Chenmo Range,division,2009,0.5569936999917957,46
+Chang Chenmo Range,division,2010,0.6108779853791448,46
+Chang Chenmo Range,division,2011,0.5137442948006581,46
+Chang Chenmo Range,division,2012,0.45940316166278766,46
+Chang Chenmo Range,division,2013,0.5939491422230091,46
+Chang Chenmo Range,division,2014,0.5137037053029747,46
+Chang Chenmo Range,division,2015,0.5660257268326806,46
+Chang Chenmo Range,division,2016,0.4264859426479034,46
+Chang Chenmo Range,division,2017,0.5237832866266241,46
+Chang Chenmo Range,division,2018,0.4203849957035585,46
+Eastern Himalaya,division,2003,0.2096601618943337,45
+Eastern Himalaya,division,2004,0.1956294733009153,46
+Eastern Himalaya,division,2005,0.20953482101272236,46
+Eastern Himalaya,division,2006,0.18127109157317603,46
+Eastern Himalaya,division,2007,0.20551462604179696,46
+Eastern Himalaya,division,2008,0.18723053452719948,46
+Eastern Himalaya,division,2009,0.20433010867637535,46
+Eastern Himalaya,division,2010,0.1793608451325687,46
+Eastern Himalaya,division,2011,0.19525406444534035,46
+Eastern Himalaya,division,2012,0.21156009539666112,46
+Eastern Himalaya,division,2013,0.17570751391987727,46
+Eastern Himalaya,division,2014,0.19100717983821972,46
+Eastern Himalaya,division,2015,0.17732245100321742,46
+Eastern Himalaya,division,2016,0.19161727677127208,46
+Eastern Himalaya,division,2017,0.1734759775735215,46
+Eastern Himalaya,division,2018,0.16982215724751426,46
+Eastern Hindu Kush,division,2003,0.4804360061080177,45
+Eastern Hindu Kush,division,2004,0.48185906948582674,46
+Eastern Hindu Kush,division,2005,0.5292441572899815,46
+Eastern Hindu Kush,division,2006,0.47081581507446896,46
+Eastern Hindu Kush,division,2007,0.4739427528649579,46
+Eastern Hindu Kush,division,2008,0.4297995794553275,46
+Eastern Hindu Kush,division,2009,0.5152837264172871,46
+Eastern Hindu Kush,division,2010,0.49719293847765156,46
+Eastern Hindu Kush,division,2011,0.40152111917942473,46
+Eastern Hindu Kush,division,2012,0.5144385064312021,46
+Eastern Hindu Kush,division,2013,0.48272157144912325,46
+Eastern Hindu Kush,division,2014,0.47553638537545856,46
+Eastern Hindu Kush,division,2015,0.4821478240003441,46
+Eastern Hindu Kush,division,2016,0.4641500464555161,46
+Eastern Hindu Kush,division,2017,0.4419033156058809,46
+Eastern Hindu Kush,division,2018,0.4079589573268593,46
+Eastern Pamirs,division,2003,0.47140541026496674,45
+Eastern Pamirs,division,2004,0.5990677863525758,46
+Eastern Pamirs,division,2005,0.6194935178223365,46
+Eastern Pamirs,division,2006,0.567829282879097,46
+Eastern Pamirs,division,2007,0.4953602478509508,46
+Eastern Pamirs,division,2008,0.40147346340817713,46
+Eastern Pamirs,division,2009,0.5136256012478408,46
+Eastern Pamirs,division,2010,0.5928780713799767,46
+Eastern Pamirs,division,2011,0.41896860542698655,46
+Eastern Pamirs,division,2012,0.6099755118395218,46
+Eastern Pamirs,division,2013,0.45656601100566024,46
+Eastern Pamirs,division,2014,0.4248482682094546,46
+Eastern Pamirs,division,2015,0.42109648764531465,46
+Eastern Pamirs,division,2016,0.5448345901378361,46
+Eastern Pamirs,division,2017,0.4775997727078945,46
+Eastern Pamirs,division,2018,0.38997246498049953,46
+Eastern Tian Shan,division,2003,0.41777586762685465,45
+Eastern Tian Shan,division,2004,0.38991680871343026,46
+Eastern Tian Shan,division,2005,0.3907640725403644,46
+Eastern Tian Shan,division,2006,0.4069445011663263,46
+Eastern Tian Shan,division,2007,0.353063609099662,46
+Eastern Tian Shan,division,2008,0.36983507888255435,46
+Eastern Tian Shan,division,2009,0.3732573644341824,46
+Eastern Tian Shan,division,2010,0.408262680199282,46
+Eastern Tian Shan,division,2011,0.4024646163105022,46
+Eastern Tian Shan,division,2012,0.40002518502694917,46
+Eastern Tian Shan,division,2013,0.38415489000221625,46
+Eastern Tian Shan,division,2014,0.3821577462076483,46
+Eastern Tian Shan,division,2015,0.41198070878483994,46
+Eastern Tian Shan,division,2016,0.39724550427478095,46
+Eastern Tian Shan,division,2017,0.4246182656555795,46
+Eastern Tian Shan,division,2018,0.37392750768598976,46
+Haramoshi Range,division,2003,0.5901281616982836,45
+Haramoshi Range,division,2004,0.6080314930187345,46
+Haramoshi Range,division,2005,0.6321041556203606,46
+Haramoshi Range,division,2006,0.5985523815835985,46
+Haramoshi Range,division,2007,0.5688792417815483,46
+Haramoshi Range,division,2008,0.5561594202898551,46
+Haramoshi Range,division,2009,0.6473135383527748,46
+Haramoshi Range,division,2010,0.6320503048780488,46
+Haramoshi Range,division,2011,0.5608554811770944,46
+Haramoshi Range,division,2012,0.5964121597737716,46
+Haramoshi Range,division,2013,0.5982858894485684,46
+Haramoshi Range,division,2014,0.5919163131848709,46
+Haramoshi Range,division,2015,0.5984833421703782,46
+Haramoshi Range,division,2016,0.5903546416578296,46
+Haramoshi Range,division,2017,0.5769361413043478,46
+Haramoshi Range,division,2018,0.5594526003004595,46
+Hengduan Shan,division,2003,0.13156720922892381,45
+Hengduan Shan,division,2004,0.12522399885622668,46
+Hengduan Shan,division,2005,0.1556423040232073,46
+Hengduan Shan,division,2006,0.1471630728673528,46
+Hengduan Shan,division,2007,0.1378335768186663,46
+Hengduan Shan,division,2008,0.15987405700965332,46
+Hengduan Shan,division,2009,0.12472920809933624,46
+Hengduan Shan,division,2010,0.13077820785444838,46
+Hengduan Shan,division,2011,0.15306590279677904,46
+Hengduan Shan,division,2012,0.14118677020807138,46
+Hengduan Shan,division,2013,0.11999653365966913,46
+Hengduan Shan,division,2014,0.14659045307992158,46
+Hengduan Shan,division,2015,0.10060446115790557,46
+Hengduan Shan,division,2016,0.11259316002141685,46
+Hengduan Shan,division,2017,0.10363080449441028,46
+Hengduan Shan,division,2018,0.1112524500472563,46
+Himalaya,range,2003,0.29329017294260984,45
+Himalaya,range,2004,0.2728278871748462,46
+Himalaya,range,2005,0.3156694453260269,46
+Himalaya,range,2006,0.27791563330958835,46
+Himalaya,range,2007,0.29380087096497015,46
+Himalaya,range,2008,0.2830993670276458,46
+Himalaya,range,2009,0.29414657929068105,46
+Himalaya,range,2010,0.29480412094371977,46
+Himalaya,range,2011,0.28899207205215766,46
+Himalaya,range,2012,0.29063587926647416,46
+Himalaya,range,2013,0.2920861016562355,46
+Himalaya,range,2014,0.298418683604137,46
+Himalaya,range,2015,0.31232459059541695,46
+Himalaya,range,2016,0.2721588324976394,46
+Himalaya,range,2017,0.25732014678463394,46
+Himalaya,range,2018,0.2555108118773872,46
+Hindu Kush,range,2003,0.2939324783604795,45
+Hindu Kush,range,2004,0.28247861537650953,46
+Hindu Kush,range,2005,0.3345524710644357,46
+Hindu Kush,range,2006,0.27527215816827494,46
+Hindu Kush,range,2007,0.32326658810429104,46
+Hindu Kush,range,2008,0.28583352641056864,46
+Hindu Kush,range,2009,0.30994808439436383,46
+Hindu Kush,range,2010,0.2964087435507297,46
+Hindu Kush,range,2011,0.2377599528178607,46
+Hindu Kush,range,2012,0.31936404320846196,46
+Hindu Kush,range,2013,0.3048499386835389,46
+Hindu Kush,range,2014,0.29950036405833663,46
+Hindu Kush,range,2015,0.28220412152640145,46
+Hindu Kush,range,2016,0.2762094863534451,46
+Hindu Kush,range,2017,0.27205574853342657,46
+Hindu Kush,range,2018,0.21755041141659917,46
+Hispar Muztagh,division,2003,0.8359038292681292,45
+Hispar Muztagh,division,2004,0.8553037078613375,46
+Hispar Muztagh,division,2005,0.8565810145539525,46
+Hispar Muztagh,division,2006,0.843585009088024,46
+Hispar Muztagh,division,2007,0.833805875610786,46
+Hispar Muztagh,division,2008,0.8229776195934125,46
+Hispar Muztagh,division,2009,0.8796381051797802,46
+Hispar Muztagh,division,2010,0.8618961316229139,46
+Hispar Muztagh,division,2011,0.8348576209572719,46
+Hispar Muztagh,division,2012,0.8337101431789987,46
+Hispar Muztagh,division,2013,0.8360247697831725,46
+Hispar Muztagh,division,2014,0.8352510419098226,46
+Hispar Muztagh,division,2015,0.8501341565448198,46
+Hispar Muztagh,division,2016,0.8550702780961573,46
+Hispar Muztagh,division,2017,0.8345782920809607,46
+Hispar Muztagh,division,2018,0.8336471958265905,46
+Karakoram,range,2003,0.6541854339821955,45
+Karakoram,range,2004,0.6564730886582171,46
+Karakoram,range,2005,0.696213148848512,46
+Karakoram,range,2006,0.6564053513683188,46
+Karakoram,range,2007,0.6548875362060406,46
+Karakoram,range,2008,0.6399772223161317,46
+Karakoram,range,2009,0.6874354060161935,46
+Karakoram,range,2010,0.7092709396722923,46
+Karakoram,range,2011,0.6395397353165397,46
+Karakoram,range,2012,0.6388714416627382,46
+Karakoram,range,2013,0.6711739678249914,46
+Karakoram,range,2014,0.6568153455973873,46
+Karakoram,range,2015,0.6794492407455713,46
+Karakoram,range,2016,0.6389768731222413,46
+Karakoram,range,2017,0.6469216207125943,46
+Karakoram,range,2018,0.6069709526382706,46
+Kashmir Himalayas,division,2003,0.4046334097982833,45
+Kashmir Himalayas,division,2004,0.40078542801876177,46
+Kashmir Himalayas,division,2005,0.4618569393698034,46
+Kashmir Himalayas,division,2006,0.40516793725847167,46
+Kashmir Himalayas,division,2007,0.4180501578230949,46
+Kashmir Himalayas,division,2008,0.40567288687729414,46
+Kashmir Himalayas,division,2009,0.4543397979695817,46
+Kashmir Himalayas,division,2010,0.455383495370663,46
+Kashmir Himalayas,division,2011,0.4159750896578463,46
+Kashmir Himalayas,division,2012,0.4187334117181014,46
+Kashmir Himalayas,division,2013,0.4312851519863796,46
+Kashmir Himalayas,division,2014,0.435367017712429,46
+Kashmir Himalayas,division,2015,0.4383280866109545,46
+Kashmir Himalayas,division,2016,0.4097002836180049,46
+Kashmir Himalayas,division,2017,0.3815922011370006,46
+Kashmir Himalayas,division,2018,0.3769998651444851,46
+Kumaun Himalayas,division,2003,0.2532862285791944,45
+Kumaun Himalayas,division,2004,0.2257704403387099,46
+Kumaun Himalayas,division,2005,0.27887459943186743,46
+Kumaun Himalayas,division,2006,0.23493659240962522,46
+Kumaun Himalayas,division,2007,0.2549264706836068,46
+Kumaun Himalayas,division,2008,0.26917630209626087,46
+Kumaun Himalayas,division,2009,0.2548843164775073,46
+Kumaun Himalayas,division,2010,0.2577335281113135,46
+Kumaun Himalayas,division,2011,0.2587736462987369,46
+Kumaun Himalayas,division,2012,0.23465967170186375,46
+Kumaun Himalayas,division,2013,0.2713053548104788,46
+Kumaun Himalayas,division,2014,0.25756968679837566,46
+Kumaun Himalayas,division,2015,0.28607719089558764,46
+Kumaun Himalayas,division,2016,0.22690942930043945,46
+Kumaun Himalayas,division,2017,0.21464155305764207,46
+Kumaun Himalayas,division,2018,0.23028058664976883,46
+Kunlun Mountains,division,2003,0.3379310458726657,45
+Kunlun Mountains,division,2004,0.30970105285992183,46
+Kunlun Mountains,division,2005,0.368701082318307,46
+Kunlun Mountains,division,2006,0.3153431279861284,46
+Kunlun Mountains,division,2007,0.3099403820445595,46
+Kunlun Mountains,division,2008,0.3308177873930713,46
+Kunlun Mountains,division,2009,0.34645928789227515,46
+Kunlun Mountains,division,2010,0.3373928505091427,46
+Kunlun Mountains,division,2011,0.30517620180383337,46
+Kunlun Mountains,division,2012,0.34461692708974256,46
+Kunlun Mountains,division,2013,0.2825154735957815,46
+Kunlun Mountains,division,2014,0.30303932446698767,46
+Kunlun Mountains,division,2015,0.3259935459747648,46
+Kunlun Mountains,division,2016,0.29855491810434265,46
+Kunlun Mountains,division,2017,0.3221528349495144,46
+Kunlun Mountains,division,2018,0.2779437287756239,46
+Ladakh Range,division,2003,0.489025767818755,45
+Ladakh Range,division,2004,0.4534693076720107,46
+Ladakh Range,division,2005,0.5351198758730495,46
+Ladakh Range,division,2006,0.4959459718504252,46
+Ladakh Range,division,2007,0.49232635419932025,46
+Ladakh Range,division,2008,0.4898267319475798,46
+Ladakh Range,division,2009,0.5080976259367593,46
+Ladakh Range,division,2010,0.5812361727222907,46
+Ladakh Range,division,2011,0.47813767852833783,46
+Ladakh Range,division,2012,0.47082317547590646,46
+Ladakh Range,division,2013,0.5049493479050194,46
+Ladakh Range,division,2014,0.49862291026280003,46
+Ladakh Range,division,2015,0.5336900705205259,46
+Ladakh Range,division,2016,0.43324427119393255,46
+Ladakh Range,division,2017,0.4714267269861101,46
+Ladakh Range,division,2018,0.3966432838614668,46
+Masherbrum Mountains,division,2003,0.6582336388486895,45
+Masherbrum Mountains,division,2004,0.6609568678034354,46
+Masherbrum Mountains,division,2005,0.6949270118920279,46
+Masherbrum Mountains,division,2006,0.6584659913169321,46
+Masherbrum Mountains,division,2007,0.6356391178506261,46
+Masherbrum Mountains,division,2008,0.6138056062417416,46
+Masherbrum Mountains,division,2009,0.6908009815642107,46
+Masherbrum Mountains,division,2010,0.7135641477379978,46
+Masherbrum Mountains,division,2011,0.6312739885484175,46
+Masherbrum Mountains,division,2012,0.6544154659283962,46
+Masherbrum Mountains,division,2013,0.6679686025294155,46
+Masherbrum Mountains,division,2014,0.6639629081985781,46
+Masherbrum Mountains,division,2015,0.68009894293085,46
+Masherbrum Mountains,division,2016,0.655349839552004,46
+Masherbrum Mountains,division,2017,0.6475822689234254,46
+Masherbrum Mountains,division,2018,0.6210823947649908,46
+Min Mountains,division,2003,0.06976483178033566,45
+Min Mountains,division,2004,0.06155610872415074,46
+Min Mountains,division,2005,0.10043152257102485,46
+Min Mountains,division,2006,0.07902057859655955,46
+Min Mountains,division,2007,0.0792637223864596,46
+Min Mountains,division,2008,0.10837051324754772,46
+Min Mountains,division,2009,0.07269657500014003,46
+Min Mountains,division,2010,0.04850615651277773,46
+Min Mountains,division,2011,0.06253457303719868,46
+Min Mountains,division,2012,0.13288088161697867,46
+Min Mountains,division,2013,0.05352972795240971,46
+Min Mountains,division,2014,0.07587449398581529,46
+Min Mountains,division,2015,0.05761470011771718,46
+Min Mountains,division,2016,0.07161799507847977,46
+Min Mountains,division,2017,0.06557885354078968,46
+Min Mountains,division,2018,0.06986389219175676,46
+Nan Shan,division,2003,0.2383835384390847,45
+Nan Shan,division,2004,0.23809425894602795,46
+Nan Shan,division,2005,0.24855823940444466,46
+Nan Shan,division,2006,0.19487012933752793,46
+Nan Shan,division,2007,0.23023910628424363,46
+Nan Shan,division,2008,0.22877429635354202,46
+Nan Shan,division,2009,0.20195945170074472,46
+Nan Shan,division,2010,0.23152808434279545,46
+Nan Shan,division,2011,0.20525263969947616,46
+Nan Shan,division,2012,0.19930822755701044,46
+Nan Shan,division,2013,0.16068893361548453,46
+Nan Shan,division,2014,0.16368458773359193,46
+Nan Shan,division,2015,0.25277657151658095,46
+Nan Shan,division,2016,0.21221631090948198,46
+Nan Shan,division,2017,0.20676782021184428,46
+Nan Shan,division,2018,0.1439984050011969,46
+North Ghunjerab Mountains,division,2003,0.819308422908491,45
+North Ghunjerab Mountains,division,2004,0.8669994362143276,46
+North Ghunjerab Mountains,division,2005,0.8557311409983457,46
+North Ghunjerab Mountains,division,2006,0.8319510693382195,46
+North Ghunjerab Mountains,division,2007,0.8027584697669934,46
+North Ghunjerab Mountains,division,2008,0.7836759938577034,46
+North Ghunjerab Mountains,division,2009,0.8412090235380518,46
+North Ghunjerab Mountains,division,2010,0.8560835070436118,46
+North Ghunjerab Mountains,division,2011,0.7645323175300254,46
+North Ghunjerab Mountains,division,2012,0.8228034613472994,46
+North Ghunjerab Mountains,division,2013,0.8162058707892258,46
+North Ghunjerab Mountains,division,2014,0.8097547903236574,46
+North Ghunjerab Mountains,division,2015,0.8038480226701187,46
+North Ghunjerab Mountains,division,2016,0.8310210084345304,46
+North Ghunjerab Mountains,division,2017,0.7965429181843133,46
+North Ghunjerab Mountains,division,2018,0.7734295601729932,46
+Northern Karakorum,division,2003,0.49000163639338895,45
+Northern Karakorum,division,2004,0.5034997918934494,46
+Northern Karakorum,division,2005,0.5896499007491836,46
+Northern Karakorum,division,2006,0.5288527726195812,46
+Northern Karakorum,division,2007,0.4537203047960556,46
+Northern Karakorum,division,2008,0.4806560959211116,46
+Northern Karakorum,division,2009,0.5517264839597874,46
+Northern Karakorum,division,2010,0.5192498559262342,46
+Northern Karakorum,division,2011,0.5487689697124928,46
+Northern Karakorum,division,2012,0.4493980918230134,46
+Northern Karakorum,division,2013,0.46831577767817123,46
+Northern Karakorum,division,2014,0.4810763110712685,46
+Northern Karakorum,division,2015,0.49692042325670743,46
+Northern Karakorum,division,2016,0.5404687199846322,46
+Northern Karakorum,division,2017,0.5387078184030224,46
+Northern Karakorum,division,2018,0.5063572549145162,46
+Pamir Mountains,range,2003,0.6217606019290367,45
+Pamir Mountains,range,2004,0.6632392039703126,46
+Pamir Mountains,range,2005,0.6894727420921336,46
+Pamir Mountains,range,2006,0.6430138255342552,46
+Pamir Mountains,range,2007,0.6004963046162521,46
+Pamir Mountains,range,2008,0.5424533472806111,46
+Pamir Mountains,range,2009,0.6607175917886956,46
+Pamir Mountains,range,2010,0.68423012106986,46
+Pamir Mountains,range,2011,0.5526338422396009,46
+Pamir Mountains,range,2012,0.6865294174362259,46
+Pamir Mountains,range,2013,0.5937563634648761,46
+Pamir Mountains,range,2014,0.5752266141281914,46
+Pamir Mountains,range,2015,0.5941829316926015,46
+Pamir Mountains,range,2016,0.6247252323361481,46
+Pamir Mountains,range,2017,0.6190814095420916,46
+Pamir Mountains,range,2018,0.5528188658684741,46
+Pangong Range,division,2003,0.2924539512774807,45
+Pangong Range,division,2004,0.27019247293349374,46
+Pangong Range,division,2005,0.3541517139593421,46
+Pangong Range,division,2006,0.27931067598030795,46
+Pangong Range,division,2007,0.34117192159558446,46
+Pangong Range,division,2008,0.3080906361513501,46
+Pangong Range,division,2009,0.2992858081538166,46
+Pangong Range,division,2010,0.40103413766262647,46
+Pangong Range,division,2011,0.2864071045156334,46
+Pangong Range,division,2012,0.25566602306844716,46
+Pangong Range,division,2013,0.35971412108407547,46
+Pangong Range,division,2014,0.2865915914398067,46
+Pangong Range,division,2015,0.3561456890712979,46
+Pangong Range,division,2016,0.21558939781446176,46
+Pangong Range,division,2017,0.3039358895302407,46
+Pangong Range,division,2018,0.22320896050463493,46
+Panmah Muztagh,division,2003,0.8620107477753844,45
+Panmah Muztagh,division,2004,0.8716808132060854,46
+Panmah Muztagh,division,2005,0.8810456236538085,46
+Panmah Muztagh,division,2006,0.8565055635487523,46
+Panmah Muztagh,division,2007,0.844735699508773,46
+Panmah Muztagh,division,2008,0.8368990558568375,46
+Panmah Muztagh,division,2009,0.8942074390648811,46
+Panmah Muztagh,division,2010,0.8911425920092626,46
+Panmah Muztagh,division,2011,0.8480218966295195,46
+Panmah Muztagh,division,2012,0.8589744681213338,46
+Panmah Muztagh,division,2013,0.8634057261559155,46
+Panmah Muztagh,division,2014,0.8584083227624488,46
+Panmah Muztagh,division,2015,0.8689224508560287,46
+Panmah Muztagh,division,2016,0.8641634244557769,46
+Panmah Muztagh,division,2017,0.856539617404926,46
+Panmah Muztagh,division,2018,0.8511803917896152,46
+Qiangtang,division,2003,0.2383137809838397,45
+Qiangtang,division,2004,0.15057649112529745,46
+Qiangtang,division,2005,0.23953121838299146,46
+Qiangtang,division,2006,0.2057155596282976,46
+Qiangtang,division,2007,0.24851892232605213,46
+Qiangtang,division,2008,0.2283113509921568,46
+Qiangtang,division,2009,0.20860321996183726,46
+Qiangtang,division,2010,0.19382623150350783,46
+Qiangtang,division,2011,0.21489839777113287,46
+Qiangtang,division,2012,0.2016235808604557,46
+Qiangtang,division,2013,0.20856342299449732,46
+Qiangtang,division,2014,0.20548856246583616,46
+Qiangtang,division,2015,0.23097008884477255,46
+Qiangtang,division,2016,0.16711226857777867,46
+Qiangtang,division,2017,0.19866053690403884,46
+Qiangtang,division,2018,0.14641477774589132,46
+Qionglai Shan,division,2003,0.1633891509524192,45
+Qionglai Shan,division,2004,0.15210280408809126,46
+Qionglai Shan,division,2005,0.2041827036073947,46
+Qionglai Shan,division,2006,0.17825630362176623,46
+Qionglai Shan,division,2007,0.17303900213925677,46
+Qionglai Shan,division,2008,0.17244819899728886,46
+Qionglai Shan,division,2009,0.12974719643586946,46
+Qionglai Shan,division,2010,0.1558172365113797,46
+Qionglai Shan,division,2011,0.1767140626567204,46
+Qionglai Shan,division,2012,0.19470380500277698,46
+Qionglai Shan,division,2013,0.14794352901020827,46
+Qionglai Shan,division,2014,0.17051665521438225,46
+Qionglai Shan,division,2015,0.11635034409249255,46
+Qionglai Shan,division,2016,0.1638467100506146,46
+Qionglai Shan,division,2017,0.11763262568694995,46
+Qionglai Shan,division,2018,0.1582542526897898,46
+Rakaposhi Range,division,2003,0.5325998025109324,45
+Rakaposhi Range,division,2004,0.5496844468159487,46
+Rakaposhi Range,division,2005,0.5699313694824192,46
+Rakaposhi Range,division,2006,0.5416659000165597,46
+Rakaposhi Range,division,2007,0.526620544996228,46
+Rakaposhi Range,division,2008,0.5165136433053046,46
+Rakaposhi Range,division,2009,0.5831367642458922,46
+Rakaposhi Range,division,2010,0.5588143296104804,46
+Rakaposhi Range,division,2011,0.4979907633995106,46
+Rakaposhi Range,division,2012,0.5407735192919833,46
+Rakaposhi Range,division,2013,0.546523395094666,46
+Rakaposhi Range,division,2014,0.5401056137187437,46
+Rakaposhi Range,division,2015,0.5416511803345048,46
+Rakaposhi Range,division,2016,0.5365305709396677,46
+Rakaposhi Range,division,2017,0.49586376934258225,46
+Rakaposhi Range,division,2018,0.5099081859831828,46
+Rimo Muztagh,division,2003,0.8882332855289218,45
+Rimo Muztagh,division,2004,0.8882044841131985,46
+Rimo Muztagh,division,2005,0.9086893054701904,46
+Rimo Muztagh,division,2006,0.8879038507789744,46
+Rimo Muztagh,division,2007,0.8874762833703002,46
+Rimo Muztagh,division,2008,0.880276115015633,46
+Rimo Muztagh,division,2009,0.9011150156329334,46
+Rimo Muztagh,division,2010,0.9113649421447849,46
+Rimo Muztagh,division,2011,0.8805483552016248,46
+Rimo Muztagh,division,2012,0.8706925923946447,46
+Rimo Muztagh,division,2013,0.891316039122418,46
+Rimo Muztagh,division,2014,0.897428916918308,46
+Rimo Muztagh,division,2015,0.9030557708238689,46
+Rimo Muztagh,division,2016,0.8936225648699928,46
+Rimo Muztagh,division,2017,0.8864507896635578,46
+Rimo Muztagh,division,2018,0.8595775099543037,46
+Saltoro Mountains,division,2003,0.7276219648383905,45
+Saltoro Mountains,division,2004,0.7184130247501883,46
+Saltoro Mountains,division,2005,0.7579452113705759,46
+Saltoro Mountains,division,2006,0.7302255831020069,46
+Saltoro Mountains,division,2007,0.7201068748673428,46
+Saltoro Mountains,division,2008,0.6999353534680922,46
+Saltoro Mountains,division,2009,0.7433324593566144,46
+Saltoro Mountains,division,2010,0.7776187047665025,46
+Saltoro Mountains,division,2011,0.7028090721557954,46
+Saltoro Mountains,division,2012,0.715997103391446,46
+Saltoro Mountains,division,2013,0.7311273051135962,46
+Saltoro Mountains,division,2014,0.7353993865515792,46
+Saltoro Mountains,division,2015,0.7502313263775884,46
+Saltoro Mountains,division,2016,0.7123416610829265,46
+Saltoro Mountains,division,2017,0.7174266795959731,46
+Saltoro Mountains,division,2018,0.6784778377538521,46
+Saser Muztagh,division,2003,0.7118074698664937,45
+Saser Muztagh,division,2004,0.7082913262032839,46
+Saser Muztagh,division,2005,0.7524992773598607,46
+Saser Muztagh,division,2006,0.7194129342009716,46
+Saser Muztagh,division,2007,0.7162104046079765,46
+Saser Muztagh,division,2008,0.7126077791329728,46
+Saser Muztagh,division,2009,0.7336269132338323,46
+Saser Muztagh,division,2010,0.7584055385960337,46
+Saser Muztagh,division,2011,0.7008402013522184,46
+Saser Muztagh,division,2012,0.6896533794883003,46
+Saser Muztagh,division,2013,0.7283454713376246,46
+Saser Muztagh,division,2014,0.7260647485564822,46
+Saser Muztagh,division,2015,0.7523274300096586,46
+Saser Muztagh,division,2016,0.7052474249335524,46
+Saser Muztagh,division,2017,0.7155829414626236,46
+Saser Muztagh,division,2018,0.6646121361242517,46
+Siachen Muztagh,division,2003,0.9106907207884406,45
+Siachen Muztagh,division,2004,0.9122100813787545,46
+Siachen Muztagh,division,2005,0.9225322192324034,46
+Siachen Muztagh,division,2006,0.9118887061104878,46
+Siachen Muztagh,division,2007,0.9061911038968112,46
+Siachen Muztagh,division,2008,0.8968249212902945,46
+Siachen Muztagh,division,2009,0.9170742867103157,46
+Siachen Muztagh,division,2010,0.9162381663089778,46
+Siachen Muztagh,division,2011,0.9153148932925169,46
+Siachen Muztagh,division,2012,0.8809222925495408,46
+Siachen Muztagh,division,2013,0.9001530617803101,46
+Siachen Muztagh,division,2014,0.8974104779231532,46
+Siachen Muztagh,division,2015,0.9296542219994989,46
+Siachen Muztagh,division,2016,0.9344830215811663,46
+Siachen Muztagh,division,2017,0.9009347117971958,46
+Siachen Muztagh,division,2018,0.8937255564149772,46
+South Ghujerab Mountains,division,2003,0.7713301919131453,45
+South Ghujerab Mountains,division,2004,0.8106592511176377,46
+South Ghujerab Mountains,division,2005,0.8149205891597646,46
+South Ghujerab Mountains,division,2006,0.7879521352737086,46
+South Ghujerab Mountains,division,2007,0.7651899633827235,46
+South Ghujerab Mountains,division,2008,0.7351203525188642,46
+South Ghujerab Mountains,division,2009,0.8288767965789173,46
+South Ghujerab Mountains,division,2010,0.8009073236554813,46
+South Ghujerab Mountains,division,2011,0.7619446596635374,46
+South Ghujerab Mountains,division,2012,0.7570867142751321,46
+South Ghujerab Mountains,division,2013,0.7730379526357831,46
+South Ghujerab Mountains,division,2014,0.7732862053570535,46
+South Ghujerab Mountains,division,2015,0.7899751947482537,46
+South Ghujerab Mountains,division,2016,0.8076131501868903,46
+South Ghujerab Mountains,division,2017,0.7843644830437385,46
+South Ghujerab Mountains,division,2018,0.7590507136264718,46
+Spantik-Sosbun Mountains,division,2003,0.7639448681921585,45
+Spantik-Sosbun Mountains,division,2004,0.7864922416351038,46
+Spantik-Sosbun Mountains,division,2005,0.8030213115040231,46
+Spantik-Sosbun Mountains,division,2006,0.7656886530640741,46
+Spantik-Sosbun Mountains,division,2007,0.7405546925453371,46
+Spantik-Sosbun Mountains,division,2008,0.7402160822439042,46
+Spantik-Sosbun Mountains,division,2009,0.8160386085560191,46
+Spantik-Sosbun Mountains,division,2010,0.8102455797392352,46
+Spantik-Sosbun Mountains,division,2011,0.7373152043007,46
+Spantik-Sosbun Mountains,division,2012,0.7744384130696594,46
+Spantik-Sosbun Mountains,division,2013,0.7702040388878223,46
+Spantik-Sosbun Mountains,division,2014,0.764278358612745,46
+Spantik-Sosbun Mountains,division,2015,0.7877681392142146,46
+Spantik-Sosbun Mountains,division,2016,0.7724276962281604,46
+Spantik-Sosbun Mountains,division,2017,0.7614839509189604,46
+Spantik-Sosbun Mountains,division,2018,0.7463494667760459,46
+Tanggula Mountains,division,2003,0.39329198559174344,45
+Tanggula Mountains,division,2004,0.31790055793081906,46
+Tanggula Mountains,division,2005,0.4731205996327169,46
+Tanggula Mountains,division,2006,0.38419764459150485,46
+Tanggula Mountains,division,2007,0.3996941937815938,46
+Tanggula Mountains,division,2008,0.3702112638238827,46
+Tanggula Mountains,division,2009,0.48768142567906086,46
+Tanggula Mountains,division,2010,0.29519856520526533,46
+Tanggula Mountains,division,2011,0.40025766791577316,46
+Tanggula Mountains,division,2012,0.4248985698439422,46
+Tanggula Mountains,division,2013,0.3743150493114452,46
+Tanggula Mountains,division,2014,0.4261989391865608,46
+Tanggula Mountains,division,2015,0.39935803406328657,46
+Tanggula Mountains,division,2016,0.23384734749483538,46
+Tanggula Mountains,division,2017,0.40800753043963306,46
+Tanggula Mountains,division,2018,0.28674597200202406,46
+Tian Shan,range,2003,0.42745286626952556,45
+Tian Shan,range,2004,0.4107000395764217,46
+Tian Shan,range,2005,0.41369153691338867,46
+Tian Shan,range,2006,0.40492056418517036,46
+Tian Shan,range,2007,0.36370338486822823,46
+Tian Shan,range,2008,0.3904745953961745,46
+Tian Shan,range,2009,0.408862172558391,46
+Tian Shan,range,2010,0.41654702506927854,46
+Tian Shan,range,2011,0.38826454510145786,46
+Tian Shan,range,2012,0.44200350696496316,46
+Tian Shan,range,2013,0.38787689050227436,46
+Tian Shan,range,2014,0.39363912677309204,46
+Tian Shan,range,2015,0.4158168750727363,46
+Tian Shan,range,2016,0.38643591266425475,46
+Tian Shan,range,2017,0.43752665758933335,46
+Tian Shan,range,2018,0.36974060025368766,46
+Tibetan Plateau,range,2003,0.23105047153678035,45
+Tibetan Plateau,range,2004,0.19665972254210443,46
+Tibetan Plateau,range,2005,0.2512010530737871,46
+Tibetan Plateau,range,2006,0.21395707934805713,46
+Tibetan Plateau,range,2007,0.22687030376021017,46
+Tibetan Plateau,range,2008,0.2293999551893364,46
+Tibetan Plateau,range,2009,0.21934522803896597,46
+Tibetan Plateau,range,2010,0.20792082133425738,46
+Tibetan Plateau,range,2011,0.2150180656479255,46
+Tibetan Plateau,range,2012,0.22613224708298063,46
+Tibetan Plateau,range,2013,0.19778608151316251,46
+Tibetan Plateau,range,2014,0.21453254840516817,46
+Tibetan Plateau,range,2015,0.21652171067553852,46
+Tibetan Plateau,range,2016,0.1887548899159451,46
+Tibetan Plateau,range,2017,0.1987233246943436,46
+Tibetan Plateau,range,2018,0.17811229263650438,46
+Tibetan Plateau (nn),division,2003,0.12304641690903648,45
+Tibetan Plateau (nn),division,2004,0.09694673141961782,46
+Tibetan Plateau (nn),division,2005,0.2052855903906563,46
+Tibetan Plateau (nn),division,2006,0.18194948796951355,46
+Tibetan Plateau (nn),division,2007,0.1402390729394924,46
+Tibetan Plateau (nn),division,2008,0.20887017993339144,46
+Tibetan Plateau (nn),division,2009,0.2850326326072448,46
+Tibetan Plateau (nn),division,2010,0.16641393814796385,46
+Tibetan Plateau (nn),division,2011,0.1846431691833842,46
+Tibetan Plateau (nn),division,2012,0.21339833704276465,46
+Tibetan Plateau (nn),division,2013,0.16656009439974379,46
+Tibetan Plateau (nn),division,2014,0.17193133665265645,46
+Tibetan Plateau (nn),division,2015,0.1711516575301098,46
+Tibetan Plateau (nn),division,2016,0.11539519683270806,46
+Tibetan Plateau (nn),division,2017,0.16825271275675407,46
+Tibetan Plateau (nn),division,2018,0.11231087004882263,46
+Trans-Alay Range,division,2003,0.5396119611397585,45
+Trans-Alay Range,division,2004,0.5375330629086539,46
+Trans-Alay Range,division,2005,0.5604418760497741,46
+Trans-Alay Range,division,2006,0.5277967330967219,46
+Trans-Alay Range,division,2007,0.4864449731515093,46
+Trans-Alay Range,division,2008,0.510858539143176,46
+Trans-Alay Range,division,2009,0.5427330820205158,46
+Trans-Alay Range,division,2010,0.5479015543089286,46
+Trans-Alay Range,division,2011,0.4826526161811314,46
+Trans-Alay Range,division,2012,0.6124145019828557,46
+Trans-Alay Range,division,2013,0.49264193314033616,46
+Trans-Alay Range,division,2014,0.49759662210090816,46
+Trans-Alay Range,division,2015,0.5071893066682022,46
+Trans-Alay Range,division,2016,0.46571013430983516,46
+Trans-Alay Range,division,2017,0.5618176850879697,46
+Trans-Alay Range,division,2018,0.4885849503887916,46
+Transhimalaya,division,2003,0.2825207009444407,45
+Transhimalaya,division,2004,0.2276170389904548,46
+Transhimalaya,division,2005,0.2870990926070517,46
+Transhimalaya,division,2006,0.24226038224467797,46
+Transhimalaya,division,2007,0.27168722990123717,46
+Transhimalaya,division,2008,0.24359856569269245,46
+Transhimalaya,division,2009,0.23776413144337796,46
+Transhimalaya,division,2010,0.21974190128139626,46
+Transhimalaya,division,2011,0.24598054547679912,46
+Transhimalaya,division,2012,0.2359438774113781,46
+Transhimalaya,division,2013,0.24985700933044677,46
+Transhimalaya,division,2014,0.2560219764888099,46
+Transhimalaya,division,2015,0.26584034770562043,46
+Transhimalaya,division,2016,0.21263475705436707,46
+Transhimalaya,division,2017,0.21621662925237384,46
+Transhimalaya,division,2018,0.20342692935716447,46
+Western Hindu Kush,division,2003,0.19350519517582027,45
+Western Hindu Kush,division,2004,0.1751170042926479,46
+Western Hindu Kush,division,2005,0.22971607116282441,46
+Western Hindu Kush,division,2006,0.16997650474464435,46
+Western Hindu Kush,division,2007,0.24213145128737779,46
+Western Hindu Kush,division,2008,0.20831117046178851,46
+Western Hindu Kush,division,2009,0.19938000776117712,46
+Western Hindu Kush,division,2010,0.18829132343356492,46
+Western Hindu Kush,division,2011,0.14957882199945932,46
+Western Hindu Kush,division,2012,0.21432075139567808,46
+Western Hindu Kush,division,2013,0.20907049165153707,46
+Western Hindu Kush,division,2014,0.2047088614619187,46
+Western Hindu Kush,division,2015,0.17453910080870183,46
+Western Hindu Kush,division,2016,0.17500758805255678,46
+Western Hindu Kush,division,2017,0.1805971604364634,46
+Western Hindu Kush,division,2018,0.11501962804287405,46
+Western Pamirs,division,2003,0.7027204183872864,45
+Western Pamirs,division,2004,0.7165515913645394,46
+Western Pamirs,division,2005,0.7459438920550925,46
+Western Pamirs,division,2006,0.6988395574949742,46
+Western Pamirs,division,2007,0.6688229572786349,46
+Western Pamirs,division,2008,0.6089527912878858,46
+Western Pamirs,division,2009,0.7477030279763551,46
+Western Pamirs,division,2010,0.7513039901776029,46
+Western Pamirs,division,2011,0.6239683838740103,46
+Western Pamirs,division,2012,0.734424884116184,46
+Western Pamirs,division,2013,0.6730388339036051,46
+Western Pamirs,division,2014,0.6552597726497073,46
+Western Pamirs,division,2015,0.6858175381431474,46
+Western Pamirs,division,2016,0.6916227944851618,46
+Western Pamirs,division,2017,0.6911168867536513,46
+Western Pamirs,division,2018,0.6353773071022267,46
+Western Tian Shan,division,2003,0.38221209800959466,45
+Western Tian Shan,division,2004,0.3712087824014773,46
+Western Tian Shan,division,2005,0.3904599436440978,46
+Western Tian Shan,division,2006,0.3623202386457142,46
+Western Tian Shan,division,2007,0.3631799454214411,46
+Western Tian Shan,division,2008,0.3588292955180011,46
+Western Tian Shan,division,2009,0.3809886970516242,46
+Western Tian Shan,division,2010,0.3675690282977557,46
+Western Tian Shan,division,2011,0.316209495622773,46
+Western Tian Shan,division,2012,0.4413373927079507,46
+Western Tian Shan,division,2013,0.3636295136162977,46
+Western Tian Shan,division,2014,0.3779260604417155,46
+Western Tian Shan,division,2015,0.3805511508401788,46
+Western Tian Shan,division,2016,0.3448873452948262,46
+Western Tian Shan,division,2017,0.40452948469294214,46
+Western Tian Shan,division,2018,0.3109449050564379,46
+Yengisogat,division,2003,0.7567878028404345,45
+Yengisogat,division,2004,0.7784111546983401,46
+Yengisogat,division,2005,0.8204637499545966,46
+Yengisogat,division,2006,0.7836280011623261,46
+Yengisogat,division,2007,0.7556481784170571,46
+Yengisogat,division,2008,0.7518388362209872,46
+Yengisogat,division,2009,0.8125885365587883,46
+Yengisogat,division,2010,0.7809787149031999,46
+Yengisogat,division,2011,0.7963999673095783,46
+Yengisogat,division,2012,0.7507832080200502,46
+Yengisogat,division,2013,0.7635324724855618,46
+Yengisogat,division,2014,0.7686971050815444,46
+Yengisogat,division,2015,0.7866881878609567,46
+Yengisogat,division,2016,0.8160096799970943,46
+Yengisogat,division,2017,0.7929470415168356,46
+Yengisogat,division,2018,0.7784179652028622,46

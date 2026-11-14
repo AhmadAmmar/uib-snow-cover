@@ -8,6 +8,7 @@ POINTS cells per scene are sampled with their elevation (Copernicus GLO-30, 2024
 
 Output: outputs/landsat_validation_points.csv (one row per sampled cell); summary by src/30.
 """
+import time
 from pathlib import Path
 
 import ee
@@ -64,10 +65,15 @@ def main():
             parts = []
             for k in range(col.size().getInfo()):
                 img = ee.Image(col.toList(SCENES).get(k))
-                try:
-                    parts.append(scene_rows(img, r, season))
-                except ee.EEException as e:
-                    print("skip", r, season, k, str(e)[:80], flush=True)
+                for attempt in range(6):
+                    try:
+                        parts.append(scene_rows(img, r, season))
+                        break
+                    except ee.EEException as e:
+                        if "Too Many Requests" not in str(e) or attempt == 5:
+                            print("skip", r, season, k, str(e)[:80], flush=True)
+                            break
+                        time.sleep(30 * (attempt + 1))
             d = pd.concat(parts) if parts else pd.DataFrame()
             if not d.empty:
                 d.to_csv(OUT, mode="a", header=not OUT.exists(), index=False)
