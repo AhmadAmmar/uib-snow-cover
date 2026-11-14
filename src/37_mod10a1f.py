@@ -10,6 +10,7 @@ after a year is reduced if space is short; nothing else in the project is touche
   python src/37_mod10a1f.py download [first last]
   python src/37_mod10a1f.py reduce   [first last]
   python src/37_mod10a1f.py compare     -> outputs/mod10a1f_year.csv: Karakoram duration, gap-filled vs our MOD10A1
+  python src/37_mod10a1f.py timing [first last]; python src/37_mod10a1f.py timing_series   -> snow onset and melt-out
 """
 import sys
 from pathlib import Path
@@ -58,6 +59,55 @@ def reduce(first=2001, last=2025):
         print(y, len(files), flush=True)
 
 
+def timing(first=2001, last=2025, run=5):
+    """Snow onset and melt-out per pixel, in days from 1 October, read in one pass with per-pixel counters.
+    Onset: first day of the first spell of at least `run` consecutive snow days. Melt-out: last day of the last such
+    spell. Pixels with no such spell get -1. Saved as data/mod10a1f/timing_<year>.npz."""
+    from pyhdf.SD import SD, SDC
+    for y in range(first, last + 1):
+        out = D / f"timing_{y}.npz"
+        files = sorted((D / str(y)).glob("*.hdf"))
+        if out.exists() or len(files) < 360:
+            continue
+        streak = onset = melt = None
+        for day, f in enumerate(files):
+            a = SD(str(f), SDC.READ).select("CGF_NDSI_Snow_Cover")[:]
+            snow = (a <= 100) & (a >= 40)
+            if streak is None:
+                streak = np.zeros(a.shape, np.int16)
+                onset = np.full(a.shape, -1, np.int16)
+                melt = np.full(a.shape, -1, np.int16)
+            streak = np.where(snow, streak + 1, 0).astype(np.int16)
+            hit = streak == run
+            onset[hit & (onset < 0)] = day - run + 1
+            melt[streak >= run] = day
+        np.savez_compressed(out, onset=onset, melt=melt, days=len(files))
+        print("timing", y, flush=True)
+
+
+def timing_series(unit="Karakoram"):
+    """Mean onset and melt-out over the unit's pixels that have a snow season every year; Sen slope and Mann-Kendall p."""
+    import importlib.util
+    from scipy import stats
+    spec = importlib.util.spec_from_file_location("det", R / "src" / "22_detectability.py")
+    det = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(det)
+    m = tile_mask(unit)
+    z = {int(f.stem.split("_")[1]): np.load(f) for f in sorted(D.glob("timing_*.npz"))}
+    every = m.copy()
+    for v in z.values():
+        every &= (v["onset"] >= 0)
+    rows = [dict(year=y, onset_day=float(v["onset"][every].mean()), meltout_day=float(v["melt"][every].mean()),
+                 season_days=float((v["melt"][every] - v["onset"][every]).mean()), pixels=int(every.sum()))
+            for y, v in z.items()]
+    t = pd.DataFrame(rows)
+    t.to_csv(R / f"outputs/timing_{unit.lower().replace(' ', '_')}.csv", index=False)
+    for col in ("onset_day", "meltout_day", "season_days"):
+        x, yv = t.year.to_numpy(float), t[col].to_numpy()
+        print(col, "Sen", round(10 * det.sen(x, yv), 2), "days/decade, p", round(2 * stats.norm.sf(abs(det.mk_z(yv[None])[0])), 3))
+    print(t.round(1).to_string(index=False))
+
+
 def tile_mask(unit="Karakoram"):
     """Mask of the tile's 2400 x 2400 sinusoidal cells whose centres fall in the unit."""
     import geopandas as gpd
@@ -92,4 +142,4 @@ def compare():
 
 if __name__ == "__main__":
     cmd, *rest = sys.argv[1:] or ["compare"]
-    {"download": download, "reduce": reduce, "compare": compare}[cmd](*map(int, rest))
+    {"download": download, "reduce": reduce, "compare": compare, "timing": timing, "timing_series": timing_series}[cmd](*map(int, rest))
