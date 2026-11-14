@@ -22,8 +22,10 @@ import pandas as pd
 
 R = Path(__file__).resolve().parent.parent
 D = R / "data" / "glofas"
-GAUGES = {"Indus at Besham Qila": (34.92, 72.87), "Hunza at Dainyor": (35.93, 74.37), "Gilgit at Gilgit": (35.92, 74.30),
-          "Astore at Doyian": (35.55, 74.70), "Shyok at Yugo": (35.18, 76.10)}
+# Only the main stem: "largest mean flow near the gauge" finds the Indus correctly, but near a tributary it finds the
+# Indus instead (tested 2026-11-14: Astore came out at 1,469 m3/s, about ten times its real flow). Tributary gauges need
+# the GloFAS upstream-area map matched to each gauge's published catchment area before they are added back.
+GAUGES = {"Indus at Besham Qila": (34.92, 72.87)}
 AREA = [36.5, 72.4, 34.6, 76.5]  # N, W, S, E
 
 
@@ -46,8 +48,12 @@ def download(first=2000, last=2025):
 
 def extract():
     import xarray as xr
-    ds = xr.open_mfdataset(sorted(D.glob("glofas_*.nc")), combine="by_coords")
-    q = ds[[v for v in ds.data_vars if ds[v].ndim == 3][0]]
+    # one year at a time, joined in memory: the files are small, and this needs no dask
+    parts = []
+    for f in sorted(D.glob("glofas_*.nc")):
+        with xr.open_dataset(f) as one:
+            parts.append(one[[v for v in one.data_vars if one[v].ndim == 3][0]].load())
+    q = xr.concat(parts, dim=[c for c in parts[0].dims if "time" in c][0])
     tname = [c for c in q.dims if "time" in c][0]
     mean = q.mean(tname).compute()
     rows = []
@@ -56,8 +62,9 @@ def extract():
         k = np.unravel_index(int(np.nanargmax(box.values)), box.shape)
         cla, clo = float(box.latitude[k[0]]), float(box.longitude[k[1]])
         s = q.sel(latitude=cla, longitude=clo).to_series()
-        rows.append(pd.DataFrame({"gauge": g, "date": s.index, "discharge": s.values, "cell_lat": cla, "cell_lon": clo}))
-    d = pd.concat(rows)
+        # GloFAS stamps each 24-hour mean at the end of the day it covers: date it to that day
+        rows.append(pd.DataFrame({"gauge": g, "date": s.index - pd.Timedelta(days=1), "discharge": s.values, "cell_lat": cla, "cell_lon": clo}))
+    d = pd.concat(rows, ignore_index=True)
     d.to_csv(R / "outputs/glofas_daily.csv", index=False)
     d["date"] = pd.to_datetime(d.date)
     d["hy"] = d.date.dt.year + (d.date.dt.month >= 10)
