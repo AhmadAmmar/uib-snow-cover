@@ -1,0 +1,218 @@
+                              check    value           expected
+False positive rate, no trend, n=25 0.045550      close to 0.05
+   MK Z matches scipy Kendall tau p 0.272343 scipy tau p 0.2755
+                  Sen slope of 2x+1 2.000000                  2
+        MDT, white noise sd 1, n 25 0.085858         about 0.07
+                                      unit     level  mean_days  sen_days_per_decade  mk_p  resid_sd   lag1  mdt_25y_days_per_decade  observed_over_mdt25
+                         Central Himalayas  division     44.463               -3.846 0.168     9.371 -0.055                    8.087                0.476
+                          Eastern Himalaya  division     34.161               -3.566 0.072     7.736  0.079                    6.742                0.529
+                         Kashmir Himalayas  division    100.070               -0.000 1.000    10.275  0.026                    8.908                0.000
+                          Kumaun Himalayas  division     58.535               -1.085 0.761     9.653  0.015                    8.352                0.130
+                        Eastern Hindu Kush  division    102.452               -2.792 0.441    10.151 -0.171                    8.760                0.319
+                        Western Hindu Kush  division     32.200               -1.460 0.559     7.163 -0.048                    6.181                0.236
+                           Baltoro Muztagh  division    187.653                8.397 0.252    25.481 -0.530                   21.988                0.382
+                            Batura Muztagh  division    168.263                1.450 0.624    14.636 -0.118                   12.630                0.115
+                        Chang Chenmo Range  division    101.331                0.611 0.944    17.172 -0.202                   14.818                0.041
+                           Haramoshi Range  division    119.788                4.672 0.315    22.153 -0.274                   19.117                0.244
+                            Hispar Muztagh  division    195.119                8.079 0.441    29.734 -0.489                   25.659                0.315
+                              Ladakh Range  division     95.490               -0.509 0.907    13.615 -0.243                   11.749                0.043
+                      Masherbrum Mountains  division    122.609                9.939 0.129    26.291 -0.326                   22.687                0.438
+                 North Ghunjerab Mountains  division    205.687               -2.504 0.797    19.961 -0.084                   17.225                0.145
+                        Northern Karakorum  division     92.199                0.304 0.944    12.899  0.090                   11.245                0.027
+                             Pangong Range  division     41.699               -0.838 0.761     8.467 -0.281                    7.306                0.115
+                            Panmah Muztagh  division    208.488                6.157 0.338    39.793 -0.293                   34.339                0.179
+                           Rakaposhi Range  division    108.447                6.150 0.080    11.642 -0.165                   10.046                0.612
+                              Rimo Muztagh  division    231.367                5.181 0.272    18.219 -0.359                   15.722                0.330
+                         Saltoro Mountains  division    150.108                6.537 0.216    26.629 -0.311                   22.979                0.284
+                             Saser Muztagh  division    159.592                6.898 0.141    19.747 -0.295                   17.040                0.405
+                           Siachen Muztagh  division    260.380               -1.775 0.559    13.608 -0.133                   11.743                0.151
+                  South Ghujerab Mountains  division    178.173                4.117 0.338    22.511 -0.105                   19.425                0.212
+                  Spantik-Sosbun Mountains  division    182.125                6.482 0.414    23.222 -0.229                   20.039                0.323
+                                Yengisogat  division    183.855                2.525 0.528    27.821 -0.406                   24.008                0.105
+                            Eastern Pamirs  division     89.994               -1.669 0.761    19.885 -0.038                   17.159                0.097
+                          Trans-Alay Range  division    115.253               -1.543 0.441     8.939 -0.449                    7.714                0.200
+                            Western Pamirs  division    159.944               -2.976 0.469    15.036 -0.203                   12.975                0.229
+                         Central Tian Shan  division    110.152               -7.098 0.027    10.117 -0.028                    8.730                0.813
+                         Eastern Tian Shan  division     96.197               -1.598 0.726     7.551 -0.017                    6.516                0.245
+                         Western Tian Shan  division     81.760               -3.208 0.168     8.574 -0.473                    7.399                0.434
+                       Bayan Har Mountains  division     40.967               -0.321 0.870    13.128  0.114                   11.493                0.028
+                             Hengduan Shan  division     24.357               -1.343 0.388     5.869 -0.058                    5.065                0.265
+                          Kunlun Mountains  division     52.208               -0.079 0.981     6.736 -0.014                    5.813                0.014
+                             Min Mountains  division     12.979                0.901 0.315     4.064 -0.272                    3.507                0.257
+                                  Nan Shan  division     29.322               -1.130 0.624     7.014  0.125                    6.158                0.184
+                                 Qiangtang  division     31.125               -0.645 0.691     6.869 -0.205                    5.927                0.109
+                             Qionglai Shan  division     40.442                0.598 0.907    10.052 -0.291                    8.674                0.069
+                        Tanggula Mountains  division     79.899                5.253 0.691    25.974 -0.252                   22.413                0.234
+                      Tibetan Plateau (nn)  division     30.229                3.483 0.559    14.288  0.067                   12.447                0.280
+                             Transhimalaya  division     37.944               -2.681 0.199     6.873 -0.266                    5.931                0.452
+                                  Himalaya     range     65.653               -2.557 0.388     7.882  0.093                    6.872                0.372
+                                Hindu Kush     range     56.344               -1.885 0.293     7.243 -0.153                    6.250                0.302
+                                 Karakoram     range    140.467                3.894 0.183    14.204 -0.315                   12.257                0.318
+                           Pamir Mountains     range    136.152               -2.542 0.591    14.389 -0.203                   12.417                0.205
+                                 Tian Shan     range     95.868               -4.010 0.072     6.986 -0.210                    6.029                0.665
+                           Tibetan Plateau     range     35.834               -1.738 0.315     5.924 -0.087                    5.112                0.340
+                      Amu Darya 4050051940 sub-basin    118.840               -0.330 0.907    18.472 -0.052                   15.940                0.021
+                      Amu Darya 4050484700 sub-basin     80.913               -4.666 0.065     8.617 -0.320                    7.436                0.628
+                      Amu Darya 4050496820 sub-basin     35.418               -1.718 0.591     8.434 -0.036                    7.278                0.236
+                      Amu Darya 4050508720 sub-basin    154.360               -3.037 0.362    14.102 -0.292                   12.169                0.250
+                      Amu Darya 4050508830 sub-basin    104.416               -2.011 0.761    22.095 -0.133                   19.067                0.105
+                      Amu Darya 4050520570 sub-basin    163.537               -3.824 0.362    13.780 -0.165                   11.891                0.322
+                      Amu Darya 4050520710 sub-basin    154.430               -2.224 0.761    19.397 -0.102                   16.738                0.133
+                      Amu Darya 4050531200 sub-basin     10.082               -0.942 0.216     5.233 -0.082                    4.516                0.209
+                      Amu Darya 4050531330 sub-basin     50.330               -1.878 0.657     8.094 -0.185                    6.985                0.269
+                      Amu Darya 4050538040 sub-basin     63.533               -2.708 0.252     8.637 -0.307                    7.454                0.363
+                      Amu Darya 4050538240 sub-basin     29.830               -2.340 0.183     6.344 -0.149                    5.475                0.427
+                      Amu Darya 4050540620 sub-basin     37.535               -3.688 0.118     9.298 -0.130                    8.023                0.460
+                      Amu Darya 4050540630 sub-basin    123.403               -2.522 0.388    11.638 -0.267                   10.042                0.251
+                      Amu Darya 4050544080 sub-basin     93.067               -4.474 0.272    12.335 -0.305                   10.644                0.420
+                      Amu Darya 4050545530 sub-basin    149.691               -3.054 0.315    10.155 -0.390                    8.763                0.349
+                      Amu Darya 4050545690 sub-basin      9.196               -1.324 0.469     5.760 -0.022                    4.970                0.266
+                      Amu Darya 4050549780 sub-basin     55.936               -1.532 0.338     8.045 -0.183                    6.942                0.221
+             Ganges-Brahmaputra 4050053370 sub-basin     59.679               -1.128 0.657    23.009  0.224                   20.577                0.055
+             Ganges-Brahmaputra 4050769230 sub-basin    159.231              -11.651 0.042    18.460 -0.199                   15.930                0.731
+             Ganges-Brahmaputra 4050769470 sub-basin     49.415                4.576 0.080    11.753 -0.530                   10.142                0.451
+             Ganges-Brahmaputra 4050783910 sub-basin     74.193               -5.720 0.272    15.632 -0.361                   13.489                0.424
+             Ganges-Brahmaputra 4050784170 sub-basin     30.334               -1.098 0.591     7.959 -0.462                    6.868                0.160
+             Ganges-Brahmaputra 4050784890 sub-basin      8.971               -1.371 0.072     3.056  0.294                    2.816                0.487
+             Ganges-Brahmaputra 4050785160 sub-basin     32.822               -3.523 0.338    13.399  0.023                   11.610                0.303
+             Ganges-Brahmaputra 4050786460 sub-basin     50.619               -4.761 0.315    16.894 -0.161                   14.578                0.327
+             Ganges-Brahmaputra 4050786650 sub-basin     14.675               -0.852 0.388     4.280 -0.326                    3.694                0.231
+             Ganges-Brahmaputra 4050838850 sub-basin     15.714                0.591 0.498    18.082 -0.239                   15.604                0.038
+             Ganges-Brahmaputra 4050839030 sub-basin     72.927               -6.921 0.129    19.108 -0.123                   16.489                0.420
+             Ganges-Brahmaputra 4050865800 sub-basin     27.733               -3.161 0.141     6.877 -0.164                    5.934                0.533
+             Ganges-Brahmaputra 4050876680 sub-basin     25.397               -0.224 0.834     4.416  0.056                    3.846                0.058
+             Ganges-Brahmaputra 4050884290 sub-basin     10.959               -1.585 0.021     4.147  0.058                    3.612                0.439
+             Ganges-Brahmaputra 4050886200 sub-basin     48.002               -7.123 0.038    11.713  0.010                   10.127                0.703
+             Ganges-Brahmaputra 4050900670 sub-basin     32.757               -4.053 0.047     8.854 -0.016                    7.640                0.530
+             Ganges-Brahmaputra 4050901850 sub-basin     47.348               -3.354 0.441    10.581 -0.159                    9.131                0.367
+             Ganges-Brahmaputra 4050911460 sub-basin     58.504               -0.702 0.834     8.089  0.074                    7.048                0.100
+             Ganges-Brahmaputra 4050911800 sub-basin     32.324               -2.563 0.216     6.685  0.166                    5.911                0.434
+             Ganges-Brahmaputra 4050911950 sub-basin     47.948               -3.967 0.216     9.381 -0.090                    8.095                0.490
+             Ganges-Brahmaputra 4050956230 sub-basin     55.174               -7.934 0.107    12.406 -0.152                   10.706                0.741
+            Helmand (endorheic) 2050807100 sub-basin     22.133               -1.100 0.528     8.791 -0.033                    7.586                0.145
+            Helmand (endorheic) 2050807220 sub-basin     23.345               -1.035 0.691    11.811  0.032                   10.251                0.101
+            Helmand (endorheic) 2050807910 sub-basin     33.262               -1.593 0.498     7.672  0.000                    6.621                0.241
+                          Indus 4050053490 sub-basin     95.961               -2.210 0.761    32.740 -0.092                   28.252                0.078
+                          Indus 4050607260 sub-basin     84.900                2.227 0.624    12.355 -0.315                   10.662                0.209
+                          Indus 4050607420 sub-basin     86.207               -1.461 0.691    11.990 -0.137                   10.347                0.141
+                          Indus 4050648310 sub-basin     82.167               -2.326 0.414     8.860 -0.034                    7.646                0.304
+                          Indus 4050648320 sub-basin    129.333                1.460 0.691    11.606 -0.157                   10.015                0.146
+                          Indus 4050709980 sub-basin    140.286               -2.720 0.834    24.275  0.196                   21.470                0.127
+                          Indus 4050709990 sub-basin     66.686               -5.131 0.691    23.856 -0.241                   20.586                0.249
+                          Indus 4050729700 sub-basin     63.427                0.466 0.834     8.078  0.047                    7.030                0.066
+                          Indus 4050729890 sub-basin     72.706               -1.108 0.657    10.274  0.215                    9.152                0.121
+                          Indus 4050786190 sub-basin     98.218                1.658 0.691     9.816  0.071                    8.553                0.194
+                      Irrawaddy 4050903190 sub-basin     20.826               -1.133 0.591     7.188 -0.246                    6.202                0.183
+          Issyk-Kul (endorheic) 4050050570 sub-basin    127.354               -6.073 0.038    11.358 -0.197                    9.801                0.620
+                         Mekong 4050705050 sub-basin     43.745               -2.014 0.591    17.878  0.230                   16.032                0.126
+                         Mekong 4050705180 sub-basin     40.823                2.760 0.624    19.386 -0.005                   16.729                0.165
+                         Mekong 4050730280 sub-basin     57.482                3.316 0.726    21.318 -0.076                   18.396                0.180
+                         Mekong 4050730290 sub-basin     25.747               -1.304 0.528    10.474  0.048                    9.117                0.143
+                         Mekong 4050933180 sub-basin     27.644               -2.014 0.154     6.385 -0.136                    5.510                0.366
+                          Other 2050085640 sub-basin     15.535               -1.775 0.234     5.360 -0.043                    4.625                0.384
+                          Other 2050672240 sub-basin     35.668               -0.776 0.834     8.447 -0.106                    7.290                0.106
+                          Other 2050816220 sub-basin     14.033               -1.074 0.657     5.887 -0.153                    5.080                0.211
+                          Other 3050713950 sub-basin    104.316                0.007 0.981    15.352 -0.015                   13.248                0.001
+                          Other 3050713960 sub-basin    115.390               -1.146 0.761    11.573 -0.136                    9.986                0.115
+                          Other 4050050960 sub-basin     15.825               -2.022 0.293     8.062 -0.025                    6.957                0.291
+                          Other 4050496830 sub-basin     12.978               -1.604 0.293     7.326 -0.132                    6.322                0.254
+                          Other 4050585650 sub-basin     15.211                1.227 0.624     6.689 -0.130                    5.772                0.213
+                          Other 4050603560 sub-basin     24.705               -0.261 0.907     8.462  0.006                    7.310                0.036
+Other endorheic (inner plateau) 2050088390 sub-basin     75.753               -0.800 0.761    20.323 -0.207                   17.537                0.046
+Other endorheic (inner plateau) 2050724600 sub-basin     39.011               -0.769 0.726     9.021 -0.129                    7.785                0.099
+Other endorheic (inner plateau) 4050050280 sub-basin     42.285               -4.332 0.183     9.679  0.136                    8.524                0.508
+Other endorheic (inner plateau) 4050050290 sub-basin     90.232                2.043 0.624    10.513 -0.164                    9.072                0.225
+Other endorheic (inner plateau) 4050050300 sub-basin    106.415               -7.498 0.042    11.633 -0.090                   10.038                0.747
+Other endorheic (inner plateau) 4050050320 sub-basin     36.778               -0.754 0.797    11.394  0.025                    9.876                0.076
+Other endorheic (inner plateau) 4050050330 sub-basin    123.998               -0.797 0.726    10.791 -0.079                    9.312                0.086
+Other endorheic (inner plateau) 4050050340 sub-basin     86.971                1.459 0.591    10.015 -0.014                    8.642                0.169
+Other endorheic (inner plateau) 4050050350 sub-basin     86.824               -5.300 0.072    10.501 -0.227                    9.061                0.585
+Other endorheic (inner plateau) 4050050410 sub-basin     31.090               -0.796 0.657     4.870  0.181                    4.307                0.185
+Other endorheic (inner plateau) 4050050420 sub-basin     34.753                0.693 0.834     8.895 -0.245                    7.676                0.090
+Other endorheic (inner plateau) 4050050470 sub-basin     17.759               -0.990 0.441     5.576 -0.153                    4.812                0.206
+Other endorheic (inner plateau) 4050050500 sub-basin     43.492               -2.447 0.498    10.543 -0.165                    9.098                0.269
+Other endorheic (inner plateau) 4050050560 sub-basin     45.307               -3.183 0.168     9.268 -0.174                    7.998                0.398
+Other endorheic (inner plateau) 4050050580 sub-basin     36.340               -4.049 0.107    13.736 -0.220                   11.853                0.342
+Other endorheic (inner plateau) 4050050590 sub-basin    111.633                0.473 0.981    17.996 -0.231                   15.530                0.030
+Other endorheic (inner plateau) 4050050600 sub-basin     39.728               -3.171 0.183    11.208  0.088                    9.770                0.325
+Other endorheic (inner plateau) 4050050610 sub-basin     13.312               -1.630 0.053     3.626  0.104                    3.165                0.515
+Other endorheic (inner plateau) 4050050700 sub-basin     27.623               -4.190 0.199    10.261  0.088                    8.944                0.468
+Other endorheic (inner plateau) 4050050720 sub-basin     28.595               -0.477 0.907    13.598  0.067                   11.846                0.040
+Other endorheic (inner plateau) 4050050740 sub-basin    114.248               -2.564 0.624    16.465 -0.011                   14.209                0.180
+Other endorheic (inner plateau) 4050050780 sub-basin     11.524               -1.111 0.216     4.793 -0.041                    4.136                0.269
+Other endorheic (inner plateau) 4050050810 sub-basin     24.246               -2.225 0.362     7.907 -0.104                    6.824                0.326
+Other endorheic (inner plateau) 4050050910 sub-basin     35.214               -4.623 0.252    12.167 -0.438                   10.499                0.440
+Other endorheic (inner plateau) 4050050950 sub-basin     32.825                1.260 0.726     9.410 -0.095                    8.120                0.155
+Other endorheic (inner plateau) 4050050980 sub-basin     85.112               -1.375 0.797    15.445 -0.376                   13.328                0.103
+Other endorheic (inner plateau) 4050051160 sub-basin     51.847               -0.990 0.907    13.377 -0.210                   11.544                0.086
+Other endorheic (inner plateau) 4050051190 sub-basin     42.382               -1.003 0.761    13.632 -0.281                   11.764                0.085
+Other endorheic (inner plateau) 4050051270 sub-basin     23.235                0.094 0.981     8.785  0.104                    7.669                0.012
+Other endorheic (inner plateau) 4050051280 sub-basin    112.460               -1.131 0.797    10.950  0.083                    9.544                0.119
+Other endorheic (inner plateau) 4050051340 sub-basin     80.459                0.266 0.907    17.920 -0.091                   15.464                0.017
+Other endorheic (inner plateau) 4050051740 sub-basin     43.750                3.999 0.216     9.544 -0.139                    8.236                0.486
+Other endorheic (inner plateau) 4050051760 sub-basin     48.791               -2.405 0.441    15.667  0.028                   13.587                0.177
+Other endorheic (inner plateau) 4050051820 sub-basin     71.696                3.934 0.624    29.671 -0.154                   25.604                0.154
+Other endorheic (inner plateau) 4050052120 sub-basin     85.137               -1.529 0.797    15.750 -0.175                   13.591                0.112
+Other endorheic (inner plateau) 4050052370 sub-basin     77.184               -5.039 0.414    17.152 -0.126                   14.801                0.340
+Other endorheic (inner plateau) 4050219180 sub-basin    164.855               -0.710 0.761    11.351 -0.021                    9.795                0.072
+Other endorheic (inner plateau) 4050219380 sub-basin    156.405                0.145 0.944     9.533 -0.230                    8.226                0.018
+Other endorheic (inner plateau) 4050298550 sub-basin    126.643               -3.471 0.216    11.073  0.162                    9.791                0.355
+Other endorheic (inner plateau) 4050298640 sub-basin     85.257               -3.222 0.234    10.158  0.129                    8.930                0.361
+Other endorheic (inner plateau) 4050313680 sub-basin    130.839               -1.390 0.691    12.538  0.090                   10.930                0.127
+Other endorheic (inner plateau) 4050313840 sub-basin    140.438               -3.888 0.293    14.833 -0.057                   12.800                0.304
+Other endorheic (inner plateau) 4050317010 sub-basin     97.864               -3.421 0.293     9.813 -0.148                    8.468                0.404
+Other endorheic (inner plateau) 4050317280 sub-basin    143.298               -3.319 0.388    12.273  0.036                   10.660                0.311
+Other endorheic (inner plateau) 4050325660 sub-basin    166.601               -1.889 0.559    12.640 -0.039                   10.907                0.173
+Other endorheic (inner plateau) 4050325880 sub-basin     75.023               -2.175 0.624    12.279  0.010                   10.614                0.205
+Other endorheic (inner plateau) 4050326920 sub-basin    134.391               -2.594 0.726    15.830 -0.059                   13.660                0.190
+Other endorheic (inner plateau) 4050327070 sub-basin    147.868               -6.608 0.168    14.859 -0.059                   12.822                0.515
+             Qaidam (endorheic) 4050050270 sub-basin     29.745                1.561 0.797    11.995  0.020                   10.388                0.150
+                        Salween 4050718180 sub-basin     64.514                2.180 0.944    31.901 -0.265                   27.529                0.079
+                        Salween 4050718400 sub-basin     53.298                2.504 0.834    23.083 -0.329                   19.919                0.126
+                        Salween 4051046870 sub-basin     67.539               -6.185 0.097    12.217 -0.164                   10.542                0.587
+                      Syr Darya 4050237450 sub-basin     43.791                1.840 0.691    13.335 -0.248                   11.507                0.160
+                      Syr Darya 4050355290 sub-basin     80.597               -1.116 0.797    10.880 -0.262                    9.388                0.119
+                      Syr Darya 4050411980 sub-basin     41.668               -3.629 0.168    10.171 -0.382                    8.777                0.413
+                      Syr Darya 4050411990 sub-basin     90.145               -4.736 0.053     9.318 -0.499                    8.041                0.589
+                      Syr Darya 4050420980 sub-basin    130.795               -7.889 0.080    15.724 -0.027                   13.569                0.581
+                      Syr Darya 4050421200 sub-basin    112.070               -4.433 0.338    13.085 -0.267                   11.291                0.393
+              Tarim (endorheic) 4050050210 sub-basin     10.994               -0.476 0.691     5.393 -0.088                    4.653                0.102
+              Tarim (endorheic) 4050051120 sub-basin     62.910                0.777 0.761    10.276 -0.055                    8.868                0.088
+              Tarim (endorheic) 4050052610 sub-basin     36.916               -1.814 0.559     8.675 -0.125                    7.486                0.242
+              Tarim (endorheic) 4050416010 sub-basin     81.164               -5.639 0.053    10.133 -0.383                    8.744                0.645
+              Tarim (endorheic) 4050416190 sub-basin     77.693               -3.468 0.129     7.848  0.017                    6.792                0.511
+              Tarim (endorheic) 4050438030 sub-basin     87.592               -4.944 0.272    12.994  0.168                   11.490                0.430
+              Tarim (endorheic) 4050440300 sub-basin     61.920               -0.923 0.559     7.110 -0.092                    6.135                0.150
+              Tarim (endorheic) 4050442120 sub-basin     39.403               -2.927 0.216     7.014 -0.079                    6.053                0.484
+              Tarim (endorheic) 4050449660 sub-basin     69.890               -0.662 0.834     8.758 -0.223                    7.558                0.088
+              Tarim (endorheic) 4050449990 sub-basin     23.672               -2.298 0.168     8.128 -0.156                    7.014                0.328
+              Tarim (endorheic) 4050462690 sub-basin     64.040               -1.342 0.797    12.630 -0.066                   10.899                0.123
+              Tarim (endorheic) 4050469570 sub-basin     30.072               -1.873 0.441     6.069 -0.069                    5.238                0.358
+              Tarim (endorheic) 4050469680 sub-basin     39.940               -2.619 0.441     8.134 -0.002                    7.019                0.373
+              Tarim (endorheic) 4050475170 sub-basin     44.159               -4.012 0.080     7.995 -0.217                    6.899                0.582
+              Tarim (endorheic) 4050476110 sub-basin     22.691               -3.586 0.034     5.970 -0.292                    5.152                0.696
+              Tarim (endorheic) 4050492110 sub-basin     16.728               -2.819 0.338     8.063 -0.371                    6.958                0.405
+              Tarim (endorheic) 4050492120 sub-basin     48.530               -2.483 0.528     8.391  0.038                    7.290                0.341
+              Tarim (endorheic) 4050508980 sub-basin     64.147               -1.508 0.591     8.139  0.248                    7.359                0.205
+              Tarim (endorheic) 4050510850 sub-basin     31.624               -0.552 0.797     5.955  0.211                    5.294                0.104
+              Tarim (endorheic) 4050515470 sub-basin     67.544                0.206 0.870     6.947 -0.166                    5.995                0.034
+              Tarim (endorheic) 4050515600 sub-basin    110.635               -1.436 0.498     7.219 -0.213                    6.230                0.231
+              Tarim (endorheic) 4050523580 sub-basin     94.411               -3.083 0.591    15.507 -0.082                   13.381                0.230
+              Tarim (endorheic) 4050523690 sub-basin    103.987               -1.144 0.761    10.163 -0.049                    8.770                0.130
+                        Yangtze 4050779600 sub-basin     10.724                0.429 0.726     3.254 -0.353                    2.808                0.153
+                        Yangtze 4050779690 sub-basin     30.832               -1.301 0.761    13.481 -0.030                   11.633                0.112
+                        Yangtze 4050805770 sub-basin     36.696                0.550 0.761     9.535 -0.275                    8.228                0.067
+                        Yangtze 4050872680 sub-basin     28.341               -1.898 0.272     6.850  0.059                    5.966                0.318
+                        Yangtze 4050872820 sub-basin     28.318                0.625 0.834     7.742 -0.021                    6.681                0.094
+              Yellow (Huang He) 4050050550 sub-basin     42.153               -2.142 0.591     9.336  0.206                    8.281                0.259
+              Yellow (Huang He) 4050050850 sub-basin     13.223                0.345 0.657     5.643 -0.070                    4.870                0.071
+              Yellow (Huang He) 4050051010 sub-basin     32.453               -3.305 0.338    10.158  0.115                    8.894                0.372
+              Yellow (Huang He) 4050051460 sub-basin      9.987                2.797 0.034     4.908  0.017                    4.248                0.658
+              Yellow (Huang He) 4050534090 sub-basin      7.160                0.458 0.657     2.511  0.140                    2.214                0.207
+              Yellow (Huang He) 4050563950 sub-basin     20.622               -2.431 0.118     6.632  0.165                    5.864                0.414
+              Yellow (Huang He) 4050578640 sub-basin     28.295                2.894 0.183     9.280  0.124                    8.146                0.355
+              Yellow (Huang He) 4050589340 sub-basin     11.423                1.895 0.141     4.156 -0.116                    3.587                0.528
+              Yellow (Huang He) 4050589480 sub-basin     13.319                2.183 0.199     6.289 -0.079                    5.427                0.402
+              Yellow (Huang He) 4050603550 sub-basin     39.216                6.446 0.107    13.060  0.144                   11.529                0.559
+              Yellow (Huang He) 4050646320 sub-basin     29.133                1.184 0.761    10.505 -0.259                    9.065                0.131
+              Yellow (Huang He) 4050646500 sub-basin     45.041                1.003 0.907    16.496  0.073                   14.373                0.070

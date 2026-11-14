@@ -1,0 +1,5 @@
+check,value,expected
+"False positive rate, no trend, n=25",0.04555,close to 0.05
+MK Z matches scipy Kendall tau p,0.2723427122311102,scipy tau p 0.2755
+Sen slope of 2x+1,2.0,2
+"MDT, white noise sd 1, n 25",0.08585751056671143,about 0.07
