@@ -24,10 +24,12 @@ TILE = "h24v05"
 
 
 def hydro_days(y):
+    """First and last day of a hydrological year (October-September)."""
     return pd.Timestamp(f"{y - 1}-10-01"), pd.Timestamp(f"{y}-09-30")
 
 
 def download(first=2001, last=2025):
+    """Download MOD10A1F tiles for the years (earthaccess, credentials from netrc)."""
     import earthaccess
     earthaccess.login(strategy="netrc")
     D.mkdir(parents=True, exist_ok=True)
@@ -40,6 +42,7 @@ def download(first=2001, last=2025):
 
 
 def reduce(first=2001, last=2025):
+    """Yearly snow days per tile from the daily MOD10A1F files."""
     from pyhdf.SD import SD, SDC
     for y in range(first, last + 1):
         out = D / f"counts_{y}.npz"
@@ -172,6 +175,7 @@ def tile_mask(unit="Karakoram"):
 
 
 def compare():
+    """Compare cloud-gap-filled MOD10A1F snow duration with ours."""
     m = tile_mask()
     rows = []
     for f in sorted(D.glob("counts_*.npz")):

@@ -1,4 +1,4 @@
-"""Snow-cover duration by 500 m elevation band, per range and hydrological year, from the yearly assets of src/11.
+"""Snow-cover duration by elevation band (STEP m, 1 km cells), per range and hydrological year, from the yearly assets of src/11.
 
 Duration is defined as in src/13: snow days scaled to 365 by clear days, pixels with at least 120 clear days.
 Elevation is the Copernicus GLO-30 DEM (2024_1 release), averaged to the 500 m MODIS grid.
@@ -24,10 +24,12 @@ DEM = ee.ImageCollection("COPERNICUS/DEM/GLO30_2024_1").select("DEM").mosaic().s
 
 
 def key(n):
+    """Asset key of a range name."""
     return n.lower().replace(" ", "_")
 
 
 def rows(r, y, geom, tile_scale=8):
+    """Snow duration and pixel counts by elevation band (STEP m, 1 km cells) for a range-year."""
     i = ee.Image(f"{ROOT}/{key(r)}_{y}")
     v = i.select("valid_days")
     dur = i.select("snow_days").multiply(365).divide(v).updateMask(v.gte(MIN_VALID)).rename("duration")
@@ -38,6 +40,7 @@ def rows(r, y, geom, tile_scale=8):
 
 
 def main():
+    """Elevation band table of every range-year, reusing rows already computed."""
     done = pd.read_csv(OUT) if OUT.exists() else pd.DataFrame(columns=["range", "year"])
     have = set(zip(done["range"], done["year"]))
     for r in RANGES:

@@ -20,12 +20,14 @@ D = R / "data" / "indices"
 
 
 def oni():
+    """Monthly ONI (ENSO) values, seasons centred on their middle month."""
     t = pd.read_csv(D / "oni.txt", sep=r"\s+")
     centre = {"DJF": 1, "JFM": 2, "FMA": 3, "MAM": 4, "AMJ": 5, "MJJ": 6, "JJA": 7, "JAS": 8, "ASO": 9, "SON": 10, "OND": 11, "NDJ": 12}
     return pd.DataFrame({"year": t.YR, "month": t.SEAS.map(centre), "value": t.ANOM})
 
 
 def dmi():
+    """Monthly Dipole Mode Index (IOD)."""
     rows = []
     for line in (D / "dmi.txt").read_text().splitlines()[1:]:
         p = line.split()
@@ -35,6 +37,7 @@ def dmi():
 
 
 def nao():
+    """Monthly NAO index."""
     return pd.read_csv(D / "nao.txt", sep=r"\s+", header=None, names=["year", "month", "value"])
 
 
@@ -49,6 +52,7 @@ SEASONS = {"autumn": [(-1, 9), (-1, 10), (-1, 11)], "winter": [(-1, 12), (0, 1),
 
 
 def main():
+    """Correlation of each unit's snow duration with ENSO, IOD and NAO."""
     u = pd.read_csv(R / "outputs" / "unit_year.csv")
     idx = {"ENSO (ONI)": oni(), "IOD (DMI)": dmi(), "NAO": nao()}
     rows = []

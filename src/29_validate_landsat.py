@@ -28,6 +28,7 @@ LS = ee.ImageCollection("LANDSAT/LC08/C02/T1_L2").merge(ee.ImageCollection("LAND
 
 
 def landsat_fraction(img):
+    """Landsat snow fraction from NDSI on clear pixels (QA bits 0-4 clear)."""
     qa = img.select("QA_PIXEL")
     clear = qa.bitwiseAnd(0b11111).eq(0)  # fill, dilated cloud, cirrus, cloud, shadow
     g = img.select("SR_B3").multiply(0.0000275).add(-0.2)
@@ -39,6 +40,7 @@ def landsat_fraction(img):
 
 
 def scene_rows(img, r, season):
+    """Landsat snow fraction and same-day MODIS NDSI at sample points of one scene."""
     date = ee.Date(img.get("system:time_start"))
     mod = MODIS.filterDate(date.update(hour=0, minute=0, second=0), date.update(hour=0, minute=0, second=0).advance(1, "day")).first()
     stack = landsat_fraction(img).addBands(ee.Image(mod).rename("modis")).addBands(
@@ -52,6 +54,7 @@ def scene_rows(img, r, season):
 
 
 def main():
+    """Validation points for each range and season, reusing rows already computed."""
     have = set(pd.read_csv(OUT)[["range", "season"]].apply(tuple, axis=1)) if OUT.exists() else set()
     for r in RANGES:
         geom = REG.filter(ee.Filter.eq("unit", r)).filter(ee.Filter.eq("level", "range")).geometry()

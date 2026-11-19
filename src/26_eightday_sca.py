@@ -24,7 +24,9 @@ COL = ee.ImageCollection("MODIS/061/MOD10A2").select("Maximum_Snow_Extent")
 
 
 def per_composite(geom, tile_scale=4):
+    """Function giving the snow, land and cloud fractions of one 8-day composite over a region."""
     def f(i):
+        """Snow (200), land (25) and cloud (50) fractions of one composite."""
         snow, land, cloud = i.eq(200), i.eq(25), i.eq(50)
         s = ee.Image.cat(snow.rename("s"), land.rename("l"), cloud.rename("c")).reduceRegion(
             ee.Reducer.sum(), geom, 2000, maxPixels=1e12, tileScale=tile_scale)
@@ -33,6 +35,7 @@ def per_composite(geom, tile_scale=4):
 
 
 def main():
+    """Snow-covered area from the 8-day product for each unit-year, reusing rows already computed."""
     done = pd.read_csv(OUT) if OUT.exists() else pd.DataFrame(columns=["unit", "year"])
     have = set(zip(done["unit"], done["year"]))
     for unit, level in UNITS:

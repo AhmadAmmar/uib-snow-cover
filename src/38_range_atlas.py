@@ -37,6 +37,7 @@ snl = pd.read_csv(O / "snowline_year.csv")
 
 
 def sen(y, x):
+    """Theil-Sen slope, intercept and 95% bounds."""
     s, i, lo, hi = stats.theilslopes(y, x, 0.95)
     return s, i, lo, hi
 
@@ -60,15 +61,18 @@ print(S[["mean_days", "sen_days_decade", "ci_lo", "ci_hi", "pct_decade", "q", "m
 
 
 def z(d):
+    """Standardised series."""
     return (d - d.mean()) / d.std()
 
 
 def save(fig, name):
+    """Save a figure as PNG and PDF."""
     fig.savefig(F / f"{name}.png", bbox_inches="tight"); fig.savefig(F / f"{name}.pdf", bbox_inches="tight"); plt.close(fig)
 
 
 # --- single charts -------------------------------------------------------------------------------------------
 def all_ranges(ax):
+    """Panel: snow duration series of every range."""
     for r in ORDER:
         d = uy[uy.unit == r].sort_values("year")
         zz = z(d.duration)
@@ -83,6 +87,7 @@ def all_ranges(ax):
 
 
 def trend_bars(ax):
+    """Panel: trend of each range with its interval."""
     y = np.arange(len(ORDER))[::-1]
     for k, r in zip(y, ORDER):
         v = S.loc[r]
@@ -96,6 +101,7 @@ def trend_bars(ax):
 
 
 def climate(ax):
+    """Panel: snow duration trend against warm-season temperature trend by range (size by area)."""
     for r in ORDER:
         v = S.loc[r]
         ax.scatter(v.warm_t_C_decade, v.pct_decade, s=20 + v.km2 / 2e4, color=COL[r], edgecolor="k", lw=0.4, zorder=3)
@@ -106,6 +112,7 @@ def climate(ax):
 
 
 def bands_heat(ax):
+    """Panel: trend by elevation band and range."""
     p = bands.pivot_table(index="range", columns="band_low_m", values="sen_days_per_decade").reindex(ORDER)
     m = np.nanmax(np.abs(p.values))
     im = ax.imshow(p.values, aspect="auto", cmap="RdBu", vmin=-m, vmax=m)
@@ -117,6 +124,7 @@ def bands_heat(ax):
 
 
 def snowline(ax):
+    """Panel: snow line series by range."""
     for r in ORDER:
         d = snl[snl.range == r]
         if len(d):
@@ -125,6 +133,7 @@ def snowline(ax):
 
 
 def cumulative(ax):
+    """Panel: cumulative anomaly of each range."""
     for r in ORDER:
         d = uy[uy.unit == r].sort_values("year")
         ax.plot(d.year, z(d.duration).cumsum(), color=COL[r], lw=2.2 if r == "Karakoram" else 1, label=r)
@@ -134,6 +143,7 @@ def cumulative(ax):
 
 
 def correlation(ax):
+    """Panel: correlation of year-to-year changes between ranges."""
     W = uy.pivot(index="year", columns="unit", values="duration")[ORDER]
     c = W.diff().corr()                                   # first differences: year-to-year co-movement, trend removed
     im = ax.imshow(c.values, cmap="PuOr", vmin=-1, vmax=1)
@@ -147,6 +157,7 @@ def correlation(ax):
 
 
 def trend_map(ax):
+    """Panel: map of range trends."""
     g = gpd.read_file(R / "data/regions/tp_regions_v2.geojson")
     g = g[g.level == "range"].copy()
     key = "name" if "name" in g else [c for c in g.columns if g[c].isin(ORDER).any()][0]

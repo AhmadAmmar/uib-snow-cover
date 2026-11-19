@@ -39,12 +39,15 @@ def polygons(geom):
 
 
 def clean(g):
+    """Geometries simplified by SIMPLIFY_DEG with topology kept, as polygons only."""
     g = g.copy()
     g["geometry"] = [polygons(polygons(x).simplify(SIMPLIFY_DEG, preserve_topology=True)) for x in g.geometry]
     return g
 
 
 def build(shp):
+    """Mountain range regions from GMBA v2: the chosen ranges (level 3, parent Third Pole) and their
+    divisions (level 4), with the domain as their union."""
     g = gpd.read_file(shp, columns=["GMBA_V2_ID", "MapName", "Hier_Lvl", "Area", "Level_03", "Level_04"])
     g = g[g.Level_03.isin(RANGES)]
     rows = []

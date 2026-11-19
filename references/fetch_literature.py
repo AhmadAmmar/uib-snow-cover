@@ -69,11 +69,13 @@ LIST = [
 
 
 def get(url):
+    """Text of a URL (40 s timeout)."""
     with urlopen(Request(url, headers={"User-Agent": f"reading-list (mailto:{MAILTO})"}), timeout=40) as r:
         return r.read().decode("utf8")
 
 
 def main():
+    """Fetch the reading list (one OpenAlex search per topic) and write it as a table, BibTeX and RIS."""
     rows, bib, ris = [], [], []
     for topic, q in LIST:
         title = re.sub(r"^.*?\b(?:19|20)\d\d\b\s*", "", q)

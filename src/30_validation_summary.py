@@ -16,6 +16,8 @@ R = Path(__file__).resolve().parent.parent
 
 
 def scores(g):
+    """Agreement of MODIS (NDSI 40 or more) with Landsat (snow fraction 0.5 or more): cells, scenes, accuracy, omission, commission, Landsat snow
+    share and mean absolute error of the fraction."""
     ls, md = g.ls_frac >= 0.5, g.modis >= 40
     tp, tn = (ls & md).sum(), (~ls & ~md).sum()
     return pd.Series(dict(cells=len(g), scenes=g.scene.nunique(), accuracy=(tp + tn) / len(g),
@@ -25,6 +27,7 @@ def scores(g):
 
 
 def main():
+    """Validation scores overall and by range and season."""
     d = pd.read_csv(R / "outputs" / "landsat_validation_points.csv")
     d = d[d.modis <= 100]
     d["band"] = (d.elev // 1000 * 1000).astype(int)

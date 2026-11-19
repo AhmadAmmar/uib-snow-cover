@@ -18,15 +18,18 @@ ERA = ee.ImageCollection("ECMWF/ERA5_LAND/MONTHLY_AGGR")
 
 
 def key(n):
+    """Asset key of a range name."""
     return n.lower().replace(" ", "_")
 
 
 def complete():
+    """Ranges whose yearly assets all exist."""
     have = {a["name"].split("/")[-1] for a in ee.data.listAssets({"parent": ROOT})["assets"]}
     return [r for r in RANGES if all(f"{key(r)}_{y}" in have for y in YEARS)]
 
 
 def snow_image(r, y):
+    """Snow duration (days per year, scaled to 365 from valid days, masked below MIN_VALID) late-summer snow fraction and valid days of a range-year."""
     i = ee.Image(f"{ROOT}/{key(r)}_{y}")
     dur = i.select("snow_days").multiply(365).divide(i.select("valid_days")).updateMask(i.select("valid_days").gte(MIN_VALID)).rename("duration")
     late = i.select("late_snow").divide(i.select("late_valid")).rename("late_frac")
@@ -34,6 +37,8 @@ def snow_image(r, y):
 
 
 def climate_image(y):
+    """ERA5-Land climate of a hydrological year: mean 2 m temperature over the year, cold
+    season (October-April) and warm season (May-September), precipitation and cold-season snowfall (mm), and more."""
     wy = ERA.filterDate(f"{y - 1}-10-01", f"{y}-10-01")
     cold = ERA.filterDate(f"{y - 1}-10-01", f"{y}-05-01")
     warm = ERA.filterDate(f"{y}-05-01", f"{y}-10-01")
@@ -47,11 +52,13 @@ def climate_image(y):
 
 
 def table(img, units, scale, y):
+    """Mean of an image over each unit as a table, with the year."""
     fc = img.reduceRegions(units, ee.Reducer.mean(), scale, tileScale=8).map(lambda f: f.setGeometry(None).set("year", y))
     return pd.DataFrame([f["properties"] for f in fc.getInfo()["features"]])
 
 
 def main():
+    """Unit-year table of snow and climate for every complete range."""
     done = complete()
     print("complete ranges:", done)
     rows = []

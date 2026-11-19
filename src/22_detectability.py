@@ -32,11 +32,13 @@ def mk_z(y):
 
 
 def sen(x, y):
+    """Theil-Sen slope: median of all pairwise slopes."""
     i, j = np.triu_indices(len(y), 1)
     return np.median((y[j] - y[i]) / (x[j] - x[i]))
 
 
 def ar1_noise(n, sd, phi, sims):
+    """sims series of AR(1) noise of length n, standard deviation sd and lag-1 correlation phi (clipped to 0-0.9)."""
     phi = float(np.clip(phi, 0, 0.9))
     e = rng.standard_normal((sims, n)) * sd * np.sqrt(1 - phi**2)
     out = np.empty_like(e)
@@ -47,6 +49,8 @@ def ar1_noise(n, sd, phi, sims):
 
 
 def power(n, sd, phi, slope, noise=None):
+    """Power: share of AR(1) series with the given slope in which the Mann-Kendall test is significant
+    at ALPHA (two-sided)."""
     noise = ar1_noise(n, sd, phi, SIMS) if noise is None else noise
     y = noise + slope * np.arange(n)
     return np.mean(np.abs(mk_z(y)) > stats.norm.ppf(1 - ALPHA / 2))
@@ -73,10 +77,13 @@ def mdt_table():
 
 
 def mdt_lookup(table, n, sd, phi):
+    """Minimum detectable trend for series length n, noise sd and phi, interpolated from the table."""
     return sd * np.interp(np.clip(phi, 0, 0.9), PHIS, table[n])
 
 
 def checks():
+    """Known-answer checks: false positive rate near 5% for n=25, Mann-Kendall p against scipy's Kendall tau,
+    Sen slope of 2x+1, and the white-noise MDT against the regression value 0.078."""
     rows = []
     z = mk_z(rng.standard_normal((20000, 25)))
     rows.append(("False positive rate, no trend, n=25", np.mean(np.abs(z) > 1.96), "close to 0.05"))
@@ -91,6 +98,7 @@ def checks():
 
 
 def main():
+    """Minimum detectable trends for each unit's length, noise and autocorrelation."""
     checks()
     table = mdt_table()
     pd.DataFrame({f"n{n}": v for n, v in table.items()}, index=PHIS).rename_axis("lag1").to_csv(

@@ -25,6 +25,7 @@ SUB = A + "tp_table_subbasin_year"
 
 
 def start(which="all"):
+    """Start exports of Tibetan Plateau snow duration at full resolution and by sub-basin."""
     rng = ee.FeatureCollection(A + "tp_regions_v2_range").filter(ee.Filter.eq("unit", "Tibetan Plateau")).geometry()
     m = ee.Image(ROOT + "_mk/tibetan_plateau")
     p = m.select("p").updateMask(m.select("n").gte(20)).rename("p")
@@ -38,6 +39,7 @@ def start(which="all"):
     subs = ee.FeatureCollection(A + "tp_regions_v2_subbasin").map(lambda f: f.select(["unit", "parent", "km2"]))
 
     def year(y):
+        """Snow duration of one year over the plateau ranges."""
         i = ee.ImageCollection([ee.Image(f"{ROOT}/{r}_{y}") for r in RANGES]).mosaic()
         dur = i.select("snow_days").multiply(365).divide(i.select("valid_days")).updateMask(i.select("valid_days").gte(MIN_VALID)).rename("duration")
         return dur.addBands(i.select("valid_days").toFloat()).reduceRegions(subs, ee.Reducer.mean(), 1000, tileScale=16).map(lambda f: ee.Feature(ee.Geometry.Point([85, 30]), f.toDictionary()).set("year", y))
@@ -48,6 +50,7 @@ def start(which="all"):
 
 
 def read():
+    """Read the exported histogram and totals."""
     f = ee.FeatureCollection(TIBET).first().getInfo()["properties"]
     h, total = [float(x) for x in f["hist"].split(",")], f["count"]
     cum, thr = 0, 0.0

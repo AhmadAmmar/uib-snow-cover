@@ -27,6 +27,7 @@ YEARS = list(range(2003, 2026))
 
 
 def mask():
+    """Pixels of the Himalaya range used in the cloud tests."""
     rng = ee.FeatureCollection("projects/ee-ahmadammargeo/assets/tp_regions_v2_range").filter(ee.Filter.eq("unit", "Himalaya")).geometry()
     dur, late = C.stack("himalaya")
     s, _z, p, n = C.mann_kendall(dur)
@@ -38,6 +39,7 @@ def mask():
 
 
 def counts(product, start, end, thr):
+    """Snow and valid days of a MODIS product over a period at an NDSI threshold."""
     col = ee.ImageCollection(product).filterDate(start, end).select("NDSI_Snow_Cover")
     snow = col.map(lambda i: i.gte(thr).unmask(0).toFloat()).sum()
     valid = col.map(lambda i: i.mask().gt(0).toFloat().rename("NDSI_Snow_Cover")).sum()
@@ -45,6 +47,8 @@ def counts(product, start, end, thr):
 
 
 def run():
+    """Compare snow duration under different cloud treatments on the same pixels (the
+    snow-loss pixels of the mask)."""
     m = ee.Image(MASK)
     geom = m.geometry()
     px = m.reduceRegion(ee.Reducer.count(), geom, C.SCALE, maxPixels=1e9).getInfo()["loss"]

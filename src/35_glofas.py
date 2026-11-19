@@ -30,6 +30,7 @@ AREA = [36.5, 72.4, 34.6, 76.5]  # N, W, S, E
 
 
 def download(first=2000, last=2025):
+    """Download GloFAS river discharge for the years (CDS API)."""
     import cdsapi
     D.mkdir(parents=True, exist_ok=True)
     key = [ln.split(":", 1)[1].strip() for ln in (Path.home() / ".cdsapirc").read_text().splitlines() if ln.startswith("key")][0]
@@ -47,6 +48,7 @@ def download(first=2000, last=2025):
 
 
 def extract():
+    """Discharge series at the gauges, one year at a time."""
     import xarray as xr
     # one year at a time, joined in memory: the files are small, and this needs no dask
     parts = []

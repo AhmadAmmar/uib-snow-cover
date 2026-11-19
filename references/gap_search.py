@@ -35,6 +35,7 @@ PERIOD = {"Before 1990 start": r"19[5-8]\d[-– ]+(to )?(19|20)\d\d", "Ends afte
 
 
 def get(url):
+    """JSON text of a URL, up to five attempts."""
     for i in range(5):
         try:
             with urlopen(Request(url, headers={"User-Agent": f"gap-map (mailto:{MAIL})"}), timeout=50) as r:
@@ -45,6 +46,7 @@ def get(url):
 
 
 def abstract(inv):
+    """Abstract text rebuilt from an OpenAlex inverted index."""
     if not inv:
         return ""
     w = sorted((p, k) for k, v in inv.items() for p in v)
@@ -52,6 +54,7 @@ def abstract(inv):
 
 
 def search(q):
+    """OpenAlex works for a query, by relevance and by citations."""
     out = []
     for sort in ("relevance_score:desc", "cited_by_count:desc"):
         d = get(f"https://api.openalex.org/works?search={quote(q)}&per-page=100&sort={sort}&filter=from_publication_date:2000-01-01,type:article|review&mailto={MAIL}&select=id,doi,title,publication_year,cited_by_count,abstract_inverted_index,primary_location,authorships")
@@ -60,6 +63,7 @@ def search(q):
 
 
 def main():
+    """Run the gap searches in parallel and write the unique hits with abstracts."""
     with ThreadPoolExecutor(5) as ex:
         hits = [x for r in ex.map(search, Q) for x in r]
     keep = re.compile(r"snow|glacier|cryospher|monsoon|western disturbance", re.I)

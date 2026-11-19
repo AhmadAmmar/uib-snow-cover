@@ -34,11 +34,13 @@ GRID = dict(dimensions={"width": int(round((E - W) / RES)) + 1, "height": int(ro
 
 
 def pixels(img):
+    """Pixels of an image on the study grid as a float array (bands first)."""
     a = ee.data.computePixels({"expression": img, "fileFormat": "NUMPY_NDARRAY", "grid": GRID})
     return np.stack([a[n] for n in a.dtype.names]).astype("float32")
 
 
 def unit_masks():
+    """Boolean mask of each unit on the study grid."""
     feats = UNITS.getInfo()["features"]
     masks = {}
     for k, f in enumerate(feats):
@@ -49,6 +51,8 @@ def unit_masks():
 
 
 def year_days(y):
+    """Daily ERA5-Land temperature and snowfall on the grid from August of the previous year, run through
+    the degree-day model."""
     swe = None
     days = None
     for start in pd.date_range(f"{y - 1}-08-01", f"{y}-09-01", freq="MS"):
@@ -67,6 +71,7 @@ def year_days(y):
 
 
 def main():
+    """Degree-day snow model per unit and year, reusing years already computed."""
     done = set(pd.read_csv(OUT).year) if OUT.exists() else set()
     masks = unit_masks()
     print("grid", GRID["dimensions"], "units", len(masks), flush=True)

@@ -15,6 +15,7 @@ out = []
 
 
 def say(*a):
+    """Print a line and keep it for the audit report."""
     s = " ".join(str(x) for x in a)
     out.append(s)
     print(s[:300])

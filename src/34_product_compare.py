@@ -25,6 +25,7 @@ MEASURES = ["duration", "sca_clear", "sca_all", "moydgl06"]
 
 
 def load():
+    """Snow duration and 8-day snow-covered area by unit and year."""
     u = pd.read_csv(O / "unit_year.csv")[["unit", "year", "duration"]]
     e = pd.read_csv(O / "eightday_year.csv")[["unit", "year", "sca_clear", "sca_all", "cloud"]]
     m = pd.read_csv(O / "moydgl06_year.csv")[["unit", "year", "sca"]].rename(columns={"sca": "moydgl06"}) \
@@ -33,6 +34,7 @@ def load():
 
 
 def trend(g, col, a, b):
+    """Trend of a column between years a and b (None for fewer than 10 years)."""
     g = g[g.year.between(a, b)].dropna(subset=[col]).sort_values("year")
     if len(g) < 10:
         return None
@@ -42,6 +44,7 @@ def trend(g, col, a, b):
 
 
 def main():
+    """Our trends against the published trends of the same units and periods."""
     d = load()
     pub = pd.read_csv(R / "references" / "published_trends.csv").dropna(subset=["our_unit"])
     periods = [("2001-2025", 2001, 2025, None), ("2003-2018", 2003, 2018, None)] + \

@@ -42,5 +42,6 @@ def class_areas(image, geometry):
 def series(geometry, region, start="2000-02-01", end="2026-12-31"):
     """One feature per 8-day composite with the area of each class."""
     def one(image):
+        """Class areas of one image over the geometry, as a dated feature."""
         return ee.Feature(None, class_areas(image, geometry)).set({"region": region, "date": image.date().format("YYYY-MM-dd")})
     return ee.ImageCollection(COLLECTION).filterDate(start, end).map(one)

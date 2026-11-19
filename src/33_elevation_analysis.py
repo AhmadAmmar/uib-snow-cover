@@ -24,12 +24,14 @@ MIN_PIX = 200
 
 
 def trend(x, y):
+    """Theil-Sen slope and Mann-Kendall z of a series."""
     b = det.sen(x, y)
     z = det.mk_z(y[None])[0]
     return b, 2 * stats.norm.sf(abs(z))
 
 
 def mdt25(y, x, b):
+    """Minimum detectable trend of a 25-year series from the sd and lag-1 correlation of its detrended residuals."""
     res = y - b * x
     res -= res.mean()
     sd, phi = res.std(ddof=1), np.corrcoef(res[:-1], res[1:])[0, 1]
@@ -37,6 +39,8 @@ def mdt25(y, x, b):
 
 
 def snowline(g):
+    """Snow line: elevation where duration first reaches HALF, interpolated between band mid-points; NaN if
+    never or already at the lowest band."""
     g = g.sort_values("band_low_m")
     mid, dur = g.band_low_m.to_numpy() + 250, g.duration.to_numpy()
     above = np.nonzero(dur >= HALF)[0]
@@ -47,6 +51,7 @@ def snowline(g):
 
 
 def main():
+    """Trends by elevation band and the snow line by range and year."""
     b = pd.read_csv(R / "outputs" / "band_year.csv")
     full = b.groupby(["range", "band_low_m"]).filter(lambda g: len(g) == 25 and g.pixels.min() >= MIN_PIX)
     rows = []

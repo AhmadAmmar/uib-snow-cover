@@ -27,6 +27,7 @@ RANGES = ["Hindu Kush", "Karakoram", "Himalaya", "Pamir Mountains", "Tian Shan",
 
 
 def mdt(n, sd, phi):
+    """Minimum detectable trend for length n, noise sd and phi, from the unit noise table."""
     ns = np.array([int(c[1:]) for c in unit_noise.columns])
     per_n = [np.interp(np.clip(phi, 0, 0.9), unit_noise.index, unit_noise[c]) for c in unit_noise.columns]
     if n > ns.max():
@@ -35,6 +36,7 @@ def mdt(n, sd, phi):
 
 
 def main():
+    """Snow cover from the NOAA Northern Hemisphere snow cover record (weekly snow extent) for the cells within each range."""
     d = xr.open_dataset(R / "data/nhsce/nhsce_v01r01_19661004_20261102.nc")
     lat, lon, area = d.latitude.values, d.longitude.values, d.area.values
     pts = gpd.GeoDataFrame(geometry=gpd.points_from_xy(lon.ravel(), lat.ravel()), crs="EPSG:4326")

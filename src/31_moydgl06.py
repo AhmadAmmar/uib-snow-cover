@@ -24,6 +24,7 @@ RANGES = ["Hindu Kush", "Karakoram", "Himalaya", "Pamir Mountains", "Tian Shan",
 
 
 def main():
+    """Snow cover from the MOYDGL06 product over the ranges and their divisions."""
     names = sorted(n for n in Z.namelist() if n.endswith(".tif"))
     with rasterio.MemoryFile(Z.read(names[0])) as m, m.open() as r:
         shape, transform = r.shape, r.transform

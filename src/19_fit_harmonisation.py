@@ -22,12 +22,14 @@ ROOT = "projects/ee-ahmadammargeo/assets/tp_harm_"
 
 
 def pair_table(a_asset, b_asset, start, end, region, tag):
+    """Start an export of matched pixel pairs of two Landsat sensors on near-same-day scenes."""
     a = L.prepare(a_asset, region, start, end, harmonise=False)
     b = L.prepare(b_asset, region, start, end, harmonise=False)
     window = ee.Filter.And(ee.Filter.maxDifference(MAX_DAYS * 86400000, leftField="system:time_start", rightField="system:time_start"), ee.Filter.intersects(leftField=".geo", rightField=".geo"))
     pairs = ee.ImageCollection(ee.Join.saveFirst("match").apply(a, b, window)).limit(MAX_PAIRS)
 
     def one(im):
+        """One image paired with its match, bands prefixed a_ and b_, sampled."""
         im = ee.Image(im)
         both = im.rename([f"a_{x}" for x in L.COMMON]).addBands(ee.Image(im.get("match")).rename([f"b_{x}" for x in L.COMMON]))
         return both.sample(region=region, scale=60, numPixels=PIXELS, seed=1, dropNulls=True, tileScale=4, geometries=True).map(lambda f: f.set("pair", im.get("system:index"), "area", tag))
@@ -35,6 +37,7 @@ def pair_table(a_asset, b_asset, start, end, region, tag):
 
 
 def start():
+    """Start the pair exports for every sensor pair."""
     for label, (a, b, s, e) in PAIRS.items():
         fc = None
         for area, box in AREAS.items():
@@ -45,6 +48,7 @@ def start():
 
 
 def rma(x, y):
+    """Reduced major axis slope and intercept of y on x."""
     s = np.sign(np.corrcoef(x, y)[0, 1]) * y.std() / x.std()
     return s, y.mean() - s * x.mean()
 
@@ -61,6 +65,7 @@ def clean(d):
 
 
 def main():
+    """Fit harmonisation coefficients (RMA) per band and sensor pair from the exported pairs."""
     rows = []
     for label in PAIRS:
         d = pd.DataFrame([f["properties"] for f in ee.FeatureCollection(ROOT + label).limit(40000).getInfo()["features"]])

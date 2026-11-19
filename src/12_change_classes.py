@@ -67,6 +67,8 @@ def bh_threshold(p, geom, scale=SCALE):
 
 
 def main(name, *flags):
+    """Per-pixel change classes of snow duration in a range from a per-pixel Mann-Kendall test; --export-mk stores the test
+    result as an asset."""
     key = name.lower().replace(" ", "_")
     rng = ee.FeatureCollection("projects/ee-ahmadammargeo/assets/tp_regions_v2_range").filter(ee.Filter.eq("unit", name)).geometry()
     divs = ee.FeatureCollection("projects/ee-ahmadammargeo/assets/tp_regions_v2_division").filter(ee.Filter.eq("parent", name))

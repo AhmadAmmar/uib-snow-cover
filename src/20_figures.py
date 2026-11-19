@@ -32,6 +32,7 @@ CAPTION_NOTE = "Preliminary."
 
 
 def regions():
+    """Figure: map of the regions."""
     g = gpd.read_file(R / "data/regions/tp_regions_v2.geojson")
     fig, ax = plt.subplots(1, 2, figsize=carto.size("double", 0.42), subplot_kw={"projection": PROJ})
     for a, level, col, title in ((ax[0], "division", "parent", "Ranges and divisions"), (ax[1], "subbasin", "parent", "Sub-basins")):
@@ -83,6 +84,7 @@ def change_maps(values):
 
 
 def trends(t, values):
+    """Theil-Sen trend and Mann-Kendall test of each unit's series."""
     rows = []
     for (unit, level, parent), d in t.groupby(["unit", "level", "parent"]):
         d = d.sort_values("year")
@@ -101,6 +103,7 @@ def trends(t, values):
 
 
 def series(t):
+    """Figure: yearly snow duration of each range."""
     d = t[t.level == "range"]
     units = [u for u in RANGE_ORDER if u in set(d.unit)]
     fig, axes = plt.subplots(len(units), 1, figsize=carto.size("single", 0.55 * max(len(units), 1) + 0.25), sharex=True, squeeze=False)
@@ -117,6 +120,7 @@ def series(t):
 
 
 def heatmap(t):
+    """Figure: trends by division as a heat map."""
     d = t[t.level == "division"].copy()
     if d.empty:
         return
@@ -171,6 +175,7 @@ def attribution(t, values):
 
 
 def main():
+    """All figures of the snow paper."""
     carto.use_style()
     values = {}
     regions()
